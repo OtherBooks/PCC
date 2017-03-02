@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Word problems of division with remainders.
+  #
+  # Last edited: Yao 10/9/13
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Elementary School')
+  ## DBchapter('')
+  ## DBsection('')
+  ## KEYWORDS('division','application','remainder')
+  ## DBCCSS('3.OA','4.OA')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$remainder">
+        <!--<static></static>-->
+      </var>
+      <var name="$total">
+        <!--<static></static>-->
+      </var>
+      <var name="$each">
+        <!--<static></static>-->
+      </var>
+      <var name="$s2">
+        <!--<static></static>-->
+      </var>
+      <var name="$s1">
+        <!--<static></static>-->
+      </var>
+      <var name="$numStudents">
+        <!--<static></static>-->
+      </var>
+      <var name="$symbol">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        $numStudents = random(15,30,1);
+        $each = random(10,20,1);
+        $remainder = random(1,$each-1,1);
+        $total= $numStudents*$each+$remainder;
+
+        $s1 = $total/$numStudents;
+        if ($s1*100!=int($s1*100)) {
+           $s1 =  sprintf("%.2f",$s1);
+           $symbol = "\approx";
+        } else {
+           $symbol = "=";
+        }
+        $s2 = $each*$numStudents;
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        In a class, the teacher will hand out <m><var name="$total" /></m> marbles to all his <m><var name="$numStudents" /></m> students evenly. How many marbles will each student receive? How many marbles will be left over?
+        <em>Solution:</em>
+        Each student will receive <var name="$each" width="7" /> marbles.
+        There will be <var name="$remainder" width="7" /> left-over marbles.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Division is used when we divide a number of objects evenly into groups. In this problem, we divide <m><var name="$total" /></m> marbles evenly among <m><var name="$numStudents" /></m> students, and we have:
+      </p>
+
+      <p>
+        <me>
+          <var name="$total" /> \div <var name="$numStudents" /> <var name="$symbol" /> <var name="$s1" />
+        </me>
+      </p>
+
+      <p>
+        The decimal quotient implies <m><var name="$numStudents" /></m> doesn't go into <m><var name="$total" /></m> evenly, so there will be left-over marbles.
+      </p>
+
+      <p>
+        Notice that the integer part of <m><var name="$s1" /></m> is <m><var name="$each" /></m>. This implies each student will get <m><var name="$each" /></m> marbles.
+      </p>
+
+      <p>
+        If each student gets <m><var name="$each" /></m> marbles, <m><var name="$numStudents" /></m> students will get <m><var name="$each" /> \cdot <var name="$numStudents" /> = <var name="$s2" /></m> marbles.
+      </p>
+
+      <p>
+        Once <m><var name="$s2" /></m> marbles out of <m><var name="$total" /></m> were handed out, there will be <m><var name="$total" />-<var name="$s2" />=<var name="$remainder" /></m> left-over marbles.
+      </p>
+
+      <p>
+        We can re-write the division equation as:
+      </p>
+
+      <p>
+        <me>
+          <var name="$total" /> \div <var name="$numStudents" /> = <var name="$each" /> \text{ R } <var name="$remainder" />
+        </me>
+      </p>
+
+      <p>
+        The character <em>R</em> represents "remainder".
+      </p>
+
+      <p>
+        <em>Solution:</em>
+      </p>
+
+      <p>
+        Each student will receive <m><var name="$each" /></m> marbles.
+      </p>
+
+      <p>
+        There will be <m><var name="$remainder" /></m> left-over marbles.
+      </p>
+    </solution>
+  </webwork>
+</exercise>

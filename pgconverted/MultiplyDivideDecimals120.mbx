@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Template
+  #
+  # Divide an integer by 0.1, 0.01 and 0.001. Integer is in [1,9].
+  # 
+  # Last updated: Yao, 10/23/2013
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Algebra')
+  ## DBchapter('Basic Algebra')
+  ## DBsection('')
+  ## KEYWORDS('decimal','divide')
+  ## DBCCSS('5.NBT')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$int">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans1">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans3">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans2">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        $int = random(1,9,1);
+
+        $ans1 = $int/0.1;
+        $ans2 = $int/0.01;
+        $ans3 = $int/0.001;
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        Calculate without using a calculator.
+        <m><var name="$int" /> \div 0.1</m> = <var name="$ans1" width="11" />
+        <m><var name="$int" /> \div 0.01</m> = <var name="$ans2" width="11" />
+        <m><var name="$int" /> \div 0.001</m> = <var name="$ans3" width="11" />
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We know <m>0.1=\frac{1}{10}</m>, so <m><var name="$int" /> \div 0.1 = <var name="$int" /> \div \frac{1}{10} = <var name="$int" /> \cdot \frac{10}{1} = <var name="$int" /> \cdot 10</m>.
+      </p>
+
+      <p>
+        We can see dividing by <m>0.1</m> is the same as multiplying by <m>10</m>. So we have:
+      </p>
+
+      <p>
+        <me>
+          <var name="$int" /> \div 0.1 = <var name="$int" /> \cdot 10 = <var name="$ans1" />
+        </me>
+      </p>
+
+      <p>
+        Similarly, dividing by <m>0.01</m> is the same as multiplying by <m>100</m>; dividing by <m>0.001</m> is the same as multiplying by <m>1000</m>.
+      </p>
+
+      <p>
+        <em>Solutions:</em>
+      </p>
+
+      <p>
+        <me>
+          <var name="$int" /> \div 0.1 = <var name="$int" /> \cdot 10 =<var name="$ans1" />
+        </me>
+        as we move the decimal point to the right once.
+      </p>
+
+      <p>
+        <me>
+          <var name="$int" /> \div 0.01 = <var name="$int" /> \cdot 100 =<var name="$ans2" />
+        </me>
+        as we move the decimal point to the right twice.
+      </p>
+
+      <p>
+        <me>
+          <var name="$int" /> \div 0.001 = <var name="$int" /> \cdot 1000 =<var name="$ans3" />
+        </me>
+        as we move the decimal point to the right three times.
+      </p>
+    </solution>
+  </webwork>
+</exercise>

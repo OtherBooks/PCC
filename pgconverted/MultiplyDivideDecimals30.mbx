@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Template
+  #
+  # Multiply a decimal by a power of 10.
+  # 
+  # Last updated: Yao, 12/20/2013
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Algebra')
+  ## DBchapter('Basic Algebra')
+  ## DBsection('')
+  ## KEYWORDS('decimal','multiply')
+  ## DBCCSS('5.NBT')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$numZeroes">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans1">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans3">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans2">
+        <!--<static></static>-->
+      </var>
+      <var name="$dec">
+        <!--<static></static>-->
+      </var>
+      <var name="$power">
+        <!--<static></static>-->
+      </var>
+      <var name="$times">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+        #Context()->{format}{number} = "%9d";
+
+        $numZeroes = 1;
+        $power = 10**$numZeroes;
+
+        $dec = random(1,9,1)+random(0,9,1)/10+random(1,9,1)/100;
+        $ans1 = $dec*$power;
+        $ans2 = $ans1*10;
+        $ans3 = $ans2*10;
+
+        if ($numZeroes==1) {$times = "once";}
+        elsif ($numZeroes==2) {$times = "twice";}
+        else {$times = "$numZeroes".' times';}
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        Calculate without using a calculator. Don't use commas in your answer.
+        <m><var name="$dec" /> \cdot <var name="$power" /></m> = <var name="$ans1" width="11" />
+        <m><var name="$dec" /> \cdot [$power*10]</m> = <var name="$ans2" width="11" />
+        <m><var name="$dec" /> \cdot [$power*100]</m> = <var name="$ans3" width="11" />
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <me>
+          <var name="$dec" /> \cdot <var name="$power" /> =<var name="$ans1" />
+        </me>
+        as we move the decimal point to the right <var name="$times" />.
+      </p>
+
+      <p>
+        <me>
+          <var name="$dec" /> \cdot [$power*10] =<var name="$ans2" />
+        </me>
+        as we move the decimal point to the right [$numZeroes+1] times.
+      </p>
+
+      <p>
+        <me>
+          <var name="$dec" /> \cdot [$power*100] =<var name="$ans3" />
+        </me>
+        as we move the decimal point to the right [$numZeroes+2] times.
+      </p>
+    </solution>
+  </webwork>
+</exercise>

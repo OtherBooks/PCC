@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Template
+  #
+  # Multiply an integer by a power of 10.
+  # 
+  # Last updated: Yao, 12/20/2013
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Algebra')
+  ## DBchapter('Basic Algebra')
+  ## DBsection('')
+  ## KEYWORDS('decimal','multiply')
+  ## DBCCSS('5.NBT')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$numZeroes">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans1">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans3">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans2">
+        <!--<static></static>-->
+      </var>
+      <var name="$dec">
+        <!--<static></static>-->
+      </var>
+      <var name="$power">
+        <!--<static></static>-->
+      </var>
+      <var name="$times">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+        Context()->{format}{number} = "%9d";
+
+        $numZeroes = random(2,3,1);
+        $power = 10**$numZeroes;
+
+        $dec = random(11,99,1);
+        $ans1 = $dec*$power;
+        $ans2 = $ans1*10;
+        $ans3 = $ans2*10;
+
+        if ($numZeroes==1) {$times = "once";}
+        elsif ($numZeroes==2) {$times = "twice";}
+        else {$times = "$numZeroes".' times';}
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        Calculate without using a calculator. Don't use commas in your answer.
+        <m><var name="$dec" /> \cdot <var name="$power" /></m> = <var name="$ans1" width="11" />
+        <m><var name="$dec" /> \cdot [$power*10]</m> = <var name="$ans2" width="11" />
+        <m><var name="$dec" /> \cdot [$power*100]</m> = <var name="$ans3" width="11" />
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Let's observe a pattern:
+      </p>
+
+      <p>
+        <md>
+          <mrow>2 \cdot 10 \amp= 20</mrow>
+          <mrow>2 \cdot 100 \amp= 200</mrow>
+          <mrow>2 \cdot 1000 \amp= 2000</mrow>
+        </md>
+      </p>
+
+      <p>
+        We omit the decimal point for integers. For <m>2</m>, the decimal point is at the end: <m>2.</m>
+      </p>
+
+      <p>
+        When <m>2</m> is multiplied by <m>10</m>, we move the decimal point to the right once, and add in one zero: <m>2. \cdot 10 = 20. = 20</m>
+      </p>
+
+      <p>
+        When <m>2</m> is multiplied by <m>100</m>, we move the decimal point to the right twice, and add in two zeroes: <m>2. \cdot 100 = 200. = 200</m>
+      </p>
+
+      <p>
+        When <m>2</m> is multiplied by <m>1000</m>, we move the decimal point to the right three times, and add in three zeroes: <m>2. \cdot 1000 = 2000. = 2000</m>
+      </p>
+
+      <p>
+        When an integer is multiplied by <m>10</m>, <m>100</m> or <m>1000</m>, we move the decimal point to the right <m>1</m>, <m>2</m> or <m>3</m> times, respectively. We need to add in zeroes as needed.
+      </p>
+
+      <p>
+        <em>Solutions:</em>
+      </p>
+
+      <p>
+        <me>
+          <var name="$dec" /> \cdot <var name="$power" /> =<var name="$ans1" />
+        </me>
+        as we move the decimal point to the right <var name="$times" />. Note that we added in <m><var name="$numZeroes" /></m> zeroes.
+      </p>
+
+      <p>
+        <me>
+          <var name="$dec" /> \cdot [$power*10] =<var name="$ans2" />
+        </me>
+        as we move the decimal point to the right [$numZeroes+1] times. Note that we added in <m>[$numZeroes+1]</m> zeroes.
+      </p>
+
+      <p>
+        <me>
+          <var name="$dec" /> \cdot [$power*100] =<var name="$ans3" />
+        </me>
+        as we move the decimal point to the right [$numZeroes+2] times. Note that we added in <m>[$numZeroes+2]</m> zeroes.
+      </p>
+    </solution>
+  </webwork>
+</exercise>

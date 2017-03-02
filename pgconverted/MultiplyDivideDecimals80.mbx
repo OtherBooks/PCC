@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Template
+  #
+  # Divide a decimal by a power of 10.
+  # 
+  # Last updated: Yao, 10/19/2013
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Algebra')
+  ## DBchapter('Basic Algebra')
+  ## DBsection('')
+  ## KEYWORDS('decimal','divide')
+  ## DBCCSS('5.NBT')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$dec">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans1">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans3">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans2">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        $dec = random(11,99,1)+random(11,99,1)/100;
+
+        $ans1 = $dec/10;
+        $ans2 = $dec/100;
+        $ans3 = $dec/1000;
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        Calculate without using a calculator.
+        <m><var name="$dec" /> \div 10</m> = <var name="$ans1" width="11" />
+        <m><var name="$dec" /> \div 100</m> = <var name="$ans2" width="11" />
+        <m><var name="$dec" /> \div 1000</m> = <var name="$ans3" width="11" />
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Let's observe a pattern:
+      </p>
+
+      <p>
+        <md>
+          <mrow>2000 \div 10 \amp= 200</mrow>
+          <mrow>2000 \div 100 \amp= 20</mrow>
+          <mrow>2000 \div 1000 \amp= 2</mrow>
+        </md>
+      </p>
+
+      <p>
+        We omit the decimal point for integers. For <m>2000</m>, the decimal point is at the end: <m>2000.</m>
+      </p>
+
+      <p>
+        When <m>2000</m> is divided by <m>10</m>, we move the decimal point to the left once: <m>2000. \div 10 = 200.0 = 200</m>
+      </p>
+
+      <p>
+        When <m>2000</m> is divided by <m>100</m>, we move the decimal point to the left twice: <m>2000. \div 100 = 20.00 = 20</m>
+      </p>
+
+      <p>
+        When <m>2000</m> is divided by <m>1000</m>, we move the decimal point to the left 3 times: <m>2000. \div 1000 = 2.000 = 2</m>
+      </p>
+
+      <p>
+        When a number is divided by <m>10</m>, <m>100</m> or <m>1000</m>, we move the decimal point to the left <m>1</m>, <m>2</m> or <m>3</m> times, respectively.
+      </p>
+
+      <p>
+        <em>Solution:</em>
+      </p>
+
+      <p>
+        <me>
+          <var name="$dec" /> \div 10 =<var name="$ans1" />
+        </me>
+        as we move the decimal point to the left once.
+      </p>
+
+      <p>
+        <me>
+          <var name="$dec" /> \div 100 =<var name="$ans2" />
+        </me>
+        as we move the decimal point to the left twice.
+      </p>
+
+      <p>
+        <me>
+          <var name="$dec" /> \div 1000 =<var name="$ans3" />
+        </me>
+        as we move the decimal point to the left three times. Note that we need to add in one zero.
+      </p>
+    </solution>
+  </webwork>
+</exercise>

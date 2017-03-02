@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Word problems of division with remainders.
+  #
+  # Last edited: Yao 10/9/13
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Elementary School')
+  ## DBchapter('')
+  ## DBsection('')
+  ## KEYWORDS('division','application','remainder')
+  ## DBCCSS('3.OA','4.OA')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$each">
+        <!--<static></static>-->
+      </var>
+      <var name="$symbol">
+        <!--<static></static>-->
+      </var>
+      <var name="$total">
+        <!--<static></static>-->
+      </var>
+      <var name="$busesNeeded">
+        <!--<static></static>-->
+      </var>
+      <var name="$s1">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        $buses = random(11,19,1);
+        $each = random(40,50,1);
+        $remainder = random(5,$each-1,1);
+        $total= $buses*$each+$remainder;
+        $busesNeeded = $buses+1;
+
+        $s1 = $total/$each;
+        if ($s1*100!=int($s1*100)) {
+           $s1 =  sprintf("%.2f",$s1);
+           $symbol = "\approx";
+        } else {
+           $symbol = "=";
+        }
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        A school is planning for a field trip for <m><var name="$total" /></m> students and staff. Each school bus can hold <m><var name="$each" /></m> people. How many school buses are needed?
+        <em>Solution:</em> <var name="$busesNeeded" width="6" /> school buses are needed.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We can address this problem as "repeatedly taking away <m><var name="$each" /></m> people from <m><var name="$total" /></m> people, which implies a division problem:
+      </p>
+
+      <p>
+        <me>
+          <var name="$total" /> \div <var name="$each" /> <var name="$symbol" /> <var name="$s1" />
+        </me>
+      </p>
+
+      <p>
+        The decimal quotient implies <m><var name="$each" /></m> doesn't go into <m><var name="$total" /></m> evenly, so the last bus will not be filled with people.
+      </p>
+
+      <p>
+        There is no need to find the remainder of this division, because we need one more bus to hold the last group of people anyway.
+      </p>
+
+      <p>
+        <em>Solution:</em> <m><var name="$busesNeeded" /></m> buses are needed.
+      </p>
+    </solution>
+  </webwork>
+</exercise>

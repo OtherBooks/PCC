@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Practice the multiplication table. Numbers range from 1 to 12.
+  #
+  # Last edited: Carl Yao 9/25/13
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Elementary School')
+  ## DBchapter('')
+  ## DBsection('')
+  ## KEYWORDS('multiplication')
+  ## DBCCSS('3.OA.7')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$num1">
+        <!--<static></static>-->
+      </var>
+      <var name="$products">
+        <!--<static></static>-->
+      </var>
+      <var name="$num2">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        @num1 = ();
+        @num2 = ();
+        @products = ();
+
+        do {
+        for my $i (0..9) {
+          $num1[$i] = random(2,12,1);
+          $num2[$i] = random(2,12,1);
+          $products[$i] = $num1[$i]*$num2[$i];
+         }
+
+        my %seen = ();
+        @duplicates = ();
+        @duplicates = map { 1==$seen{$_}++ ? $_ : () } @products;
+
+        } until (@duplicates == 0);
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        ##Multiplication Facts
+        If you have not memorized the multiplication table yet, silently chant the multiplication table once or twice, and then do the following multiplication problems. If you need to look at a multiplication table, use Google to find one.
+        Do this problem every day until you are fluent with the multiplication table.
+        <me>
+          [@$num1[0]@] \cdot [@$num2[0]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[0]}
+        <me>
+          [@$num1[1]@] \cdot [@$num2[1]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[1]}
+        <me>
+          [@$num1[2]@] \cdot [@$num2[2]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[2]}
+        <me>
+          [@$num1[3]@] \cdot [@$num2[3]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[3]}
+        <me>
+          [@$num1[4]@] \cdot [@$num2[4]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[4]}
+        <me>
+          [@$num1[5]@] \cdot [@$num2[5]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[5]}
+        <me>
+          [@$num1[6]@] \cdot [@$num2[6]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[6]}
+        <me>
+          [@$num1[7]@] \cdot [@$num2[7]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[7]}
+        <me>
+          [@$num1[8]@] \cdot [@$num2[8]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[8]}
+        <me>
+          [@$num1[9]@] \cdot [@$num2[9]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[9]}
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Please make sure you are fluent with the multiplication table. This is the basis for a lot of later studies in mathematics.
+      </p>
+
+      <p>
+        <md>
+          <mrow>[@$num1[0]@] \cdot [@$num2[0]@] \amp= [@$products[0]@]</mrow>
+          <mrow>[@$num1[1]@] \cdot [@$num2[1]@] \amp= [@$products[1]@]</mrow>
+          <mrow>[@$num1[2]@] \cdot [@$num2[2]@] \amp= [@$products[2]@]</mrow>
+          <mrow>[@$num1[3]@] \cdot [@$num2[3]@] \amp= [@$products[3]@]</mrow>
+          <mrow>[@$num1[4]@] \cdot [@$num2[4]@] \amp= [@$products[4]@]</mrow>
+          <mrow>[@$num1[5]@] \cdot [@$num2[5]@] \amp= [@$products[5]@]</mrow>
+          <mrow>[@$num1[6]@] \cdot [@$num2[6]@] \amp= [@$products[6]@]</mrow>
+          <mrow>[@$num1[7]@] \cdot [@$num2[7]@] \amp= [@$products[7]@]</mrow>
+          <mrow>[@$num1[8]@] \cdot [@$num2[8]@] \amp= [@$products[8]@]</mrow>
+          <mrow>[@$num1[9]@] \cdot [@$num2[9]@] \amp= [@$products[9]@]</mrow>
+        </md>
+      </p>
+    </solution>
+  </webwork>
+</exercise>

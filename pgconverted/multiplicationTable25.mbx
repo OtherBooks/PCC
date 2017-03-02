@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Practice multiplication facts by doing division problems. Numbers range from 2 to 12.
+  #
+  # Last edited: Carl Yao 9/25/13
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Elementary School')
+  ## DBchapter('')
+  ## DBsection('')
+  ## KEYWORDS('multiplication','division')
+  ## DBCCSS('3.OA.7')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$num1">
+        <!--<static></static>-->
+      </var>
+      <var name="$products">
+        <!--<static></static>-->
+      </var>
+      <var name="$num2">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        @num1 = ();
+        @num2 = ();
+        @products = ();
+
+        do
+        {for my $i (0..9) {
+          $num1[$i] = random(2,12,1);
+          $num2[$i] = random(2,12,1);
+          $products[$i] = $num1[$i]*$num2[$i];
+          }
+
+        my %seen = ();
+        @duplicates = ();
+        @duplicates = map { 1==$seen{$_}++ ? $_ : () } @products;
+
+        } until (@duplicates == 0);
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        ##Division Facts
+        Use multiplication facts reversely to do the following division problems. For example, since <m>7 \cdot 8 = 56</m>, we know <m>56 \div 7 = 8</m>.
+        Do this problem every day until you are fluent with doing this type of problems.
+        <me>
+          [@$products[0]@] \div [@$num2[0]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[0]}
+        <me>
+          [@$products[1]@] \div [@$num2[1]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[1]}
+        <me>
+          [@$products[2]@] \div [@$num2[2]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[2]}
+        <me>
+          [@$products[3]@] \div [@$num2[3]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[3]}
+        <me>
+          [@$products[4]@] \div [@$num2[4]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[4]}
+        <me>
+          [@$products[5]@] \div [@$num2[5]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[5]}
+        <me>
+          [@$products[6]@] \div [@$num2[6]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[6]}
+        <me>
+          [@$products[7]@] \div [@$num2[7]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[7]}
+        <me>
+          [@$products[8]@] \div [@$num2[8]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[8]}
+        <me>
+          [@$products[9]@] \div [@$num2[9]@]
+        </me>
+        = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[9]}
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <md>
+          <mrow>[@$products[0]@] \div [@$num2[0]@] \amp= [@$num1[0]@]</mrow>
+          <mrow>[@$products[1]@] \div [@$num2[1]@] \amp= [@$num1[1]@]</mrow>
+          <mrow>[@$products[2]@] \div [@$num2[2]@] \amp= [@$num1[2]@]</mrow>
+          <mrow>[@$products[3]@] \div [@$num2[3]@] \amp= [@$num1[3]@]</mrow>
+          <mrow>[@$products[4]@] \div [@$num2[4]@] \amp= [@$num1[4]@]</mrow>
+          <mrow>[@$products[5]@] \div [@$num2[5]@] \amp= [@$num1[5]@]</mrow>
+          <mrow>[@$products[6]@] \div [@$num2[6]@] \amp= [@$num1[6]@]</mrow>
+          <mrow>[@$products[7]@] \div [@$num2[7]@] \amp= [@$num1[7]@]</mrow>
+          <mrow>[@$products[8]@] \div [@$num2[8]@] \amp= [@$num1[8]@]</mrow>
+          <mrow>[@$products[9]@] \div [@$num2[9]@] \amp= [@$num1[9]@]</mrow>
+          <mrow></mrow>
+        </md>
+      </p>
+    </solution>
+  </webwork>
+</exercise>

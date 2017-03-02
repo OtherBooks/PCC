@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Change money into decimals, like: 52 cents = 0.52
+  # 
+  # Last updated: Yao, 12/01/2013
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Algebra')
+  ## DBchapter('Basic Algebra')
+  ## DBsection('')
+  ## KEYWORDS('decimal','money')
+  ## DBCCSS('5.NBT')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PCCmacros.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$decimal2">
+        <!--<static></static>-->
+      </var>
+      <var name="$decimal0">
+        <!--<static></static>-->
+      </var>
+      <var name="$decimal1">
+        <!--<static></static>-->
+      </var>
+      <var name="$money2">
+        <!--<static></static>-->
+      </var>
+      <var name="$money1">
+        <!--<static></static>-->
+      </var>
+      <var name="$money0">
+        <!--<static></static>-->
+      </var>
+      <var name="$1">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        $a = random(2,9,1);
+
+        @problems = (["$a \text{ cents}",$a/100],["$a \text{ dimes}",$a/10],["$a \text{ dollars}",$a]);
+
+        for my $i (0..5) {
+           my $j=random(0,2,1);
+           ($problems[$j],$problems[($j+1)%3]) = ($problems[($j+1)%3],$problems[$j]);
+        }
+
+        $money0 = $problems[0][0]; $decimal0 = $problems[0][1];
+        $money1 = $problems[1][0]; $decimal1 = $problems[1][1];
+        $money2 = $problems[2][0]; $decimal2 = $problems[2][1];
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        If <m>1</m> dollar is represented by the integer <m>1</m>, write the following money amount with decimals. There is no need to type the dollar sign.
+        ----
+        <m><var name="$money0" /></m> = <var name="$decimal0" width="11" />
+        ----
+        <m><var name="$money1" /></m> = <var name="$decimal1" width="11" />
+        ----
+        <m><var name="$money2" /></m> = <var name="$decimal2" width="11" />
+      </p>
+    </statement>
+    <solution>
+      <p>
+        At stores, if we see an item costs <m>\$1.23</m>, the number <m>1</m> represents <m>1</m> dollar, the number <m>2</m> represents <m>2</m> dimes (or <m>20</m> cents), and the number <m>3</m> represents <m>3</m> cents.
+      </p>
+
+      <p>
+        The solutions are:
+      </p>
+
+      <p>
+        <me>
+          <var name="$money0" /> = <var name="$decimal0" />
+        </me>
+      </p>
+
+      <p>
+        <me>
+          <var name="$money1" /> = <var name="$decimal1" />
+        </me>
+      </p>
+
+      <p>
+        <me>
+          <var name="$money2" /> = <var name="$decimal2" />
+        </me>
+      </p>
+    </solution>
+  </webwork>
+</exercise>

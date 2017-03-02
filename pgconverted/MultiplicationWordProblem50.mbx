@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Multiplication word problem.
+  #
+  # Last edited: Yao 10/2/13
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Elementary School')
+  ## DBchapter('')
+  ## DBsection('')
+  ## KEYWORDS('multiplication','application')
+  ## DBCCSS('3.OA','4.OA')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    <macro-file>PCCmacros.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$days">
+        <!--<static></static>-->
+      </var>
+      <var name="$more">
+        <!--<static></static>-->
+      </var>
+      <var name="$pages1">
+        <!--<static></static>-->
+      </var>
+      <var name="$total">
+        <!--<static></static>-->
+      </var>
+      <var name="$name1">
+        <!--<static></static>-->
+      </var>
+      <var name="$name2">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        $pages1 = random(30,50,1);
+        $more = random(5,15,1);
+        $days = random(30,60,1);
+        $total = ($pages1+$more)*$days;
+
+        $name1 = RandomName();
+        do {$name2 = RandomName();} until ($name1 ne $name2);
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        <var name="$name1" /> and <var name="$name2" /> are participating in a summer reading program. <var name="$name1" /> reads <m><var name="$pages1" /></m> pages every day, and <var name="$name2" /> reads <m><var name="$more" /></m> more pages than <var name="$name1" /> every day.
+        How many pages will <var name="$name2" /> read in <m><var name="$days" /></m> days?
+        Solution: <var name="$name2" /> will read <var name="$total" width="7" /> pages in <m><var name="$days" /></m> days.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        It's given that <var name="$name1" /> reads <m><var name="$pages1" /></m> pages every day. Since <var name="$name2" /> reads <m><var name="$more" /></m> more pages than <var name="$name1" />, <var name="$name2" /> reads <m><var name="$pages1" />+<var name="$more" />=[$pages1+$more]</m> pages every day.
+      </p>
+
+      <p>
+        To find the total number of pages <var name="$name2" /> reads in <m><var name="$days" /></m> days, we do multiplication:
+      </p>
+
+      <p>
+        <me>
+          [$pages1+$more] \cdot <var name="$days" /> = <var name="$total" />
+        </me>
+      </p>
+
+      <p>
+        <em>Solution:</em> <var name="$name2" /> will read a total of <m><var name="$total" /></m> pages in <m><var name="$days" /></m> days.
+      </p>
+    </solution>
+  </webwork>
+</exercise>

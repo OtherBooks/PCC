@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Division word problem.
+  #
+  # Last edited: Yao 10/8/13
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Elementary School')
+  ## DBchapter('')
+  ## DBsection('')
+  ## KEYWORDS('division','application')
+  ## DBCCSS('3.OA','4.OA')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    <macro-file>PCCmacros.pl</macro-file>
+    <macro-file>parserNumberWithUnits.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$hours">
+        <!--<static></static>-->
+      </var>
+      <var name="$name">
+        <!--<static></static>-->
+      </var>
+      <var name="$total">
+        <!--<static></static>-->
+      </var>
+      <var name="$speed">
+        <!--<static></static>-->
+      </var>
+      <var name="$totalU">
+        <!--<static></static>-->
+      </var>
+      <var name="$hoursU">
+        <!--<static></static>-->
+      </var>
+      <var name="$speedU">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        $speed= random(30,70,1);
+        $hours = random(5,12,1);
+        $total = $speed*$hours;
+
+        $speedU = NumberWithUnits("$speed mi/hr");
+        $hoursU = NumberWithUnits("$hours hr");
+        $totalU = NumberWithUnits("$total mi");
+
+        $sex = list_random('male','female');
+        $pronoun = 'he' if ($sex eq 'male');
+        $pronoun = 'she' if ($sex eq 'female');
+
+        $possessive = 'his' if ($sex eq 'male');
+        $possessive = 'her' if ($sex eq 'female');
+
+        $name = RandomName(sex=>$sex);
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        <var name="$name" /> drove <m><var name="$totalU" /></m> at a constant speed of <m><var name="$speedU" /></m>. How many hours did <var name="$name" /> drive? In your answer, use <em>mi</em> for miles, <em>hr</em> for hours, and *mi/hr* for miles per hour.
+        <var name="$name" /> drove for <var name="$hoursU" width="11" />.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We can address this problem as "repeatedly taking away <m><var name="$speed" /></m> miles from <m><var name="$total" /></m> miles", which is a division problem:
+      </p>
+
+      <p>
+        <me>
+          <var name="$total" /> \div <var name="$speed" /> = <var name="$hours" />
+        </me>
+      </p>
+
+      <p>
+        So <var name="$name" /> drove for <m><var name="$hoursU" /></m>.
+      </p>
+
+      <p>
+        We should become familiar with using the fraction line instead of the division symbol:
+      </p>
+
+      <p>
+        <me>
+          \frac{<var name="$total" />}{<var name="$speed" />}=<var name="$hours" />
+        </me>
+      </p>
+    </solution>
+  </webwork>
+</exercise>

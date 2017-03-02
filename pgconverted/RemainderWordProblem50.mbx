@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Word problems of division with remainders.
+  #
+  # Last edited: Yao 10/9/13
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Elementary School')
+  ## DBchapter('')
+  ## DBsection('')
+  ## KEYWORDS('division','application','remainder')
+  ## DBCCSS('3.OA','4.OA')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$remainder">
+        <!--<static></static>-->
+      </var>
+      <var name="$total">
+        <!--<static></static>-->
+      </var>
+      <var name="$s2">
+        <!--<static></static>-->
+      </var>
+      <var name="$eachPile">
+        <!--<static></static>-->
+      </var>
+      <var name="$s1">
+        <!--<static></static>-->
+      </var>
+      <var name="$eachStudent">
+        <!--<static></static>-->
+      </var>
+      <var name="$numPiles">
+        <!--<static></static>-->
+      </var>
+      <var name="$numStudents">
+        <!--<static></static>-->
+      </var>
+      <var name="$symbol">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        $numPiles = random(2,5,1);
+        $eachPile = random(2,4,1);
+        $remainder = $numPiles*$eachPile;
+
+        $numStudents = random(25,35,1);
+        $eachStudent = random(10,20,1);
+        $total= $numStudents*$eachStudent+$remainder;
+
+        $s1 = $total/$numStudents;
+        if ($s1*100!=int($s1*100)) {
+           $s1 =  sprintf("%.2f",$s1);
+           $symbol = "\approx";
+        } else {
+           $symbol = "=";
+        }
+        $s2 = $eachStudent*$numStudents;
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        A teacher is doing an activity in a class with <m><var name="$numStudents" /></m> students. The teacher had a total of <m><var name="$total" /></m> marbles, and handed them out evenly among all students until not enough marbles are left for another round. Some marbles were left over, and the teacher divided those left-over marbles evenly into <m><var name="$numPiles" /></m> piles.
+        How many marbles are in each pile?
+        <em>Solution:</em> There are <var name="$eachPile" width="9" /> marbles in each pile.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        First, we divide <m><var name="$total" /></m> marbles evenly among <m><var name="$numStudents" /></m> students, and we have:
+      </p>
+
+      <p>
+        <me>
+          <var name="$total" /> \div <var name="$numStudents" /> <var name="$symbol" /> <var name="$s1" />
+        </me>
+      </p>
+
+      <p>
+        The decimal quotient implies <m><var name="$numStudents" /></m> doesn't go into <m><var name="$total" /></m> evenly, so there will be left-over marbles.
+      </p>
+
+      <p>
+        Notice that the integer part of <m><var name="$s1" /></m> is <m><var name="$eachStudent" /></m>. This implies each student will get <m><var name="$eachStudent" /></m> marbles.
+      </p>
+
+      <p>
+        If each student gets <m><var name="$eachStudent" /></m> marbles, <m><var name="$numStudents" /></m> students will get <m><var name="$eachStudent" /> \cdot <var name="$numStudents" /> = <var name="$s2" /></m> marbles.
+      </p>
+
+      <p>
+        Once <m><var name="$s2" /></m> marbles out of <m><var name="$total" /></m> were handed out, there will be <m><var name="$total" />-<var name="$s2" />=<var name="$remainder" /></m> left-over marbles.
+      </p>
+
+      <p>
+        We can re-write the division equation as:
+      </p>
+
+      <p>
+        <me>
+          <var name="$total" /> \div <var name="$numStudents" /> = <var name="$eachStudent" /> \text{ R } <var name="$remainder" />
+        </me>
+      </p>
+
+      <p>
+        The character <em>R</em> represents "remainder".
+      </p>
+
+      <p>
+        Next, the teacher divided <m><var name="$remainder" /></m> left-over marbles evenly into <m><var name="$numPiles" /></m> piles. We have:
+      </p>
+
+      <p>
+        <me>
+          <var name="$remainder" /> \div <var name="$numPiles" /> = <var name="$eachPile" />
+        </me>
+      </p>
+
+      <p>
+        <em>Solution:</em> There are <m><var name="$eachPile" /></m> marbles in each pile.
+      </p>
+    </solution>
+  </webwork>
+</exercise>

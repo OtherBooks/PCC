@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+  <original-metadata>
+  # WeBWorK problem written by Carl Yao
+  # Portland Community College
+  #
+  # Addition/subtraction word problem.
+  #
+  # Last edited: Yao 09/29/16
+  #
+  # ENDDESCRIPTION
+
+  ## DBsubject('Elementary School')
+  ## DBchapter('')
+  ## DBsection('')
+  ## KEYWORDS('division','application')
+  ## DBCCSS('3.OA','4.OA')
+  ## TitleText1('')
+  ## EditionText1('')
+  ## AuthorText1('')
+  ## Section1('')
+  ## Problem1('')
+  ## Author('Carl Yao')
+  ## Institution('PCC')
+  </original-metadata>
+  <webwork seed="1">
+    <pg-macros>
+    <macro-file>MathObjects.pl</macro-file>
+    <macro-file>PGML.pl</macro-file>
+    <macro-file>PGcourse.pl</macro-file>
+    <macro-file>contextCurrency.pl</macro-file>
+    <macro-file>PCCmacros.pl</macro-file>
+    </pg-macros>
+    <setup>
+      <var name="$c">
+        <!--<static></static>-->
+      </var>
+      <var name="$aC">
+        <!--<static></static>-->
+      </var>
+      <var name="$name">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans">
+        <!--<static></static>-->
+      </var>
+      <var name="$bC">
+        <!--<static></static>-->
+      </var>
+      <var name="$b">
+        <!--<static></static>-->
+      </var>
+      <var name="$pronoun">
+        <!--<static></static>-->
+      </var>
+      <var name="$cC">
+        <!--<static></static>-->
+      </var>
+      <var name="$a">
+        <!--<static></static>-->
+      </var>
+      <var name="$ansC">
+        <!--<static></static>-->
+      </var>
+      <pg-code>
+        Context("LimitedNumeric");
+
+        $a = random(10,30,1);
+        $b = random(5,$a-1,1);
+        $c = random(10,30,1);
+        $ans = $a-$b+$c;
+
+        $sex = list_random('male','female');
+        $pronoun = 'he' if ($sex eq 'male');
+        $pronoun = 'she' if ($sex eq 'female');
+        $name = RandomName(sex=>$sex);
+
+        Context("Currency");
+        $aC = Currency($a);
+        $bC = Currency($b);
+        $cC = Currency($c);
+        $ansC = Currency($ans);
+      </pg-code>
+    </setup>
+    <statement>
+      <p>
+        <var name="$name" /> is gambling. [@ucfirst($pronoun)@] won <m><var name="$aC" /></m> in the first game, lost <m><var name="$bC" /></m> in the second game, and won <m><var name="$cC" /></m> in the third game. Altogether, how much money did <var name="$pronoun" /> win?
+        Solution: Altogether, <var name="$name" /> won <var name="$ansC" width="10" />.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        <me>
+          <var name="$a" /> - <var name="$b" /> +<var name="$c" /> = <var name="$ans" />
+        </me>
+      </p>
+
+      <p>
+        <em>Solution:</em> Altogether, <var name="$name" /> won <m><var name="$ansC" /></m>.
+      </p>
+    </solution>
+  </webwork>
+</exercise>
