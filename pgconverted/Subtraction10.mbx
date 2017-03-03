@@ -83,43 +83,22 @@
     <statement>
       <p>
         Do the following additions without using a calculator.
-        a)
-        <me>
-          <var name="$num11" /> - <var name="$num12" /> =
-        </me>
-        <var name="$ans1" width="8" />
-        a)
-        <me>
-          <var name="$num21" /> - <var name="$num22" /> =
-        </me>
-        <var name="$ans2" width="8" />
-        a)
-        <me>
-          <var name="$num31" /> - <var name="$num32" /> =
-        </me>
-        <var name="$ans3" width="8" />
+        a)    <m>\displaystyle<var name="$num11" /> - <var name="$num12" /> =</m>  <var name="$ans1" width="8" />
+        a)    <m>\displaystyle<var name="$num21" /> - <var name="$num22" /> =</m>  <var name="$ans2" width="8" />
+        a)    <m>\displaystyle<var name="$num31" /> - <var name="$num32" /> =</m>  <var name="$ans3" width="8" />
       </p>
     </statement>
     <solution>
       <p>
-        a)
-        <me>
-          <var name="$num11" /> - <var name="$num12" /> = <var name="$ans1" />
-        </me>
+        a)    <m>\displaystyle<var name="$num11" /> - <var name="$num12" /> = <var name="$ans1" /></m>
       </p>
 
       <p>
-        a)
-        <me>
-          <var name="$num21" /> - <var name="$num22" /> = <var name="$ans2" />
-        </me>
+        a)    <m>\displaystyle<var name="$num21" /> - <var name="$num22" /> = <var name="$ans2" /></m>
       </p>
 
       <p>
-        a)
-        <me>
-          <var name="$num31" /> - <var name="$num32" /> = <var name="$ans3" />
-        </me>
+        a)    <m>\displaystyle<var name="$num31" /> - <var name="$num32" /> = <var name="$ans3" /></m>
       </p>
     </solution>
   </webwork>

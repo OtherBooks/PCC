@@ -89,10 +89,7 @@
     <statement>
       <p>
         It's give that <m><var name="$int1" />\cdot<var name="$int2" />=<var name="$product1" /></m>. Use this fact to calculate the following without using a calculator:
-        <me>
-          <var name="$dec1" />(-<var name="$dec2" />) =
-        </me>
-        <var name="$product2" width="11" />
+        <m>\displaystyle<var name="$dec1" />(-<var name="$dec2" />) =</m> <var name="$product2" width="11" />
       </p>
     </statement>
     <solution>

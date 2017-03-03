@@ -56,21 +56,9 @@
     <statement>
       <p>
         Evaluate the following expressions that have integer exponents:
-        a)
-        <me>
-          1^{<var name="$a" />}=
-        </me>
-        <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="8" />{1}
-        b)
-        <me>
-          0^{<var name="$b" />}=
-        </me>
-        <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="8" />{0}
-        c)
-        <me>
-          <var name="$c" />^{1}=
-        </me>
-        <var name="$c" width="8" />
+        a)    <m>\displaystyle1^{<var name="$a" />}=</m>  <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="8" />{1}
+        b)    <m>\displaystyle0^{<var name="$b" />}=</m>  <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="8" />{0}
+        c)    <m>\displaystyle<var name="$c" />^{1}=</m>  <var name="$c" width="8" />
       </p>
     </statement>
     <solution>

@@ -91,9 +91,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$total" /> \div <var name="$numStudents" /> <var name="$symbol" /> <var name="$s1" />
-        </me>
+        <m>\displaystyle<var name="$total" /> \div <var name="$numStudents" /> <var name="$symbol" /> <var name="$s1" /></m>
       </p>
 
       <p>
@@ -117,9 +115,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$total" /> \div <var name="$numStudents" /> = <var name="$eachStudent" /> \text{ R } <var name="$remainder" />
-        </me>
+        <m>\displaystyle<var name="$total" /> \div <var name="$numStudents" /> = <var name="$eachStudent" /> \text{ R } <var name="$remainder" /></m>
       </p>
 
       <p>
@@ -131,9 +127,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$remainder" /> \div <var name="$numPiles" /> = <var name="$eachPile" />
-        </me>
+        <m>\displaystyle<var name="$remainder" /> \div <var name="$numPiles" /> = <var name="$eachPile" /></m>
       </p>
 
       <p>

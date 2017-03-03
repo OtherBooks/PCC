@@ -114,16 +114,8 @@
     <statement>
       <p>
         Do the following multiplication problems without using a calculator.
-        a)
-        <me>
-          <var name="$a1" /> \cdot <var name="$b1" /> =
-        </me>
-        <var name="$ans1" width="8" />
-        b)
-        <me>
-          <var name="$a2" /> \cdot <var name="$b2" /> =
-        </me>
-        <var name="$ans2" width="8" />
+        a)    <m>\displaystyle<var name="$a1" /> \cdot <var name="$b1" /> =</m>  <var name="$ans1" width="8" />
+        b)    <m>\displaystyle<var name="$a2" /> \cdot <var name="$b2" /> =</m>  <var name="$ans2" width="8" />
       </p>
     </statement>
     <solution>
@@ -152,15 +144,11 @@
       </p>
 
       <p>
-        <me>
-          <var name="$a1" /> = <var name="$a" /> \cdot <var name="$a1Ten" />
-        </me>
+        <m>\displaystyle<var name="$a1" /> = <var name="$a" /> \cdot <var name="$a1Ten" /></m>
       </p>
 
       <p>
-        <me>
-          <var name="$b1" /> = <var name="$b" /> \cdot <var name="$b1Ten" />
-        </me>
+        <m>\displaystyle<var name="$b1" /> = <var name="$b" /> \cdot <var name="$b1Ten" /></m>
       </p>
 
       <p>

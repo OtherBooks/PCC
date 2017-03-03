@@ -137,16 +137,8 @@
     <statement>
       <p>
         Do the following division problems without using a calculator.
-        a)
-        <me>
-          <var name="$a1" /> \div <var name="$b1" /> =
-        </me>
-        <var name="$ans1" width="8" />
-        b)
-        <me>
-          <var name="$a2" /> \div <var name="$b2" /> =
-        </me>
-        <var name="$ans2" width="8" />
+        a)    <m>\displaystyle<var name="$a1" /> \div <var name="$b1" /> =</m>  <var name="$ans1" width="8" />
+        b)    <m>\displaystyle<var name="$a2" /> \div <var name="$b2" /> =</m>  <var name="$ans2" width="8" />
       </p>
     </statement>
     <solution>

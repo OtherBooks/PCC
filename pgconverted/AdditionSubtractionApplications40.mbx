@@ -84,7 +84,7 @@
               next unless $seen{$string}++;
               $flag2 = 1;
            }
-        } until ( ($frac[4]>0) \amp\amp ($den[4]\le25) \amp\amp ($den[1]\le$den[2]) \amp\amp ($flag1==0) \amp\amp ($flag2==0) \amp\amp ($per[4]\le50) );
+        } until ( ($frac[4]>0) &amp;&amp; ($den[4]&lt;25) &amp;&amp; ($den[1]&lt;$den[2]) &amp;&amp; ($flag1==0) &amp;&amp; ($flag2==0) &amp;&amp; ($per[4]&lt;50) );
 
         $scale = 2;
         $downshift = -0.4;
@@ -171,9 +171,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$per1" />%+<var name="$per2" />%+<var name="$per3" />%=<var name="$s1" />%
-        </me>
+        <m>\displaystyle<var name="$per1" />%+<var name="$per2" />%+<var name="$per3" />%=<var name="$s1" />%</m>
       </p>
 
       <p>
@@ -181,9 +179,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$s1" />%-<var name="$per4" />%=<var name="$ans" />%
-        </me>
+        <m>\displaystyle<var name="$s1" />%-<var name="$per4" />%=<var name="$ans" />%</m>
       </p>
 
       <p>

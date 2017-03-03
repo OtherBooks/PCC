@@ -105,9 +105,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$unitPriceSmurfU" /> \cdot <var name="$numSmurf" /> = <var name="$productSmurfU" />
-        </me>
+        <m>\displaystyle<var name="$unitPriceSmurfU" /> \cdot <var name="$numSmurf" /> = <var name="$productSmurfU" /></m>
       </p>
 
       <p>
@@ -115,9 +113,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$unitPriceSpongeU" /> \cdot <var name="$numSponge" /> = <var name="$productSpongeU" />
-        </me>
+        <m>\displaystyle<var name="$unitPriceSpongeU" /> \cdot <var name="$numSponge" /> = <var name="$productSpongeU" /></m>
       </p>
 
       <p>
@@ -125,9 +121,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$productSmurfU" /> + <var name="$productSpongeU" /> = <var name="$totalU" />
-        </me>
+        <m>\displaystyle<var name="$productSmurfU" /> + <var name="$productSpongeU" /> = <var name="$totalU" /></m>
       </p>
 
       <p>

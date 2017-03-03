@@ -72,9 +72,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$int" /> \div 0.1 = <var name="$int" /> \cdot 10 = <var name="$ans1" />
-        </me>
+        <m>\displaystyle<var name="$int" /> \div 0.1 = <var name="$int" /> \cdot 10 = <var name="$ans1" /></m>
       </p>
 
       <p>
@@ -86,24 +84,15 @@
       </p>
 
       <p>
-        <me>
-          <var name="$int" /> \div 0.1 = <var name="$int" /> \cdot 10 =<var name="$ans1" />
-        </me>
-        as we move the decimal point to the right once.
+        <m>\displaystyle<var name="$int" /> \div 0.1 = <var name="$int" /> \cdot 10 =<var name="$ans1" /></m> as we move the decimal point to the right once.
       </p>
 
       <p>
-        <me>
-          <var name="$int" /> \div 0.01 = <var name="$int" /> \cdot 100 =<var name="$ans2" />
-        </me>
-        as we move the decimal point to the right twice.
+        <m>\displaystyle<var name="$int" /> \div 0.01 = <var name="$int" /> \cdot 100 =<var name="$ans2" /></m> as we move the decimal point to the right twice.
       </p>
 
       <p>
-        <me>
-          <var name="$int" /> \div 0.001 = <var name="$int" /> \cdot 1000 =<var name="$ans3" />
-        </me>
-        as we move the decimal point to the right three times.
+        <m>\displaystyle<var name="$int" /> \div 0.001 = <var name="$int" /> \cdot 1000 =<var name="$ans3" /></m> as we move the decimal point to the right three times.
       </p>
     </solution>
   </webwork>

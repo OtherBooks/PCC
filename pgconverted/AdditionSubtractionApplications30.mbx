@@ -99,10 +99,10 @@
            $quarter = 0;
            $half1 = 0;
            $half2 = 0;
-           for (my $i=0;$i\le12;$i++) {
+           for (my $i=0;$i&lt;12;$i++) {
               $months[$i] = random(10,50,1);
-              if ($i\le=2) {$quarter += $months[$i];}
-              if ($i\le=5) {$half1 += $months[$i];}
+              if ($i&lt;=2) {$quarter += $months[$i];}
+              if ($i&lt;=5) {$half1 += $months[$i];}
               else {$half2 += $months[$i];}
            }
         } until ($half1 > $half2);
@@ -166,10 +166,7 @@
     </statement>
     <solution>
       <p>
-        <em>Part a</em>:
-        <me>
-          <var name="$a0" />+<var name="$a1" />+<var name="$a2" />=<var name="$ans1" />
-        </me>
+        <em>Part a</em>:    <m>\displaystyle<var name="$a0" />+<var name="$a1" />+<var name="$a2" />=<var name="$ans1" /></m>
       </p>
 
       <p>
@@ -181,9 +178,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$a0" /> + <var name="$a1" /> + <var name="$a2" /> + <var name="$a3" /> + <var name="$a4" /> + <var name="$a5" /> = <var name="$half1" />
-        </me>
+        <m>\displaystyle<var name="$a0" /> + <var name="$a1" /> + <var name="$a2" /> + <var name="$a3" /> + <var name="$a4" /> + <var name="$a5" /> = <var name="$half1" /></m>
       </p>
 
       <p>
@@ -191,9 +186,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$a6" /> + <var name="$a7" /> + <var name="$a8" /> + <var name="$a9" /> + <var name="$a10" /> + <var name="$a11" /> = <var name="$half2" />
-        </me>
+        <m>\displaystyle<var name="$a6" /> + <var name="$a7" /> + <var name="$a8" /> + <var name="$a9" /> + <var name="$a10" /> + <var name="$a11" /> = <var name="$half2" /></m>
       </p>
 
       <p>
@@ -201,9 +194,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$half1" />-<var name="$half2" />=<var name="$ans2" />
-        </me>
+        <m>\displaystyle<var name="$half1" />-<var name="$half2" />=<var name="$ans2" /></m>
       </p>
 
       <p>

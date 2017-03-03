@@ -78,9 +78,7 @@
       </p>
 
       <p>
-        <me>
-          [$pages1+$more] \cdot <var name="$days" /> = <var name="$total" />
-        </me>
+        <m>\displaystyle[$pages1+$more] \cdot <var name="$days" /> = <var name="$total" /></m>
       </p>
 
       <p>

@@ -39,11 +39,11 @@
 
         $num11 = 0;
         $num12 = 0; 
-        for (my $i=0; $i\le3; $i++) {
+        for (my $i=0; $i&lt;3; $i++) {
            do {
               $a[$i] = random(0,9,1);
               $b[$i] = random(0,9,1);
-           } until ($a[$i]+$b[$i]\le10);
+           } until ($a[$i]+$b[$i]&lt;10);
            $num11 += $a[$i]*10**$i;
            $num12 += $b[$i]*10**$i;
         }

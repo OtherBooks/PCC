@@ -59,9 +59,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$total" /> \div <var name="$each" /> = <var name="$pieces" />
-        </me>
+        <m>\displaystyle<var name="$total" /> \div <var name="$each" /> = <var name="$pieces" /></m>
       </p>
 
       <p>
@@ -73,9 +71,7 @@
       </p>
 
       <p>
-        <me>
-          \frac{<var name="$total" />}{<var name="$each" />}=<var name="$pieces" />
-        </me>
+        <m>\displaystyle\frac{<var name="$total" />}{<var name="$each" />}=<var name="$pieces" /></m>
       </p>
     </solution>
   </webwork>

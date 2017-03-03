@@ -79,9 +79,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$total" /> \div <var name="$weekly" /> = <var name="$weeks" />
-        </me>
+        <m>\displaystyle<var name="$total" /> \div <var name="$weekly" /> = <var name="$weeks" /></m>
       </p>
 
       <p>
@@ -93,9 +91,7 @@
       </p>
 
       <p>
-        <me>
-          \frac{<var name="$total" />}{<var name="$weekly" />}=<var name="$weeks" />
-        </me>
+        <m>\displaystyle\frac{<var name="$total" />}{<var name="$weekly" />}=<var name="$weeks" /></m>
       </p>
     </solution>
   </webwork>

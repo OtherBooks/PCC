@@ -100,24 +100,15 @@
       </p>
 
       <p>
-        <me>
-          <var name="$int" /> \div 10 =<var name="$ans1" />
-        </me>
-        as we move the decimal point to the left once.
+        <m>\displaystyle<var name="$int" /> \div 10 =<var name="$ans1" /></m> as we move the decimal point to the left once.
       </p>
 
       <p>
-        <me>
-          <var name="$int" /> \div 100 =<var name="$ans2" />
-        </me>
-        as we move the decimal point to the left twice.
+        <m>\displaystyle<var name="$int" /> \div 100 =<var name="$ans2" /></m> as we move the decimal point to the left twice.
       </p>
 
       <p>
-        <me>
-          <var name="$int" /> \div 1000 =<var name="$ans3" />
-        </me>
-        as we move the decimal point to the left three times. Note that we need to add in one zero.
+        <m>\displaystyle<var name="$int" /> \div 1000 =<var name="$ans3" /></m> as we move the decimal point to the left three times. Note that we need to add in one zero.
       </p>
     </solution>
   </webwork>

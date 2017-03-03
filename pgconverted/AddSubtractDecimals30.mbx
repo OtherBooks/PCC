@@ -73,10 +73,7 @@
     <statement>
       <p>
         Add these two decimals without using a calculator.
-        <me>
-          <var name="$decimal0" /> + <var name="$decimal1" /> =
-        </me>
-        <var name="$sum" width="11" />
+        <m>\displaystyle<var name="$decimal0" /> + <var name="$decimal1" /> =</m> <var name="$sum" width="11" />
       </p>
     </statement>
     <solution>

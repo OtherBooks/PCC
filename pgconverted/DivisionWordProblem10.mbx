@@ -58,9 +58,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$product" /> \div <var name="$numStudents" /> = <var name="$each" />
-        </me>
+        <m>\displaystyle<var name="$product" /> \div <var name="$numStudents" /> = <var name="$each" /></m>
       </p>
 
       <p>
@@ -72,9 +70,7 @@
       </p>
 
       <p>
-        <me>
-          \frac{<var name="$product" />}{<var name="$numStudents" />}=<var name="$each" />
-        </me>
+        <m>\displaystyle\frac{<var name="$product" />}{<var name="$numStudents" />}=<var name="$each" /></m>
       </p>
     </solution>
   </webwork>

@@ -122,9 +122,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$total" /> \div <var name="$weeklySpending" /> <var name="$symbol" /> <var name="$s1" />
-        </me>
+        <m>\displaystyle<var name="$total" /> \div <var name="$weeklySpending" /> <var name="$symbol" /> <var name="$s1" /></m>
       </p>
 
       <p>
@@ -144,9 +142,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$total" /> \div <var name="$weeklySpending" /> = <var name="$weeks" /> \text{ R } <var name="$remainder" />
-        </me>
+        <m>\displaystyle<var name="$total" /> \div <var name="$weeklySpending" /> = <var name="$weeks" /> \text{ R } <var name="$remainder" /></m>
       </p>
 
       <p>

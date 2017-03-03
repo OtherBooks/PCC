@@ -74,9 +74,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$more" /> \cdot <var name="$days" /> = <var name="$totalMore" />
-        </me>
+        <m>\displaystyle<var name="$more" /> \cdot <var name="$days" /> = <var name="$totalMore" /></m>
       </p>
 
       <p>

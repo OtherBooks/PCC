@@ -116,24 +116,15 @@
       </p>
 
       <p>
-        <me>
-          <var name="$dec" /> \cdot <var name="$power" /> =<var name="$ans1" />
-        </me>
-        as we move the decimal point to the right <var name="$times" />. Note that we added in <m><var name="$numZeroes" /></m> zeroes.
+        <m>\displaystyle<var name="$dec" /> \cdot <var name="$power" /> =<var name="$ans1" /></m> as we move the decimal point to the right <var name="$times" />. Note that we added in <m><var name="$numZeroes" /></m> zeroes.
       </p>
 
       <p>
-        <me>
-          <var name="$dec" /> \cdot [$power*10] =<var name="$ans2" />
-        </me>
-        as we move the decimal point to the right [$numZeroes+1] times. Note that we added in <m>[$numZeroes+1]</m> zeroes.
+        <m>\displaystyle<var name="$dec" /> \cdot [$power*10] =<var name="$ans2" /></m> as we move the decimal point to the right [$numZeroes+1] times. Note that we added in <m>[$numZeroes+1]</m> zeroes.
       </p>
 
       <p>
-        <me>
-          <var name="$dec" /> \cdot [$power*100] =<var name="$ans3" />
-        </me>
-        as we move the decimal point to the right [$numZeroes+2] times. Note that we added in <m>[$numZeroes+2]</m> zeroes.
+        <m>\displaystyle<var name="$dec" /> \cdot [$power*100] =<var name="$ans3" /></m> as we move the decimal point to the right [$numZeroes+2] times. Note that we added in <m>[$numZeroes+2]</m> zeroes.
       </p>
     </solution>
   </webwork>

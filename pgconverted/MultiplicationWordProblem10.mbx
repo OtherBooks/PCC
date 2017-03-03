@@ -63,9 +63,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$each" /> \cdot <var name="$numStudents" /> = <var name="$product" />
-        </me>
+        <m>\displaystyle<var name="$each" /> \cdot <var name="$numStudents" /> = <var name="$product" /></m>
       </p>
 
       <p>

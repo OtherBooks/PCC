@@ -90,7 +90,7 @@
         $product2 = $nums[2]*$nums[3];
         $moves[2] = -log($product2/$product0)/log(10);
 
-        do {$nums[4] = $num00*list_random(0.1,0.01,0.001);} until ( ($nums[4]!=$nums[0]) \amp\amp ($nums[4]!=$nums[2]) );
+        do {$nums[4] = $num00*list_random(0.1,0.01,0.001);} until ( ($nums[4]!=$nums[0]) &amp;&amp; ($nums[4]!=$nums[2]) );
         $nums[5] = $num01*list_random(0.1,0.01,0.001);
         $product3 = $nums[4]*$nums[5];
         $moves[3] = -log($product3/$product0)/log(10);

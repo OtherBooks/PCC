@@ -86,9 +86,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$total" /> \div <var name="$hours" /> = <var name="$speed" />
-        </me>
+        <m>\displaystyle<var name="$total" /> \div <var name="$hours" /> = <var name="$speed" /></m>
       </p>
 
       <p>
@@ -100,9 +98,7 @@
       </p>
 
       <p>
-        <me>
-          \frac{<var name="$total" />}{<var name="$hours" />}=<var name="$speed" />
-        </me>
+        <m>\displaystyle\frac{<var name="$total" />}{<var name="$hours" />}=<var name="$speed" /></m>
       </p>
     </solution>
   </webwork>

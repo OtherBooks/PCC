@@ -104,14 +104,14 @@
            ($min1,$min2) = (100,100);
            ($max1,$max2) = (0,0);
            for my $j (0..$numBars-1) {
-              if ( ($frac[$j]\le$min1) \amp\amp ($frac[$j]\le$min2) ) {
+              if ( ($frac[$j]&lt;$min1) &amp;&amp; ($frac[$j]&lt;$min2) ) {
                  $min2 = $min1;
                  $min1 = $frac[$j];
-              } elsif ($frac[$j]\le$min2) {
+              } elsif ($frac[$j]&lt;$min2) {
                  $min2 = $frac[$j];
               }
 
-              if ( ($frac[$j]>$max1) \amp\amp ($frac[$j]>$max2) ) {
+              if ( ($frac[$j]>$max1) &amp;&amp; ($frac[$j]>$max2) ) {
                  $max2 = $max1;
                  $max1 = $frac[$j];
               } elsif ($frac[$j]>$max2) {
@@ -131,7 +131,7 @@
            $ans = 100*$ans;
            $ans = Compute("$ans");
 
-        } until ( ($ans\le100) \amp\amp ($denAns!=$com) );
+        } until ( ($ans&lt;100) &amp;&amp; ($denAns!=$com) );
 
         $yCover = 1;
         $xscale = 1;
@@ -213,9 +213,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$max1Miles" />+<var name="$max2Miles" />=[$max1Miles+$max2Miles]
-        </me>
+        <m>\displaystyle<var name="$max1Miles" />+<var name="$max2Miles" />=[$max1Miles+$max2Miles]</m>
       </p>
 
       <p>
@@ -223,9 +221,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$min1Miles" />+<var name="$min2Miles" />=[$min1Miles+$min2Miles]
-        </me>
+        <m>\displaystyle<var name="$min1Miles" />+<var name="$min2Miles" />=[$min1Miles+$min2Miles]</m>
       </p>
 
       <p>
@@ -233,9 +229,7 @@
       </p>
 
       <p>
-        <me>
-          [$max1Miles+$max2Miles] - [$min1Miles+$min2Miles] = <var name="$ans" />
-        </me>
+        <m>\displaystyle[$max1Miles+$max2Miles] - [$min1Miles+$min2Miles] = <var name="$ans" /></m>
       </p>
 
       <p>

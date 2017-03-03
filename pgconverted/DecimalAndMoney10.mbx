@@ -89,21 +89,15 @@
       </p>
 
       <p>
-        <me>
-          <var name="$money0" /> = <var name="$decimal0" />
-        </me>
+        <m>\displaystyle<var name="$money0" /> = <var name="$decimal0" /></m>
       </p>
 
       <p>
-        <me>
-          <var name="$money1" /> = <var name="$decimal1" />
-        </me>
+        <m>\displaystyle<var name="$money1" /> = <var name="$decimal1" /></m>
       </p>
 
       <p>
-        <me>
-          <var name="$money2" /> = <var name="$decimal2" />
-        </me>
+        <m>\displaystyle<var name="$money2" /> = <var name="$decimal2" /></m>
       </p>
     </solution>
   </webwork>

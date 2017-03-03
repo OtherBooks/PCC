@@ -90,9 +90,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$numPerGame" /> \cdot <var name="$numGamesPlayed" /> = <var name="$totalPoints" />
-        </me>
+        <m>\displaystyle<var name="$numPerGame" /> \cdot <var name="$numGamesPlayed" /> = <var name="$totalPoints" /></m>
       </p>
 
       <p>

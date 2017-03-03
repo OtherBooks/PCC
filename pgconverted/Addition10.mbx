@@ -85,67 +85,39 @@
            $num31 = random(11,80,1);
            $num32 = random(11,80,1);
            $ans3 = $num31+$num32;
-        } until ( (int($num31/10)+int($num32/10)==int($ans3/10)) \amp\amp ($ans3\le100) );
+        } until ( (int($num31/10)+int($num32/10)==int($ans3/10)) &amp;&amp; ($ans3&lt;100) );
 
         do {
            $num41 = random(11,80,1);
            $num42 = random(11,80,1);
            $ans4 = $num41+$num42;
-        } until ( (int($num41/10)+int($num42/10)!=int($ans4/10)) \amp\amp ($ans4\le100) );
+        } until ( (int($num41/10)+int($num42/10)!=int($ans4/10)) &amp;&amp; ($ans4&lt;100) );
       </pg-code>
     </setup>
     <statement>
       <p>
         Do the following additions without using a calculator.
-        a)
-        <me>
-          <var name="$num11" /> + <var name="$num12" /> =
-        </me>
-        <var name="$ans1" width="8" />
-        a)
-        <me>
-          <var name="$num21" /> + <var name="$num22" /> =
-        </me>
-        <var name="$ans2" width="8" />
-        a)
-        <me>
-          <var name="$num31" /> + <var name="$num32" /> =
-        </me>
-        <var name="$ans3" width="8" />
-        a)
-        <me>
-          <var name="$num41" /> + <var name="$num42" /> =
-        </me>
-        <var name="$ans4" width="8" />
+        a)    <m>\displaystyle<var name="$num11" /> + <var name="$num12" /> =</m>  <var name="$ans1" width="8" />
+        a)    <m>\displaystyle<var name="$num21" /> + <var name="$num22" /> =</m>  <var name="$ans2" width="8" />
+        a)    <m>\displaystyle<var name="$num31" /> + <var name="$num32" /> =</m>  <var name="$ans3" width="8" />
+        a)    <m>\displaystyle<var name="$num41" /> + <var name="$num42" /> =</m>  <var name="$ans4" width="8" />
       </p>
     </statement>
     <solution>
       <p>
-        a)
-        <me>
-          <var name="$num11" /> + <var name="$num12" /> = <var name="$ans1" />
-        </me>
+        a)    <m>\displaystyle<var name="$num11" /> + <var name="$num12" /> = <var name="$ans1" /></m>
       </p>
 
       <p>
-        a)
-        <me>
-          <var name="$num21" /> + <var name="$num22" /> = <var name="$ans2" />
-        </me>
+        a)    <m>\displaystyle<var name="$num21" /> + <var name="$num22" /> = <var name="$ans2" /></m>
       </p>
 
       <p>
-        a)
-        <me>
-          <var name="$num31" /> + <var name="$num32" /> = <var name="$ans3" />
-        </me>
+        a)    <m>\displaystyle<var name="$num31" /> + <var name="$num32" /> = <var name="$ans3" /></m>
       </p>
 
       <p>
-        a)
-        <me>
-          <var name="$num41" /> + <var name="$num42" /> = <var name="$ans4" />
-        </me>
+        a)    <m>\displaystyle<var name="$num41" /> + <var name="$num42" /> = <var name="$ans4" /></m>
       </p>
     </solution>
   </webwork>

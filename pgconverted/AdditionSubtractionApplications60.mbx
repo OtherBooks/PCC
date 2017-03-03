@@ -78,12 +78,12 @@
            }
            $out = 0;
            for my $i (1..$numPoints-1) {
-              if (($price[$i]>=$maxLimit*100) || ($price[$i]\le=0)) {
+              if (($price[$i]>=$maxLimit*100) || ($price[$i]&lt;=0)) {
                  $out = 1;
               }
            }
            $ans = abs($price[$numPoints-1]-$price[0]);
-        } until ( ($out==0) \amp\amp ($ans!=0) );
+        } until ( ($out==0) &amp;&amp; ($ans!=0) );
 
         Context("LimitedNumeric");
 
@@ -161,9 +161,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$maxPrice" /> - <var name="$minPrice" /> = <var name="$ans" />
-        </me>
+        <m>\displaystyle<var name="$maxPrice" /> - <var name="$minPrice" /> = <var name="$ans" /></m>
       </p>
 
       <p>

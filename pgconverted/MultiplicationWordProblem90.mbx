@@ -107,9 +107,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$kmPerEvent" /> \cdot <var name="$numGamesTotal" /> = <var name="$kmTotal" />
-        </me>
+        <m>\displaystyle<var name="$kmPerEvent" /> \cdot <var name="$numGamesTotal" /> = <var name="$kmTotal" /></m>
       </p>
 
       <p>
@@ -121,9 +119,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$kmPerEvent" /> \cdot <var name="$numGamesPerMonth" /> \cdot 12 \cdot <var name="$years" /> = <var name="$kmTotal" />
-        </me>
+        <m>\displaystyle<var name="$kmPerEvent" /> \cdot <var name="$numGamesPerMonth" /> \cdot 12 \cdot <var name="$years" /> = <var name="$kmTotal" /></m>
       </p>
     </solution>
   </webwork>

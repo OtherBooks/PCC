@@ -79,9 +79,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$numPerMinute" /> \cdot 60 \cdot 24 \cdot 7 = <var name="$numPerWeek" />
-        </me>
+        <m>\displaystyle<var name="$numPerMinute" /> \cdot 60 \cdot 24 \cdot 7 = <var name="$numPerWeek" /></m>
       </p>
     </solution>
   </webwork>

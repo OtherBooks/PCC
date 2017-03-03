@@ -85,9 +85,7 @@
       </p>
 
       <p>
-        <me>
-          <var name="$unitPriceU" /> \cdot <var name="$num" /> = <var name="$productU" />
-        </me>
+        <m>\displaystyle<var name="$unitPriceU" /> \cdot <var name="$num" /> = <var name="$productU" /></m>
       </p>
 
       <p>

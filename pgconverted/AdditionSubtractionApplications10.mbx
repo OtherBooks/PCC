@@ -88,9 +88,7 @@
     </statement>
     <solution>
       <p>
-        <me>
-          <var name="$a" /> - <var name="$b" /> +<var name="$c" /> = <var name="$ans" />
-        </me>
+        <m>\displaystyle<var name="$a" /> - <var name="$b" /> +<var name="$c" /> = <var name="$ans" /></m>
       </p>
 
       <p>

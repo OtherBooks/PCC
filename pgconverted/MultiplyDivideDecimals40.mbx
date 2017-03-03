@@ -103,17 +103,11 @@
       </p>
 
       <p>
-        <me>
-          <var name="$dec" /> \cdot <var name="$power1" /> =<var name="$ans1" />
-        </me>
-        as we move the decimal point to the right <var name="$times" />.
+        <m>\displaystyle<var name="$dec" /> \cdot <var name="$power1" /> =<var name="$ans1" /></m> as we move the decimal point to the right <var name="$times" />.
       </p>
 
       <p>
-        <me>
-          <var name="$dec" /> \cdot <var name="$power2" /> =<var name="$ans2" />
-        </me>
-        as we move the decimal point to the right <m><var name="$place2" /></m> times.
+        <m>\displaystyle<var name="$dec" /> \cdot <var name="$power2" /> =<var name="$ans2" /></m> as we move the decimal point to the right <m><var name="$place2" /></m> times.
       </p>
     </solution>
   </webwork>

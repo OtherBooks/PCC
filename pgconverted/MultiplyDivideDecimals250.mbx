@@ -125,9 +125,9 @@
         $product2 = $num20*$num21;
         $move22 = $moves{Real(log($product2/$product0)/log(10))};
 
-        do {$num30 = $num00*list_random(0.1,0.01,0.001);} until ( ($num30!=$num10) \amp\amp ($num30!=$num21) );
+        do {$num30 = $num00*list_random(0.1,0.01,0.001);} until ( ($num30!=$num10) &amp;&amp; ($num30!=$num21) );
         $move30 = $moves{Real(log($num30/$num00)/log(10))};
-        do {$num31 = $num01*list_random(10,100,1000);} until ( ($num31!=$num11) \amp\amp ($num31!=$num20) );
+        do {$num31 = $num01*list_random(10,100,1000);} until ( ($num31!=$num11) &amp;&amp; ($num31!=$num20) );
         $move31 = $moves{Real(log($num31/$num01)/log(10))};
         $product3 = $num30*$num31;
         $move32 = $moves{Real(log($product3/$product0)/log(10))};

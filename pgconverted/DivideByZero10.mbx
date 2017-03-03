@@ -67,16 +67,8 @@
     <statement>
       <p>
         Evaluate the following expressions. If the answer is undefined, type <em>DNE</em> (meaning "does not exist").
-        a)
-        <me>
-          <var name="$frac0" /> =
-        </me>
-        <var name="$ans0" width="8" />
-        b)
-        <me>
-          <var name="$frac1" /> =
-        </me>
-        <var name="$ans1" width="8" />
+        a)    <m>\displaystyle<var name="$frac0" /> =</m>  <var name="$ans0" width="8" />
+        b)    <m>\displaystyle<var name="$frac1" /> =</m>  <var name="$ans1" width="8" />
       </p>
     </statement>
     <solution>
@@ -143,9 +135,7 @@
       </p>
 
       <p>
-        <me>
-          \frac{0}{<var name="$a" />}=0 \text{ and } \frac{<var name="$a" />}{0} \text{ is undefined.}
-        </me>
+        <m>\displaystyle\frac{0}{<var name="$a" />}=0 \text{ and } \frac{<var name="$a" />}{0} \text{ is undefined.}</m>
       </p>
     </solution>
   </webwork>

@@ -95,21 +95,9 @@
     <statement>
       <p>
         Calculate the following without using a calculator:
-        a)
-        <me>
-          <var name="$int10" /> \cdot <var name="$int11" /> =
-        </me>
-        <var name="$product1" width="11" />
-        b)
-        <me>
-          <var name="$int20" /> \cdot <var name="$int21" /> =
-        </me>
-        <var name="$product2" width="11" />
-        c)
-        <me>
-          <var name="$int30" /> \cdot <var name="$int31" /> =
-        </me>
-        <var name="$product3" width="11" />
+        a)    <m>\displaystyle<var name="$int10" /> \cdot <var name="$int11" /> =</m> <var name="$product1" width="11" />
+        b)    <m>\displaystyle<var name="$int20" /> \cdot <var name="$int21" /> =</m> <var name="$product2" width="11" />
+        c)    <m>\displaystyle<var name="$int30" /> \cdot <var name="$int31" /> =</m> <var name="$product3" width="11" />
       </p>
     </statement>
     <solution>
@@ -141,18 +129,9 @@
       </p>
 
       <p>
-        a)
-        <me>
-          <var name="$int10" /> \cdot <var name="$int11" /> = <var name="$product1" />
-        </me>
-        b)
-        <me>
-          <var name="$int20" /> \cdot <var name="$int21" /> = <var name="$product2" />
-        </me>
-        c)
-        <me>
-          <var name="$int30" /> \cdot <var name="$int31" /> = <var name="$product3" />
-        </me>
+        a) <m>\displaystyle<var name="$int10" /> \cdot <var name="$int11" /> = <var name="$product1" /></m>
+        b) <m>\displaystyle<var name="$int20" /> \cdot <var name="$int21" /> = <var name="$product2" /></m>
+        c) <m>\displaystyle<var name="$int30" /> \cdot <var name="$int31" /> = <var name="$product3" /></m>
       </p>
     </solution>
   </webwork>
