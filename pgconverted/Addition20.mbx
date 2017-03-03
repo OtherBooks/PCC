@@ -27,8 +27,6 @@
   </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>MathObjects.pl</macro-file>
-    <macro-file>PGML.pl</macro-file>
     <macro-file>niceTables.pl</macro-file>
     <macro-file>PGcourse.pl</macro-file>
     </pg-macros>
@@ -41,11 +39,11 @@
 
         $num11 = 0;
         $num12 = 0; 
-        for (my $i=0; $i<less />3; $i++) {
+        for (my $i=0; $i\le3; $i++) {
            do {
               $a[$i] = random(0,9,1);
               $b[$i] = random(0,9,1);
-           } until ($a[$i]+$b[$i]<less />10);
+           } until ($a[$i]+$b[$i]\le10);
            $num11 += $a[$i]*10**$i;
            $num12 += $b[$i]*10**$i;
         }

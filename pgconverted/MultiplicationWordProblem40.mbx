@@ -25,10 +25,10 @@
   </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>MathObjects.pl</macro-file>
-    <macro-file>PGML.pl</macro-file>
     <macro-file>PGcourse.pl</macro-file>
     <macro-file>PCCmacros.pl</macro-file>
+    <macro-file>contextFraction.pl</macro-file>
+    <macro-file>parserNumberWithUnits.pl</macro-file>
     </pg-macros>
     <setup>
       <var name="$minSoccer">
@@ -75,7 +75,7 @@
         $events[1][2] = $events[1][1]*$weeks;
 
         $events[2][0] = "soccer";
-        do {$events[2][1] = random(40,90,5);} until ( ($events[2][1]!=$events[0][1]) <ampersand /><ampersand /> ($events[2][1]!=$events[1][1]) );
+        do {$events[2][1] = random(40,90,5);} until ( ($events[2][1]!=$events[0][1]) \amp\amp ($events[2][1]!=$events[1][1]) );
         $minSoccer = $events[2][1];
         $events[2][2] = $events[2][1]*$weeks;
 

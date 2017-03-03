@@ -25,10 +25,10 @@
   </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>MathObjects.pl</macro-file>
-    <macro-file>PGML.pl</macro-file>
     <macro-file>PCCmacros.pl</macro-file>
     <macro-file>PGcourse.pl</macro-file>
+    <macro-file>contextFraction.pl</macro-file>
+    <macro-file>parserNumberWithUnits.pl</macro-file>
     </pg-macros>
     <setup>
       <var name="$movesToWords">
@@ -90,7 +90,7 @@
         $product2 = $nums[2]*$nums[3];
         $moves[2] = -log($product2/$product0)/log(10);
 
-        do {$nums[4] = $num00*list_random(0.1,0.01,0.001);} until ( ($nums[4]!=$nums[0]) <ampersand /><ampersand /> ($nums[4]!=$nums[2]) );
+        do {$nums[4] = $num00*list_random(0.1,0.01,0.001);} until ( ($nums[4]!=$nums[0]) \amp\amp ($nums[4]!=$nums[2]) );
         $nums[5] = $num01*list_random(0.1,0.01,0.001);
         $product3 = $nums[4]*$nums[5];
         $moves[3] = -log($product3/$product0)/log(10);

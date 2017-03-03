@@ -25,8 +25,6 @@
   </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>MathObjects.pl</macro-file>
-    <macro-file>PGML.pl</macro-file>
     <macro-file>PGgraphmacros.pl</macro-file>
     <macro-file>PGcourse.pl</macro-file>
     <macro-file>contextFraction.pl</macro-file>
@@ -86,7 +84,7 @@
               next unless $seen{$string}++;
               $flag2 = 1;
            }
-        } until ( ($frac[4]>0) <ampersand /><ampersand /> ($den[4]<less />25) <ampersand /><ampersand /> ($den[1]<less />$den[2]) <ampersand /><ampersand /> ($flag1==0) <ampersand /><ampersand /> ($flag2==0) <ampersand /><ampersand /> ($per[4]<less />50) );
+        } until ( ($frac[4]>0) \amp\amp ($den[4]\le25) \amp\amp ($den[1]\le$den[2]) \amp\amp ($flag1==0) \amp\amp ($flag2==0) \amp\amp ($per[4]\le50) );
 
         $scale = 2;
         $downshift = -0.4;

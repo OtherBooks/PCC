@@ -26,12 +26,11 @@
   <webwork seed="1">
     <pg-macros>
     <macro-file>PGgraphmacros.pl</macro-file>
-    <macro-file>MathObjects.pl</macro-file>
-    <macro-file>PGML.pl</macro-file>
     <macro-file>contextPercent.pl</macro-file>
     <macro-file>contextCurrency.pl</macro-file>
     <macro-file>PCCmacros.pl</macro-file>
     <macro-file>PGcourse.pl</macro-file>
+    <macro-file>contextFraction.pl</macro-file>
     </pg-macros>
     <setup>
       <var name="$maxPrice">
@@ -79,12 +78,12 @@
            }
            $out = 0;
            for my $i (1..$numPoints-1) {
-              if (($price[$i]>=$maxLimit*100) || ($price[$i]<less />=0)) {
+              if (($price[$i]>=$maxLimit*100) || ($price[$i]\le=0)) {
                  $out = 1;
               }
            }
            $ans = abs($price[$numPoints-1]-$price[0]);
-        } until ( ($out==0) <ampersand /><ampersand /> ($ans!=0) );
+        } until ( ($out==0) \amp\amp ($ans!=0) );
 
         Context("LimitedNumeric");
 

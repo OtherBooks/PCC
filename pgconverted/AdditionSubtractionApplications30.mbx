@@ -25,8 +25,6 @@
   </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>MathObjects.pl</macro-file>
-    <macro-file>PGML.pl</macro-file>
     <macro-file>niceTables.pl</macro-file>
     <macro-file>PCCmacros.pl</macro-file>
     <macro-file>PGcourse.pl</macro-file>
@@ -101,10 +99,10 @@
            $quarter = 0;
            $half1 = 0;
            $half2 = 0;
-           for (my $i=0;$i<less />12;$i++) {
+           for (my $i=0;$i\le12;$i++) {
               $months[$i] = random(10,50,1);
-              if ($i<less />=2) {$quarter += $months[$i];}
-              if ($i<less />=5) {$half1 += $months[$i];}
+              if ($i\le=2) {$quarter += $months[$i];}
+              if ($i\le=5) {$half1 += $months[$i];}
               else {$half2 += $months[$i];}
            }
         } until ($half1 > $half2);

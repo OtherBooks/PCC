@@ -26,11 +26,10 @@
   <webwork seed="1">
     <pg-macros>
     <macro-file>PGgraphmacros.pl</macro-file>
-    <macro-file>MathObjects.pl</macro-file>
-    <macro-file>PGML.pl</macro-file>
     <macro-file>contextFraction.pl</macro-file>
     <macro-file>PCCmacros.pl</macro-file>
     <macro-file>PGcourse.pl</macro-file>
+    <macro-file>contextFraction.pl</macro-file>
     </pg-macros>
     <setup>
       <var name="$min1Miles">
@@ -105,14 +104,14 @@
            ($min1,$min2) = (100,100);
            ($max1,$max2) = (0,0);
            for my $j (0..$numBars-1) {
-              if ( ($frac[$j]<less />$min1) <ampersand /><ampersand /> ($frac[$j]<less />$min2) ) {
+              if ( ($frac[$j]\le$min1) \amp\amp ($frac[$j]\le$min2) ) {
                  $min2 = $min1;
                  $min1 = $frac[$j];
-              } elsif ($frac[$j]<less />$min2) {
+              } elsif ($frac[$j]\le$min2) {
                  $min2 = $frac[$j];
               }
 
-              if ( ($frac[$j]>$max1) <ampersand /><ampersand /> ($frac[$j]>$max2) ) {
+              if ( ($frac[$j]>$max1) \amp\amp ($frac[$j]>$max2) ) {
                  $max2 = $max1;
                  $max1 = $frac[$j];
               } elsif ($frac[$j]>$max2) {
@@ -132,7 +131,7 @@
            $ans = 100*$ans;
            $ans = Compute("$ans");
 
-        } until ( ($ans<less />100) <ampersand /><ampersand /> ($denAns!=$com) );
+        } until ( ($ans\le100) \amp\amp ($denAns!=$com) );
 
         $yCover = 1;
         $xscale = 1;

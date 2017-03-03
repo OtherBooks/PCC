@@ -25,9 +25,8 @@
   </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>MathObjects.pl</macro-file>
-    <macro-file>PGML.pl</macro-file>
     <macro-file>PGcourse.pl</macro-file>
+    <macro-file>contextFraction.pl</macro-file>
     </pg-macros>
     <setup>
       <var name="$numStudents">
