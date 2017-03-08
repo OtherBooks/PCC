@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>Addition10</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -97,27 +98,39 @@
     <statement>
       <p>
         Do the following additions without using a calculator.
-        a)    <m>\displaystyle<var name="$num11" /> + <var name="$num12" /> =</m>  <var name="$ans1" width="8" />
-        a)    <m>\displaystyle<var name="$num21" /> + <var name="$num22" /> =</m>  <var name="$ans2" width="8" />
-        a)    <m>\displaystyle<var name="$num31" /> + <var name="$num32" /> =</m>  <var name="$ans3" width="8" />
-        a)    <m>\displaystyle<var name="$num41" /> + <var name="$num42" /> =</m>  <var name="$ans4" width="8" />
+      </p>
+
+      <p>
+        a)    <m>\displaystyle{<var name="$num11" /> + <var name="$num12" /> =}</m>  <var name="$ans1" width="8" />
+      </p>
+
+      <p>
+        a)    <m>\displaystyle{<var name="$num21" /> + <var name="$num22" /> =}</m>  <var name="$ans2" width="8" />
+      </p>
+
+      <p>
+        a)    <m>\displaystyle{<var name="$num31" /> + <var name="$num32" /> =}</m>  <var name="$ans3" width="8" />
+      </p>
+
+      <p>
+        a)    <m>\displaystyle{<var name="$num41" /> + <var name="$num42" /> =}</m>  <var name="$ans4" width="8" />
       </p>
     </statement>
     <solution>
       <p>
-        a)    <m>\displaystyle<var name="$num11" /> + <var name="$num12" /> = <var name="$ans1" /></m>
+        a)    <m>\displaystyle{<var name="$num11" /> + <var name="$num12" /> = <var name="$ans1" />}</m>
       </p>
 
       <p>
-        a)    <m>\displaystyle<var name="$num21" /> + <var name="$num22" /> = <var name="$ans2" /></m>
+        a)    <m>\displaystyle{<var name="$num21" /> + <var name="$num22" /> = <var name="$ans2" />}</m>
       </p>
 
       <p>
-        a)    <m>\displaystyle<var name="$num31" /> + <var name="$num32" /> = <var name="$ans3" /></m>
+        a)    <m>\displaystyle{<var name="$num31" /> + <var name="$num32" /> = <var name="$ans3" />}</m>
       </p>
 
       <p>
-        a)    <m>\displaystyle<var name="$num41" /> + <var name="$num42" /> = <var name="$ans4" /></m>
+        a)    <m>\displaystyle{<var name="$num41" /> + <var name="$num42" /> = <var name="$ans4" />}</m>
       </p>
     </solution>
   </webwork>

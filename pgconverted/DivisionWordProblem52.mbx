@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>DivisionWordProblem52</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -77,6 +78,9 @@
     <statement>
       <p>
         <var name="$name" /> drove <m><var name="$totalU" /></m> at a constant speed of <m><var name="$speedU" /></m>. How many hours did <var name="$name" /> drive? In your answer, use <em>mi</em> for miles, <em>hr</em> for hours, and *mi/hr* for miles per hour.
+      </p>
+
+      <p>
         <var name="$name" /> drove for <var name="$hoursU" width="11" />.
       </p>
     </statement>
@@ -86,7 +90,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$speed" /> = <var name="$hours" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$speed" /> = <var name="$hours" />}</m>
       </p>
 
       <p>
@@ -98,7 +102,7 @@
       </p>
 
       <p>
-        <m>\displaystyle\frac{<var name="$total" />}{<var name="$speed" />}=<var name="$hours" /></m>
+        <m>\displaystyle{\frac{<var name="$total" />}{<var name="$speed" />}=<var name="$hours" />}</m>
       </p>
     </solution>
   </webwork>

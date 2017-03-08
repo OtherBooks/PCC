@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>AdditionSubtractionApplications20</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -64,12 +65,15 @@
     <statement>
       <p>
         <var name="$name" /> is working to pass a local measure, and <var name="$pronoun" /> needs to collect a total of <m><var name="$total" /></m> signatures in three days. On the first day, <var name="$pronoun" /> collected <m><var name="$a" /></m> signatures; on the second day, <var name="$pronoun" /> collected <m><var name="$b" /></m>. To complete her job, how many more signatures does <var name="$pronoun" /> need to collect on the third day?
+      </p>
+
+      <p>
         Solution: <var name="$name" /> needs to collect <var name="$ans" width="11" /> more signatures on the third day.
       </p>
     </statement>
     <solution>
       <p>
-        <m>\displaystyle<var name="$total" /> - <var name="$a" /> - <var name="$b" /> = <var name="$ans" /></m>
+        <m>\displaystyle{<var name="$total" /> - <var name="$a" /> - <var name="$b" /> = <var name="$ans" />}</m>
       </p>
 
       <p>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>multiplicationTable25</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -63,18 +64,54 @@
     <statement>
       <p>
         ##Division Facts
+      </p>
+
+      <p>
         Use multiplication facts reversely to do the following division problems. For example, since <m>7 \cdot 8 = 56</m>, we know <m>56 \div 7 = 8</m>.
+      </p>
+
+      <p>
         Do this problem every day until you are fluent with doing this type of problems.
-        <m>\displaystyle[@$products[0]@] \div [@$num2[0]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[0]}
-        <m>\displaystyle[@$products[1]@] \div [@$num2[1]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[1]}
-        <m>\displaystyle[@$products[2]@] \div [@$num2[2]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[2]}
-        <m>\displaystyle[@$products[3]@] \div [@$num2[3]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[3]}
-        <m>\displaystyle[@$products[4]@] \div [@$num2[4]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[4]}
-        <m>\displaystyle[@$products[5]@] \div [@$num2[5]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[5]}
-        <m>\displaystyle[@$products[6]@] \div [@$num2[6]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[6]}
-        <m>\displaystyle[@$products[7]@] \div [@$num2[7]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[7]}
-        <m>\displaystyle[@$products[8]@] \div [@$num2[8]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[8]}
-        <m>\displaystyle[@$products[9]@] \div [@$num2[9]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[9]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$products[0]@] \div [@$num2[0]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[0]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$products[1]@] \div [@$num2[1]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[1]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$products[2]@] \div [@$num2[2]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[2]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$products[3]@] \div [@$num2[3]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[3]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$products[4]@] \div [@$num2[4]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[4]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$products[5]@] \div [@$num2[5]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[5]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$products[6]@] \div [@$num2[6]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[6]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$products[7]@] \div [@$num2[7]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[7]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$products[8]@] \div [@$num2[8]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[8]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$products[9]@] \div [@$num2[9]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$num1[9]}
       </p>
     </statement>
     <solution>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplicationWordProblem40</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -97,7 +98,13 @@
     <statement>
       <p>
         <var name="$name" /> loves sports. Every week, <var name="$pronoun" /> practices <m><var name="$minBasketball" /></m> minutes of basketball, <m><var name="$minFootball" /></m> minutes of volleyball, and <m><var name="$minSoccer" /></m> minutes of soccer.
+      </p>
+
+      <p>
         In total, how many minutes of <var name="$event" /> will <var name="$name" /> play in <m><var name="$weeks" /></m> weeks?
+      </p>
+
+      <p>
         Solution: <var name="$name" /> will play <var name="$minutesTotal" width="7" /> minutes of <var name="$event" /> in <m><var name="$weeks" /></m> weeks.
       </p>
     </statement>
@@ -107,7 +114,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$minutesWeekly" /> \cdot <var name="$weeks" /> = <var name="$minutesTotal" /></m>
+        <m>\displaystyle{<var name="$minutesWeekly" /> \cdot <var name="$weeks" /> = <var name="$minutesTotal" />}</m>
       </p>
 
       <p>

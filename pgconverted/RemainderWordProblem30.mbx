@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>RemainderWordProblem30</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -66,6 +67,9 @@
     <statement>
       <p>
         A school is planning for a field trip for <m><var name="$total" /></m> students and staff. Each school bus can hold <m><var name="$each" /></m> people. How many school buses are needed?
+      </p>
+
+      <p>
         <em>Solution:</em> <var name="$busesNeeded" width="6" /> school buses are needed.
       </p>
     </statement>
@@ -75,7 +79,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$each" /> <var name="$symbol" /> <var name="$s1" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$each" /> <var name="$symbol" /> <var name="$s1" />}</m>
       </p>
 
       <p>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>Subtraction20</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -33,6 +34,36 @@
     <macro-file>parserNumberWithUnits.pl</macro-file>
     </pg-macros>
     <setup>
+      <var name="$PAR">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans1">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans3">
+        <!--<static></static>-->
+      </var>
+      <var name="$ans2">
+        <!--<static></static>-->
+      </var>
+      <var name="$num11">
+        <!--<static></static>-->
+      </var>
+      <var name="$num12">
+        <!--<static></static>-->
+      </var>
+      <var name="$num32">
+        <!--<static></static>-->
+      </var>
+      <var name="$num31">
+        <!--<static></static>-->
+      </var>
+      <var name="$num21">
+        <!--<static></static>-->
+      </var>
+      <var name="$num22">
+        <!--<static></static>-->
+      </var>
       <pg-code>
         Context("LimitedNumeric");
 
@@ -75,19 +106,7 @@
         END_TEXT
         Context()->normalStrings;
         Context()->texStrings;
-        BEGIN_SOLUTION
 
-        $PAR
-        \{ 
-        DataTable([[{data=>"",header=>"CH"},{data=>"",header=>"CH"},],
-        ["\( $num11\)","\( $num21\)","\( $num31 \)"],
-        ["\( \underline{-$num12} \)","\( \underline{-$num22} \)","\( \underline{-$num32} \)"],
-        ["\( $ans1 \)","\( $ans2 \)","\( $ans3 \)"],
-        ], tablecss=>"border:0px solid;", align=>rrr);
-        \}  
-
-        $PAR
-        END_SOLUTION
         Context()->normalStrings;
 
         $ansevaluator = Compute("$ans1") -> cmp
@@ -102,7 +121,18 @@
     </statement>
     <solution>
       <p>
-        SOLUTION_NOT_PARSED_CORRECTLY
+        $PAR
+        \{ 
+        DataTable([[{data=>"",header=>"CH"},{data=>"",header=>"CH"},],
+        ["\( $num11\)","\( $num21\)","\( $num31 \)"],
+        ["\( \underline{-$num12} \)","\( \underline{-$num22} \)","\( \underline{-$num32} \)"],
+        ["\( $ans1 \)","\( $ans2 \)","\( $ans3 \)"],
+        ], tablecss=>"border:0px solid;", align=>rrr);
+        \}
+      </p>
+
+      <p>
+        $PAR
       </p>
     </solution>
   </webwork>

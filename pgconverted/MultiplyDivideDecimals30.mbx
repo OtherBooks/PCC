@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplyDivideDecimals30</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -73,22 +74,31 @@
     <statement>
       <p>
         Calculate without using a calculator. Don't use commas in your answer.
+      </p>
+
+      <p>
         <m><var name="$dec" /> \cdot <var name="$power" /></m> = <var name="$ans1" width="11" />
+      </p>
+
+      <p>
         <m><var name="$dec" /> \cdot [$power*10]</m> = <var name="$ans2" width="11" />
+      </p>
+
+      <p>
         <m><var name="$dec" /> \cdot [$power*100]</m> = <var name="$ans3" width="11" />
       </p>
     </statement>
     <solution>
       <p>
-        <m>\displaystyle<var name="$dec" /> \cdot <var name="$power" /> =<var name="$ans1" /></m> as we move the decimal point to the right <var name="$times" />.
+        <m>\displaystyle{<var name="$dec" /> \cdot <var name="$power" /> =<var name="$ans1" />}</m> as we move the decimal point to the right <var name="$times" />.
       </p>
 
       <p>
-        <m>\displaystyle<var name="$dec" /> \cdot [$power*10] =<var name="$ans2" /></m> as we move the decimal point to the right [$numZeroes+1] times.
+        <m>\displaystyle{<var name="$dec" /> \cdot [$power*10] =<var name="$ans2" />}</m> as we move the decimal point to the right [$numZeroes+1] times.
       </p>
 
       <p>
-        <m>\displaystyle<var name="$dec" /> \cdot [$power*100] =<var name="$ans3" /></m> as we move the decimal point to the right [$numZeroes+2] times.
+        <m>\displaystyle{<var name="$dec" /> \cdot [$power*100] =<var name="$ans3" />}</m> as we move the decimal point to the right [$numZeroes+2] times.
       </p>
     </solution>
   </webwork>

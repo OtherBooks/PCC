@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>DivisionWordProblem90</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -51,6 +52,9 @@
     <statement>
       <p>
         A team is climbing a mountain, which is <m><var name="$total" /></m> meters high. The team plans to climb <m><var name="$rate" /></m> meters every day. How many days would it take the team to climb to the top?
+      </p>
+
+      <p>
         Solution: It would take the team <var name="$days" width="12" /> days to climb to the top.
       </p>
     </statement>
@@ -60,7 +64,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$rate" /> = <var name="$days" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$rate" /> = <var name="$days" />}</m>
       </p>
 
       <p>
@@ -72,7 +76,7 @@
       </p>
 
       <p>
-        <m>\displaystyle\frac{<var name="$total" />}{<var name="$rate" />}=<var name="$days" /></m>
+        <m>\displaystyle{\frac{<var name="$total" />}{<var name="$rate" />}=<var name="$days" />}</m>
       </p>
     </solution>
   </webwork>

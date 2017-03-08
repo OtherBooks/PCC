@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplyDivideDecimals20</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -73,8 +74,17 @@
     <statement>
       <p>
         Calculate without using a calculator. Don't use commas in your answer.
+      </p>
+
+      <p>
         <m><var name="$dec" /> \cdot <var name="$power" /></m> = <var name="$ans1" width="11" />
+      </p>
+
+      <p>
         <m><var name="$dec" /> \cdot [$power*10]</m> = <var name="$ans2" width="11" />
+      </p>
+
+      <p>
         <m><var name="$dec" /> \cdot [$power*100]</m> = <var name="$ans3" width="11" />
       </p>
     </statement>
@@ -116,15 +126,15 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$dec" /> \cdot <var name="$power" /> =<var name="$ans1" /></m> as we move the decimal point to the right <var name="$times" />. Note that we added in <m><var name="$numZeroes" /></m> zeroes.
+        <m>\displaystyle{<var name="$dec" /> \cdot <var name="$power" /> =<var name="$ans1" />}</m> as we move the decimal point to the right <var name="$times" />. Note that we added in <m><var name="$numZeroes" /></m> zeroes.
       </p>
 
       <p>
-        <m>\displaystyle<var name="$dec" /> \cdot [$power*10] =<var name="$ans2" /></m> as we move the decimal point to the right [$numZeroes+1] times. Note that we added in <m>[$numZeroes+1]</m> zeroes.
+        <m>\displaystyle{<var name="$dec" /> \cdot [$power*10] =<var name="$ans2" />}</m> as we move the decimal point to the right [$numZeroes+1] times. Note that we added in <m>[$numZeroes+1]</m> zeroes.
       </p>
 
       <p>
-        <m>\displaystyle<var name="$dec" /> \cdot [$power*100] =<var name="$ans3" /></m> as we move the decimal point to the right [$numZeroes+2] times. Note that we added in <m>[$numZeroes+2]</m> zeroes.
+        <m>\displaystyle{<var name="$dec" /> \cdot [$power*100] =<var name="$ans3" />}</m> as we move the decimal point to the right [$numZeroes+2] times. Note that we added in <m>[$numZeroes+2]</m> zeroes.
       </p>
     </solution>
   </webwork>

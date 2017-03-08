@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplicationWordProblem50</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -64,7 +65,13 @@
     <statement>
       <p>
         <var name="$name1" /> and <var name="$name2" /> are participating in a summer reading program. <var name="$name1" /> reads <m><var name="$pages1" /></m> pages every day, and <var name="$name2" /> reads <m><var name="$more" /></m> more pages than <var name="$name1" /> every day.
+      </p>
+
+      <p>
         How many pages will <var name="$name2" /> read in <m><var name="$days" /></m> days?
+      </p>
+
+      <p>
         Solution: <var name="$name2" /> will read <var name="$total" width="7" /> pages in <m><var name="$days" /></m> days.
       </p>
     </statement>
@@ -78,7 +85,7 @@
       </p>
 
       <p>
-        <m>\displaystyle[$pages1+$more] \cdot <var name="$days" /> = <var name="$total" /></m>
+        <m>\displaystyle{[$pages1+$more] \cdot <var name="$days" /> = <var name="$total" />}</m>
       </p>
 
       <p>

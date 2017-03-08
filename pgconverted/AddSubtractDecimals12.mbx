@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>AddSubtractDecimals12</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -87,7 +88,10 @@
     <statement>
       <p>
         Add these two decimals without using a calculator.
-        <m>\displaystyle<var name="$decimal0" /> + <var name="$decimal1" /> =</m> <var name="$sum" width="11" />
+      </p>
+
+      <p>
+        <m>\displaystyle{<var name="$decimal0" /> + <var name="$decimal1" /> =}</m> <var name="$sum" width="11" />
       </p>
     </statement>
     <solution>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>DivisionWordProblem10</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -49,6 +50,9 @@
     <statement>
       <p>
         In a class, the teacher will hand out a total of <m><var name="$product" /></m> marbles to all his <m><var name="$numStudents" /></m> students evenly. How many marbles will each student receive?
+      </p>
+
+      <p>
         Solution: Each student will receive <var name="$each" width="7" /> marbles.
       </p>
     </statement>
@@ -58,7 +62,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$product" /> \div <var name="$numStudents" /> = <var name="$each" /></m>
+        <m>\displaystyle{<var name="$product" /> \div <var name="$numStudents" /> = <var name="$each" />}</m>
       </p>
 
       <p>
@@ -70,7 +74,7 @@
       </p>
 
       <p>
-        <m>\displaystyle\frac{<var name="$product" />}{<var name="$numStudents" />}=<var name="$each" /></m>
+        <m>\displaystyle{\frac{<var name="$product" />}{<var name="$numStudents" />}=<var name="$each" />}</m>
       </p>
     </solution>
   </webwork>

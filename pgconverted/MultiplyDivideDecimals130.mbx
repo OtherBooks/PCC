@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplyDivideDecimals130</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -57,8 +58,17 @@
     <statement>
       <p>
         Calculate without using a calculator.
+      </p>
+
+      <p>
         <m><var name="$int" /> \div 0.1</m> = <var name="$ans1" width="11" />
+      </p>
+
+      <p>
         <m><var name="$int" /> \div 0.01</m> = <var name="$ans2" width="11" />
+      </p>
+
+      <p>
         <m><var name="$int" /> \div 0.001</m> = <var name="$ans3" width="11" />
       </p>
     </statement>
@@ -72,7 +82,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$int" /> \div 0.1 = <var name="$int" /> \cdot 10 = <var name="$ans1" /></m>
+        <m>\displaystyle{<var name="$int" /> \div 0.1 = <var name="$int" /> \cdot 10 = <var name="$ans1" />}</m>
       </p>
 
       <p>
@@ -84,15 +94,15 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$int" /> \div 0.1 = <var name="$int" /> \cdot 10 =<var name="$ans1" /></m> as we move the decimal point to the right once.
+        <m>\displaystyle{<var name="$int" /> \div 0.1 = <var name="$int" /> \cdot 10 =<var name="$ans1" />}</m> as we move the decimal point to the right once.
       </p>
 
       <p>
-        <m>\displaystyle<var name="$int" /> \div 0.01 = <var name="$int" /> \cdot 100 =<var name="$ans2" /></m> as we move the decimal point to the right twice.
+        <m>\displaystyle{<var name="$int" /> \div 0.01 = <var name="$int" /> \cdot 100 =<var name="$ans2" />}</m> as we move the decimal point to the right twice.
       </p>
 
       <p>
-        <m>\displaystyle<var name="$int" /> \div 0.001 = <var name="$int" /> \cdot 1000 =<var name="$ans3" /></m> as we move the decimal point to the right three times.
+        <m>\displaystyle{<var name="$int" /> \div 0.001 = <var name="$int" /> \cdot 1000 =<var name="$ans3" />}</m> as we move the decimal point to the right three times.
       </p>
     </solution>
   </webwork>

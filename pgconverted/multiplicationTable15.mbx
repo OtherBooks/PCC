@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>multiplicationTable15</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -63,18 +64,54 @@
     <statement>
       <p>
         ##Multiplication Facts
+      </p>
+
+      <p>
         If you have not memorized the multiplication table yet, silently chant the multiplication table once or twice, and then do the following multiplication problems. If you need to look at a multiplication table, use Google to find one.
+      </p>
+
+      <p>
         Do this problem every day until you are fluent with the multiplication table.
-        <m>\displaystyle[@$num1[0]@] \cdot [@$num2[0]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[0]}
-        <m>\displaystyle[@$num1[1]@] \cdot [@$num2[1]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[1]}
-        <m>\displaystyle[@$num1[2]@] \cdot [@$num2[2]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[2]}
-        <m>\displaystyle[@$num1[3]@] \cdot [@$num2[3]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[3]}
-        <m>\displaystyle[@$num1[4]@] \cdot [@$num2[4]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[4]}
-        <m>\displaystyle[@$num1[5]@] \cdot [@$num2[5]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[5]}
-        <m>\displaystyle[@$num1[6]@] \cdot [@$num2[6]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[6]}
-        <m>\displaystyle[@$num1[7]@] \cdot [@$num2[7]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[7]}
-        <m>\displaystyle[@$num1[8]@] \cdot [@$num2[8]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[8]}
-        <m>\displaystyle[@$num1[9]@] \cdot [@$num2[9]@]</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[9]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$num1[0]@] \cdot [@$num2[0]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[0]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$num1[1]@] \cdot [@$num2[1]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[1]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$num1[2]@] \cdot [@$num2[2]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[2]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$num1[3]@] \cdot [@$num2[3]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[3]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$num1[4]@] \cdot [@$num2[4]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[4]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$num1[5]@] \cdot [@$num2[5]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[5]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$num1[6]@] \cdot [@$num2[6]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[6]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$num1[7]@] \cdot [@$num2[7]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[7]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$num1[8]@] \cdot [@$num2[8]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[8]}
+      </p>
+
+      <p>
+        <m>\displaystyle{[@$num1[9]@] \cdot [@$num2[9]@]}</m> = <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="7" />{$products[9]}
       </p>
     </statement>
     <solution>

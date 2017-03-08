@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>AdditionSubtractionApplications50</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -196,6 +197,9 @@
     <statement>
       <p>
         The following bar graph shows the distance different runners ran in a relay race.
+      </p>
+
+      <p>
 
         <figure>
           <image pg-name="$picture" width="400" height="400" tex_size="400" >
@@ -203,7 +207,13 @@
           </image>
         </figure>
 
+      </p>
+
+      <p>
         Identify those two runners who ran the longest distances, and then identify those two runners who ran the shortest distances.
+      </p>
+
+      <p>
         The best two runners ran <var name="$ans" width="13" /> more miles than the worst two runners.
       </p>
     </statement>
@@ -213,7 +223,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$max1Miles" />+<var name="$max2Miles" />=[$max1Miles+$max2Miles]</m>
+        <m>\displaystyle{<var name="$max1Miles" />+<var name="$max2Miles" />=[$max1Miles+$max2Miles]}</m>
       </p>
 
       <p>
@@ -221,7 +231,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$min1Miles" />+<var name="$min2Miles" />=[$min1Miles+$min2Miles]</m>
+        <m>\displaystyle{<var name="$min1Miles" />+<var name="$min2Miles" />=[$min1Miles+$min2Miles]}</m>
       </p>
 
       <p>
@@ -229,7 +239,7 @@
       </p>
 
       <p>
-        <m>\displaystyle[$max1Miles+$max2Miles] - [$min1Miles+$min2Miles] = <var name="$ans" /></m>
+        <m>\displaystyle{[$max1Miles+$max2Miles] - [$min1Miles+$min2Miles] = <var name="$ans" />}</m>
       </p>
 
       <p>

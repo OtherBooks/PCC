@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplicationWordProblem30</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -95,7 +96,13 @@
     <statement>
       <p>
         <var name="$name" /> is saving money to buy action figures. [@ucfirst($pronoun)@]* plans to buy <m><var name="$numSmurf" /></m> Smurf action figures, each of which costs <m><var name="$unitPriceSmurfU" /></m>. In addition, <var name="$pronoun" /> also plans to buy <m><var name="$numSponge" /></m> SpongeBob action figures, each of which costs <m><var name="$unitPriceSpongeU" /></m>.
+      </p>
+
+      <p>
         How much money does <var name="$name" /> need to save?
+      </p>
+
+      <p>
         <var name="$name" /> needs to save <var name="$totalU" width="7" />.
       </p>
     </statement>
@@ -105,7 +112,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$unitPriceSmurfU" /> \cdot <var name="$numSmurf" /> = <var name="$productSmurfU" /></m>
+        <m>\displaystyle{<var name="$unitPriceSmurfU" /> \cdot <var name="$numSmurf" /> = <var name="$productSmurfU" />}</m>
       </p>
 
       <p>
@@ -113,7 +120,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$unitPriceSpongeU" /> \cdot <var name="$numSponge" /> = <var name="$productSpongeU" /></m>
+        <m>\displaystyle{<var name="$unitPriceSpongeU" /> \cdot <var name="$numSponge" /> = <var name="$productSpongeU" />}</m>
       </p>
 
       <p>
@@ -121,7 +128,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$productSmurfU" /> + <var name="$productSpongeU" /> = <var name="$totalU" /></m>
+        <m>\displaystyle{<var name="$productSmurfU" /> + <var name="$productSpongeU" /> = <var name="$totalU" />}</m>
       </p>
 
       <p>

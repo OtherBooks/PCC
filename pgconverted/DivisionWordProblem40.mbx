@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>DivisionWordProblem40</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -66,6 +67,9 @@
     <statement>
       <p>
         <var name="$name" /> just bought a total of <m><var name="$total" /></m> movies. [@ucfirst($pronoun)@] will watch <m><var name="$weekly" /></m> movies every week. In how many weeks will <var name="$name" /> finish watching all the movies?
+      </p>
+
+      <p>
         Solution: <var name="$name" /> will finish watching all movies in <var name="$weeks" width="10" /> weeks.
       </p>
     </statement>
@@ -79,7 +83,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$weekly" /> = <var name="$weeks" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$weekly" /> = <var name="$weeks" />}</m>
       </p>
 
       <p>
@@ -91,7 +95,7 @@
       </p>
 
       <p>
-        <m>\displaystyle\frac{<var name="$total" />}{<var name="$weekly" />}=<var name="$weeks" /></m>
+        <m>\displaystyle{\frac{<var name="$total" />}{<var name="$weekly" />}=<var name="$weeks" />}</m>
       </p>
     </solution>
   </webwork>

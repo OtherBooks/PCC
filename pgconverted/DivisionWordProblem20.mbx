@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>DivisionWordProblem20</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -49,6 +50,9 @@
     <statement>
       <p>
         For an activity in a class, each student will use <m><var name="$each" /></m> marbles. The teacher purchased a total of <m><var name="$product" /></m> marbles for his class. How many students are there in this class?
+      </p>
+
+      <p>
         Solution: There are <var name="$numStudents" width="10" /> students in this class.
       </p>
     </statement>
@@ -58,7 +62,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$product" /> \div <var name="$each" /> = <var name="$numStudents" /></m>
+        <m>\displaystyle{<var name="$product" /> \div <var name="$each" /> = <var name="$numStudents" />}</m>
       </p>
 
       <p>
@@ -70,7 +74,7 @@
       </p>
 
       <p>
-        <m>\displaystyle\frac{<var name="$product" />}{<var name="$each" />}=<var name="$numStudents" /></m>
+        <m>\displaystyle{\frac{<var name="$product" />}{<var name="$each" />}=<var name="$numStudents" />}</m>
       </p>
     </solution>
   </webwork>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplicationWordProblem80</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -77,6 +78,9 @@
     <statement>
       <p>
         <var name="$name" /> is a star player in <var name="$possessive" /> basketball team. Last season, <var name="$name" /> scored an average of <m><var name="$numPerGame" /></m> points per game. The season had a total of <m><var name="$numGamesTotal" /></m> games, but <var name="$name" /> missed <m><var name="$numGamesMissed" /></m> games. How many points did <var name="$name" /> score in total last season?
+      </p>
+
+      <p>
         <em>Solution:</em> <var name="$name" /> scored a total of <var name="$totalPoints" width="11" /> points last season.
       </p>
     </statement>
@@ -90,7 +94,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$numPerGame" /> \cdot <var name="$numGamesPlayed" /> = <var name="$totalPoints" /></m>
+        <m>\displaystyle{<var name="$numPerGame" /> \cdot <var name="$numGamesPlayed" /> = <var name="$totalPoints" />}</m>
       </p>
 
       <p>

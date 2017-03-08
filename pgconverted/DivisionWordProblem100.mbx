@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>DivisionWordProblem100</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -50,6 +51,9 @@
     <statement>
       <p>
         An archeology team is studying a buried city. The team can cover <m><var name="$rate" /></m> square meters every day. The whole area covers about <m><var name="$total" /></m> square meters. How many days will it take the team to complete studying the whole area?
+      </p>
+
+      <p>
         Solution: It would take the team <var name="$days" width="12" /> days to cover the whole area.
       </p>
     </statement>
@@ -59,7 +63,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$rate" /> = <var name="$days" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$rate" /> = <var name="$days" />}</m>
       </p>
 
       <p>
@@ -71,7 +75,7 @@
       </p>
 
       <p>
-        <m>\displaystyle\frac{<var name="$total" />}{<var name="$rate" />}=<var name="$days" /></m>
+        <m>\displaystyle{\frac{<var name="$total" />}{<var name="$rate" />}=<var name="$days" />}</m>
       </p>
     </solution>
   </webwork>

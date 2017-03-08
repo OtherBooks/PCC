@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>RemainderWordProblem40</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -90,6 +91,9 @@
     <statement>
       <p>
         <var name="$name" /> saved <m><var name="$totalU" /></m>, and will purchase some Lego figures. Each Lego figure costs <m><var name="$eachU" /></m>. How many Lego figures can <var name="$name" /> afford?
+      </p>
+
+      <p>
         <em>Solution:</em> <var name="$name" /> can afford <var name="$numLegoes" width="10" /> Lego figures.
       </p>
     </statement>
@@ -99,7 +103,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$each" /> <var name="$symbol" /> <var name="$s1" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$each" /> <var name="$symbol" /> <var name="$s1" />}</m>
       </p>
 
       <p>

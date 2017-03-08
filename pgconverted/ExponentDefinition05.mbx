@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>ExponentDefinition05</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -57,8 +58,14 @@
     <statement>
       <p>
         Evaluate the following expressions that have integer exponents:
-        a)   <m>\displaystyle<var name="$a" />^{2}=</m>  <var name="$ans1" width="8" />
-        b)   <m>\displaystyle<var name="$b" />^{3}=</m>  <var name="$ans2" width="8" />
+      </p>
+
+      <p>
+        a)   <m>\displaystyle{<var name="$a" />^{2}=}</m>  <var name="$ans1" width="8" />
+      </p>
+
+      <p>
+        b)   <m>\displaystyle{<var name="$b" />^{3}=}</m>  <var name="$ans2" width="8" />
       </p>
     </statement>
     <solution>

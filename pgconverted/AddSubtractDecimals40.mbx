@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>AddSubtractDecimals40</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -73,7 +74,10 @@
     <statement>
       <p>
         Subtract these two decimals without using a calculator.
-        <m>\displaystyle<var name="$decimal0" /> - <var name="$decimal1" /> =</m> <var name="$dif" width="11" />
+      </p>
+
+      <p>
+        <m>\displaystyle{<var name="$decimal0" /> - <var name="$decimal1" /> =}</m> <var name="$dif" width="11" />
       </p>
     </statement>
     <solution>

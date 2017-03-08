@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplicationWordProblem10</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -50,6 +51,9 @@
     <statement>
       <p>
         In a class, the teacher handed out <m><var name="$each" /></m> marbles to each of his <m><var name="$numStudents" /></m> students. How many marbles did the teacher hand out altogether?
+      </p>
+
+      <p>
         The teacher handed out a total of <var name="$product" width="7" /> marbles.
       </p>
     </statement>
@@ -63,7 +67,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$each" /> \cdot <var name="$numStudents" /> = <var name="$product" /></m>
+        <m>\displaystyle{<var name="$each" /> \cdot <var name="$numStudents" /> = <var name="$product" />}</m>
       </p>
 
       <p>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplyDivideDecimals210</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -89,7 +90,10 @@
     <statement>
       <p>
         It's give that <m><var name="$int1" />\cdot<var name="$int2" />=<var name="$product1" /></m>. Use this fact to calculate the following without using a calculator:
-        <m>\displaystyle<var name="$dec1" />(-<var name="$dec2" />) =</m> <var name="$product2" width="11" />
+      </p>
+
+      <p>
+        <m>\displaystyle{<var name="$dec1" />(-<var name="$dec2" />) =}</m> <var name="$product2" width="11" />
       </p>
     </statement>
     <solution>

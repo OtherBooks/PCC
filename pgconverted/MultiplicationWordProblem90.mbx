@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplicationWordProblem90</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -93,7 +94,13 @@
     <statement>
       <p>
         A city holds a walking competition <var name="$numGamesOutput" /> per month. The competition covers <m><var name="$kmPerEventU" /></m> (kilometers). <var name="$name" /> completed each event in the past <m><var name="$years" /></m> years. How many total kilometers did <var name="$name" /> walk in this event in the past <m><var name="$years" /></m> years?
+      </p>
+
+      <p>
         <em>Solution:</em> <var name="$name" /> walked a total of <var name="$kmTotalU" width="11" /> in this event in the past <m><var name="$years" /></m> years.
+      </p>
+
+      <p>
         Use <em>km</em> for kilometers.
       </p>
     </statement>
@@ -107,7 +114,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$kmPerEvent" /> \cdot <var name="$numGamesTotal" /> = <var name="$kmTotal" /></m>
+        <m>\displaystyle{<var name="$kmPerEvent" /> \cdot <var name="$numGamesTotal" /> = <var name="$kmTotal" />}</m>
       </p>
 
       <p>
@@ -119,7 +126,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$kmPerEvent" /> \cdot <var name="$numGamesPerMonth" /> \cdot 12 \cdot <var name="$years" /> = <var name="$kmTotal" /></m>
+        <m>\displaystyle{<var name="$kmPerEvent" /> \cdot <var name="$numGamesPerMonth" /> \cdot 12 \cdot <var name="$years" /> = <var name="$kmTotal" />}</m>
       </p>
     </solution>
   </webwork>

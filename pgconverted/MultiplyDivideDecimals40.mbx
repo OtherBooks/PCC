@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplyDivideDecimals40</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -77,7 +78,13 @@
     <statement>
       <p>
         Calculate without using a calculator. Don't use commas in your answer.
+      </p>
+
+      <p>
         <m><var name="$dec" /> \cdot <var name="$power1" /></m> = <var name="$ans1" width="11" />
+      </p>
+
+      <p>
         <m><var name="$dec" /> \cdot <var name="$power2" /></m> = <var name="$ans2" width="11" />
       </p>
     </statement>
@@ -103,11 +110,11 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$dec" /> \cdot <var name="$power1" /> =<var name="$ans1" /></m> as we move the decimal point to the right <var name="$times" />.
+        <m>\displaystyle{<var name="$dec" /> \cdot <var name="$power1" /> =<var name="$ans1" />}</m> as we move the decimal point to the right <var name="$times" />.
       </p>
 
       <p>
-        <m>\displaystyle<var name="$dec" /> \cdot <var name="$power2" /> =<var name="$ans2" /></m> as we move the decimal point to the right <m><var name="$place2" /></m> times.
+        <m>\displaystyle{<var name="$dec" /> \cdot <var name="$power2" /> =<var name="$ans2" />}</m> as we move the decimal point to the right <m><var name="$place2" /></m> times.
       </p>
     </solution>
   </webwork>

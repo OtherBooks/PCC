@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>AdditionSubtractionApplications30</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -135,7 +136,13 @@
     <statement>
       <p>
         <var name="$name" /> collects Pokemon cards. This table records the number of cards <var name="$pronoun" /> collected last year:
+      </p>
+
+      <p>
         END_PGML
+      </p>
+
+      <p>
         Context()->texStrings;
         BEGIN_TEXT
         $PAR
@@ -155,18 +162,33 @@
         ["December","\( $months[11]\)"],
         ], allcellcss=>"border:1px solid;", align=>cc);
         \}
+      </p>
+
+      <p>
         $PAR
         END_TEXT
         Context()->normalStrings;
+      </p>
+
+      <p>
         BEGIN_PGML
+      </p>
+
+      <p>
         Answer the following questions:
+      </p>
+
+      <p>
         a. In the first quarter (January, February and March), how many Pokemon cards did <var name="$name" /> collect in all? <var name="$ans1" width="11" />
+      </p>
+
+      <p>
         a. In the first half of the year, how many more cards did <var name="$name" /> collect than in the second half? <var name="$ans2" width="10" />
       </p>
     </statement>
     <solution>
       <p>
-        <em>Part a</em>:    <m>\displaystyle<var name="$a0" />+<var name="$a1" />+<var name="$a2" />=<var name="$ans1" /></m>
+        <em>Part a</em>:    <m>\displaystyle{<var name="$a0" />+<var name="$a1" />+<var name="$a2" />=<var name="$ans1" />}</m>
       </p>
 
       <p>
@@ -178,7 +200,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$a0" /> + <var name="$a1" /> + <var name="$a2" /> + <var name="$a3" /> + <var name="$a4" /> + <var name="$a5" /> = <var name="$half1" /></m>
+        <m>\displaystyle{<var name="$a0" /> + <var name="$a1" /> + <var name="$a2" /> + <var name="$a3" /> + <var name="$a4" /> + <var name="$a5" /> = <var name="$half1" />}</m>
       </p>
 
       <p>
@@ -186,7 +208,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$a6" /> + <var name="$a7" /> + <var name="$a8" /> + <var name="$a9" /> + <var name="$a10" /> + <var name="$a11" /> = <var name="$half2" /></m>
+        <m>\displaystyle{<var name="$a6" /> + <var name="$a7" /> + <var name="$a8" /> + <var name="$a9" /> + <var name="$a10" /> + <var name="$a11" /> = <var name="$half2" />}</m>
       </p>
 
       <p>
@@ -194,7 +216,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$half1" />-<var name="$half2" />=<var name="$ans2" /></m>
+        <m>\displaystyle{<var name="$half1" />-<var name="$half2" />=<var name="$ans2" />}</m>
       </p>
 
       <p>

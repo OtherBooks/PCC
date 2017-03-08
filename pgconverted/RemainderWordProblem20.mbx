@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>RemainderWordProblem20</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -107,8 +108,17 @@
     <statement>
       <p>
         <var name="$name" /> saved <m><var name="$totalU" /></m>, and will start spending <var name="$possessive" /> money on Lego figures. Each week, <var name="$name" /> will spend <m><var name="$weeklySpendingU" /></m> to buy a Lego figure. For how many weeks can <var name="$name" /> spend <var name="$possessive" /> money this way? How much left-over money will <var name="$pronoun" /> have?
+      </p>
+
+      <p>
         <em>Solution: </em>
+      </p>
+
+      <p>
         <var name="$name" /> can spend <var name="$possessive" /> money this way for <var name="$weeks" width="10" /> weeks.
+      </p>
+
+      <p>
         There will be <var name="$remainderU" width="10" /> of left-over money.
       </p>
     </statement>
@@ -122,7 +132,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$weeklySpending" /> <var name="$symbol" /> <var name="$s1" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$weeklySpending" /> <var name="$symbol" /> <var name="$s1" />}</m>
       </p>
 
       <p>
@@ -142,7 +152,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$weeklySpending" /> = <var name="$weeks" /> \text{ R } <var name="$remainder" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$weeklySpending" /> = <var name="$weeks" /> \text{ R } <var name="$remainder" />}</m>
       </p>
 
       <p>

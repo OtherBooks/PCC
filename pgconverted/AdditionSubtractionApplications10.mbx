@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>AdditionSubtractionApplications10</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -83,12 +84,15 @@
     <statement>
       <p>
         <var name="$name" /> is gambling. [@ucfirst($pronoun)@] won <m><var name="$aC" /></m> in the first game, lost <m><var name="$bC" /></m> in the second game, and won <m><var name="$cC" /></m> in the third game. Altogether, how much money did <var name="$pronoun" /> win?
+      </p>
+
+      <p>
         Solution: Altogether, <var name="$name" /> won <var name="$ansC" width="10" />.
       </p>
     </statement>
     <solution>
       <p>
-        <m>\displaystyle<var name="$a" /> - <var name="$b" /> +<var name="$c" /> = <var name="$ans" /></m>
+        <m>\displaystyle{<var name="$a" /> - <var name="$b" /> +<var name="$c" /> = <var name="$ans" />}</m>
       </p>
 
       <p>

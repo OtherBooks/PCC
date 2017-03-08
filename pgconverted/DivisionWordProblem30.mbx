@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>DivisionWordProblem30</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -76,6 +77,9 @@
     <statement>
       <p>
         <var name="$name" /> saved <m><var name="$totalU" /></m>, and will start spending <var name="$possessive" /> money on Lego figures. Each week, <var name="$name" /> will spend <m><var name="$weeklySpendingU" /></m> to buy a Lego figure. In how many weeks will <var name="$name" /> have spent all <var name="$possessive" /> money?
+      </p>
+
+      <p>
         Solution: <var name="$name" /> will have spent all <var name="$possessive" /> money in <var name="$weeks" width="10" /> weeks.
       </p>
     </statement>
@@ -89,7 +93,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$weeklySpending" /> = <var name="$weeks" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$weeklySpending" /> = <var name="$weeks" />}</m>
       </p>
 
       <p>
@@ -101,7 +105,7 @@
       </p>
 
       <p>
-        <m>\displaystyle\frac{<var name="$total" />}{<var name="$weeklySpending" />}=<var name="$weeks" /></m>
+        <m>\displaystyle{\frac{<var name="$total" />}{<var name="$weeklySpending" />}=<var name="$weeks" />}</m>
       </p>
     </solution>
   </webwork>

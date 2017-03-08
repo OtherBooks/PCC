@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplicationWordProblem70</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -54,6 +55,9 @@
     <statement>
       <p>
         A queen termite produces <m><var name="$numPerMinute" /></m> eggs every minute. How many eggs does the queen produce every week?
+      </p>
+
+      <p>
         <em>Solution:</em> The queen termite produces <var name="$numPerWeek" width="10" /> eggs every week.
       </p>
     </statement>
@@ -79,7 +83,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$numPerMinute" /> \cdot 60 \cdot 24 \cdot 7 = <var name="$numPerWeek" /></m>
+        <m>\displaystyle{<var name="$numPerMinute" /> \cdot 60 \cdot 24 \cdot 7 = <var name="$numPerWeek" />}</m>
       </p>
     </solution>
   </webwork>

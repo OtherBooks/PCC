@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>AdditionSubtractionApplications40</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -161,7 +162,13 @@
           </image>
         </figure>
 
+      </p>
+
+      <p>
         The pie chart represents a school's student population. Fill in the blank.
+      </p>
+
+      <p>
         The school's white, black and Hispanic students, altogether, have <var name="$ans" width="10" /><m>%</m> more students than students of other races.
       </p>
     </statement>
@@ -171,7 +178,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$per1" />%+<var name="$per2" />%+<var name="$per3" />%=<var name="$s1" />%</m>
+        <m>\displaystyle{<var name="$per1" />%+<var name="$per2" />%+<var name="$per3" />%=<var name="$s1" />%}</m>
       </p>
 
       <p>
@@ -179,7 +186,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$s1" />%-<var name="$per4" />%=<var name="$ans" />%</m>
+        <m>\displaystyle{<var name="$s1" />%-<var name="$per4" />%=<var name="$ans" />%}</m>
       </p>
 
       <p>

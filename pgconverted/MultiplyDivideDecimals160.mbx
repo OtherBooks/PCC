@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplyDivideDecimals160</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -95,9 +96,18 @@
     <statement>
       <p>
         Calculate the following without using a calculator:
-        a)    <m>\displaystyle<var name="$int10" /> \cdot <var name="$int11" /> =</m> <var name="$product1" width="11" />
-        b)    <m>\displaystyle<var name="$int20" /> \cdot <var name="$int21" /> =</m> <var name="$product2" width="11" />
-        c)    <m>\displaystyle<var name="$int30" /> \cdot <var name="$int31" /> =</m> <var name="$product3" width="11" />
+      </p>
+
+      <p>
+        a)    <m>\displaystyle{<var name="$int10" /> \cdot <var name="$int11" /> =}</m> <var name="$product1" width="11" />
+      </p>
+
+      <p>
+        b)    <m>\displaystyle{<var name="$int20" /> \cdot <var name="$int21" /> =}</m> <var name="$product2" width="11" />
+      </p>
+
+      <p>
+        c)    <m>\displaystyle{<var name="$int30" /> \cdot <var name="$int31" /> =}</m> <var name="$product3" width="11" />
       </p>
     </statement>
     <solution>
@@ -129,9 +139,9 @@
       </p>
 
       <p>
-        a) <m>\displaystyle<var name="$int10" /> \cdot <var name="$int11" /> = <var name="$product1" /></m>
-        b) <m>\displaystyle<var name="$int20" /> \cdot <var name="$int21" /> = <var name="$product2" /></m>
-        c) <m>\displaystyle<var name="$int30" /> \cdot <var name="$int31" /> = <var name="$product3" /></m>
+        a) <m>\displaystyle{<var name="$int10" /> \cdot <var name="$int11" /> = <var name="$product1" />}</m>
+        b) <m>\displaystyle{<var name="$int20" /> \cdot <var name="$int21" /> = <var name="$product2" />}</m>
+        c) <m>\displaystyle{<var name="$int30" /> \cdot <var name="$int31" /> = <var name="$product3" />}</m>
       </p>
     </solution>
   </webwork>

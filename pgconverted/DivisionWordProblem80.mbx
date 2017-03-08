@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>DivisionWordProblem80</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -77,6 +78,9 @@
     <statement>
       <p>
         <var name="$name" /> is a star player in <var name="$possessive" /> basketball team. Last season, <var name="$name" /> scored a total of <m><var name="$totalPoints" /></m> points in the whole season. The season had a total of <m><var name="$numGamesTotal" /></m> games, but <var name="$name" /> missed <m><var name="$numGamesMissed" /></m> games. On average, how many points did <var name="$name" /> score in each game?
+      </p>
+
+      <p>
         <em>Solution:</em> On average, <var name="$name" /> scored <var name="$numPerGame" width="11" /> points in each game.
       </p>
     </statement>
@@ -90,7 +94,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$totalPoints" /> \div <var name="$numGamesPlayed" /> = <var name="$numPerGame" /></m>
+        <m>\displaystyle{<var name="$totalPoints" /> \div <var name="$numGamesPlayed" /> = <var name="$numPerGame" />}</m>
       </p>
 
       <p>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplicationWordProblem20</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -72,6 +73,9 @@
     <statement>
       <p>
         <var name="$name" /> is saving money to purchase <m><var name="$num" /></m> Lego figures. Each Lego figure costs <m><var name="$unitPriceU" /></m>. How much money does <var name="$pronoun" /> need to save?
+      </p>
+
+      <p>
         <var name="$name" /> needs to save <var name="$productU" width="7" />.
       </p>
     </statement>
@@ -85,7 +89,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$unitPriceU" /> \cdot <var name="$num" /> = <var name="$productU" /></m>
+        <m>\displaystyle{<var name="$unitPriceU" /> \cdot <var name="$num" /> = <var name="$productU" />}</m>
       </p>
 
       <p>

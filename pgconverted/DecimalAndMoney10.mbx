@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>DecimalAndMoney10</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -71,11 +72,29 @@
     <statement>
       <p>
         If <m>1</m> dollar is represented by the integer <m>1</m>, write the following money amount with decimals. There is no need to type the dollar sign.
+      </p>
+
+      <p>
         ----
+      </p>
+
+      <p>
         <m><var name="$money0" /></m> = <var name="$decimal0" width="11" />
+      </p>
+
+      <p>
         ----
+      </p>
+
+      <p>
         <m><var name="$money1" /></m> = <var name="$decimal1" width="11" />
+      </p>
+
+      <p>
         ----
+      </p>
+
+      <p>
         <m><var name="$money2" /></m> = <var name="$decimal2" width="11" />
       </p>
     </statement>
@@ -89,15 +108,15 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$money0" /> = <var name="$decimal0" /></m>
+        <m>\displaystyle{<var name="$money0" /> = <var name="$decimal0" />}</m>
       </p>
 
       <p>
-        <m>\displaystyle<var name="$money1" /> = <var name="$decimal1" /></m>
+        <m>\displaystyle{<var name="$money1" /> = <var name="$decimal1" />}</m>
       </p>
 
       <p>
-        <m>\displaystyle<var name="$money2" /> = <var name="$decimal2" /></m>
+        <m>\displaystyle{<var name="$money2" /> = <var name="$decimal2" />}</m>
       </p>
     </solution>
   </webwork>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplyTrailingZero10</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -114,8 +115,14 @@
     <statement>
       <p>
         Do the following multiplication problems without using a calculator.
-        a)    <m>\displaystyle<var name="$a1" /> \cdot <var name="$b1" /> =</m>  <var name="$ans1" width="8" />
-        b)    <m>\displaystyle<var name="$a2" /> \cdot <var name="$b2" /> =</m>  <var name="$ans2" width="8" />
+      </p>
+
+      <p>
+        a)    <m>\displaystyle{<var name="$a1" /> \cdot <var name="$b1" /> =}</m>  <var name="$ans1" width="8" />
+      </p>
+
+      <p>
+        b)    <m>\displaystyle{<var name="$a2" /> \cdot <var name="$b2" /> =}</m>  <var name="$ans2" width="8" />
       </p>
     </statement>
     <solution>
@@ -144,11 +151,11 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$a1" /> = <var name="$a" /> \cdot <var name="$a1Ten" /></m>
+        <m>\displaystyle{<var name="$a1" /> = <var name="$a" /> \cdot <var name="$a1Ten" />}</m>
       </p>
 
       <p>
-        <m>\displaystyle<var name="$b1" /> = <var name="$b" /> \cdot <var name="$b1Ten" /></m>
+        <m>\displaystyle{<var name="$b1" /> = <var name="$b" /> \cdot <var name="$b1Ten" />}</m>
       </p>
 
       <p>

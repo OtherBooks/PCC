@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>MultiplyDivideDecimals250</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -141,11 +142,29 @@
     <statement>
       <p>
         It's given that <m><var name="$num00" />\cdot<var name="$num01" />=<var name="$product0" /></m>. Calculate the following without using a calculator.
+      </p>
+
+      <p>
         ----
+      </p>
+
+      <p>
         <m><var name="$num10" /> \cdot <var name="$num11" /></m> = <var name="$product1" width="11" />
+      </p>
+
+      <p>
         ----
+      </p>
+
+      <p>
         <m><var name="$num20" /> \cdot <var name="$num21" /></m> = <var name="$product2" width="11" />
+      </p>
+
+      <p>
         ----
+      </p>
+
+      <p>
         <m><var name="$num30" /> \cdot <var name="$num31" /></m> = <var name="$product3" width="11" />
       </p>
     </statement>

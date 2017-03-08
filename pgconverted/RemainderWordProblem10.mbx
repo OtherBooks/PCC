@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>RemainderWordProblem10</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -72,8 +73,17 @@
     <statement>
       <p>
         In a class, the teacher will hand out <m><var name="$total" /></m> marbles to all his <m><var name="$numStudents" /></m> students evenly. How many marbles will each student receive? How many marbles will be left over?
+      </p>
+
+      <p>
         <em>Solution:</em>
+      </p>
+
+      <p>
         Each student will receive <var name="$each" width="7" /> marbles.
+      </p>
+
+      <p>
         There will be <var name="$remainder" width="7" /> left-over marbles.
       </p>
     </statement>
@@ -83,7 +93,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$numStudents" /> <var name="$symbol" /> <var name="$s1" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$numStudents" /> <var name="$symbol" /> <var name="$s1" />}</m>
       </p>
 
       <p>
@@ -107,7 +117,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$numStudents" /> = <var name="$each" /> \text{ R } <var name="$remainder" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$numStudents" /> = <var name="$each" /> \text{ R } <var name="$remainder" />}</m>
       </p>
 
       <p>

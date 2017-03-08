@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>SquarePerimeterArea10</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -105,6 +106,9 @@
     <statement>
       <p>
         Its perimeter is <var name="$ansP" width="13" /> and its area is <var name="$ansA" width="13" />.
+      </p>
+
+      <p>
         (Use <em>cm</em> for centimeters and *cm<var name="$CARET" />2* for square centimeters.)
       </p>
     </statement>

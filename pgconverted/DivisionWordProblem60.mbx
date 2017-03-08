@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>DivisionWordProblem60</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -65,7 +66,13 @@
     <statement>
       <p>
         A tank can drain <m><var name="$totalU" /></m> (liters) of water in <m><var name="$minutesU" /></m> minutes. How many liters of water does the tank drain per minute?
+      </p>
+
+      <p>
         Solution: The tank drains water at the rate of <var name="$rateU" width="12" />.
+      </p>
+
+      <p>
         Use <em>L</em> for liters, <em>min</em> for minutes, and *L/min* for liters per minute.
       </p>
     </statement>
@@ -75,7 +82,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$minutes" /> = <var name="$rate" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$minutes" /> = <var name="$rate" />}</m>
       </p>
 
       <p>
@@ -87,7 +94,7 @@
       </p>
 
       <p>
-        <m>\displaystyle\frac{<var name="$total" />}{<var name="$minutes" />}=<var name="$rate" /></m>
+        <m>\displaystyle{\frac{<var name="$total" />}{<var name="$minutes" />}=<var name="$rate" />}</m>
       </p>
     </solution>
   </webwork>

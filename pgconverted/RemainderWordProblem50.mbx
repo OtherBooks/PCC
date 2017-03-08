@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
+  <original-file>RemainderWordProblem50</original-file>
   # WeBWorK problem written by Carl Yao
   # Portland Community College
   #
@@ -81,7 +82,13 @@
     <statement>
       <p>
         A teacher is doing an activity in a class with <m><var name="$numStudents" /></m> students. The teacher had a total of <m><var name="$total" /></m> marbles, and handed them out evenly among all students until not enough marbles are left for another round. Some marbles were left over, and the teacher divided those left-over marbles evenly into <m><var name="$numPiles" /></m> piles.
+      </p>
+
+      <p>
         How many marbles are in each pile?
+      </p>
+
+      <p>
         <em>Solution:</em> There are <var name="$eachPile" width="9" /> marbles in each pile.
       </p>
     </statement>
@@ -91,7 +98,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$numStudents" /> <var name="$symbol" /> <var name="$s1" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$numStudents" /> <var name="$symbol" /> <var name="$s1" />}</m>
       </p>
 
       <p>
@@ -115,7 +122,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$total" /> \div <var name="$numStudents" /> = <var name="$eachStudent" /> \text{ R } <var name="$remainder" /></m>
+        <m>\displaystyle{<var name="$total" /> \div <var name="$numStudents" /> = <var name="$eachStudent" /> \text{ R } <var name="$remainder" />}</m>
       </p>
 
       <p>
@@ -127,7 +134,7 @@
       </p>
 
       <p>
-        <m>\displaystyle<var name="$remainder" /> \div <var name="$numPiles" /> = <var name="$eachPile" /></m>
+        <m>\displaystyle{<var name="$remainder" /> \div <var name="$numPiles" /> = <var name="$eachPile" />}</m>
       </p>
 
       <p>
