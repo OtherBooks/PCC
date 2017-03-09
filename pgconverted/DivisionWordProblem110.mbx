@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>DivisionWordProblem110</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Division word problem.
-  #
-  # Last edited: Yao 10/8/13
-  #
-  # ENDDESCRIPTION
+    <original-file>DivisionWordProblem110</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Division word problem.
+    #
+    # Last edited: Yao 10/8/13
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('division','application')
-  ## DBCCSS('3.OA','4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('division','application')
+    ## DBCCSS('3.OA','4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>PCCmacros.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>PCCmacros.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$each">
-        <!--<static></static>-->
-      </var>
-      <var name="$total">
-        <!--<static></static>-->
-      </var>
-      <var name="$pieces">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$total">
+              <!--<static></static>-->
+            </var>
+            <var name="$pieces">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $each = random(5,20,1);
-        $pieces = random(300,600,1);
-        $total = $each*$pieces;
+                $each = random(5,20,1);
+                $pieces = random(300,600,1);
+                $total = $each*$pieces;
       </pg-code>
     </setup>
     <statement>

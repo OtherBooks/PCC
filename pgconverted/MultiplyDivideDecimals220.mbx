@@ -1,85 +1,85 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>MultiplyDivideDecimals220</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Template
-  #
-  # Given 12*12=144, calculate (-1.2)(-1.2)
-  # 
-  # Last updated: Yao, 10/23/2013
-  #
-  # ENDDESCRIPTION
+    <original-file>MultiplyDivideDecimals220</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Given 12*12=144, calculate (-1.2)(-1.2)
+    # 
+    # Last updated: Yao, 10/23/2013
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('')
-  ## KEYWORDS('decimal','multiply','negative')
-  ## DBCCSS('5.NBT.7')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('')
+    ## KEYWORDS('decimal','multiply','negative')
+    ## DBCCSS('5.NBT.7')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$dec1">
-        <!--<static></static>-->
-      </var>
-      <var name="$dec2">
-        <!--<static></static>-->
-      </var>
-      <var name="$factor2">
-        <!--<static></static>-->
-      </var>
-      <var name="$factor1">
-        <!--<static></static>-->
-      </var>
-      <var name="$move2">
-        <!--<static></static>-->
-      </var>
-      <var name="$int1">
-        <!--<static></static>-->
-      </var>
-      <var name="$int2">
-        <!--<static></static>-->
-      </var>
-      <var name="$move1">
-        <!--<static></static>-->
-      </var>
-      <var name="$product2">
-        <!--<static></static>-->
-      </var>
-      <var name="$product1">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$dec2">
+              <!--<static></static>-->
+            </var>
+            <var name="$factor2">
+              <!--<static></static>-->
+            </var>
+            <var name="$factor1">
+              <!--<static></static>-->
+            </var>
+            <var name="$move2">
+              <!--<static></static>-->
+            </var>
+            <var name="$int1">
+              <!--<static></static>-->
+            </var>
+            <var name="$int2">
+              <!--<static></static>-->
+            </var>
+            <var name="$move1">
+              <!--<static></static>-->
+            </var>
+            <var name="$product2">
+              <!--<static></static>-->
+            </var>
+            <var name="$product1">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
-        #Context()->{format}{number} = "%.7f";
+                #Context()->{format}{number} = "%.7f";
 
-        $int1 = random(1,9,1)*10+random(1,9,1);
-        $int2 = random(1,9,1)*10+random(1,9,1);
-        $product1 = $int1*$int2;
+                $int1 = random(1,9,1)*10+random(1,9,1);
+                $int2 = random(1,9,1)*10+random(1,9,1);
+                $product1 = $int1*$int2;
 
-        $move1 = random(1,3,1);
-        $factor1 = 10**$move1;
-        $move2 = random(1,3,1);
-        $factor2 = 10**$move2;
+                $move1 = random(1,3,1);
+                $factor1 = 10**$move1;
+                $move2 = random(1,3,1);
+                $factor2 = 10**$move2;
 
-        $dec1 = $int1/$factor1;
-        $dec2 = $int2/$factor2;
+                $dec1 = $int1/$factor1;
+                $dec2 = $int2/$factor2;
 
-        $product2 = $dec1*$dec2;
+                $product2 = $dec1*$dec2;
       </pg-code>
     </setup>
     <statement>
@@ -132,9 +132,9 @@
 
       <p>
         a) To change <m><var name="$int1" /></m> to <m><var name="$dec1" /></m>, we moved the decimal point to the left by 
-        <m><var name="$move1" /></m> place(s).
-        b) To change <m><var name="$int2" /></m> to <m><var name="$dec2" /></m>, we moved the decimal point to the left by <m><var name="$move2" /></m> place(s).
-        c) We move the decimal point of <m><var name="$product1" /></m> to the left by <m><var name="$move1" />+<var name="$move2" />=[$move1+$move2]</m> places to get <m><var name="$dec1" />\cdot<var name="$dec2" />=<var name="$product2" /></m>.
+                <m><var name="$move1" /></m> place(s).
+                b) To change <m><var name="$int2" /></m> to <m><var name="$dec2" /></m>, we moved the decimal point to the left by <m><var name="$move2" /></m> place(s).
+                c) We move the decimal point of <m><var name="$product1" /></m> to the left by <m><var name="$move1" />+<var name="$move2" />=[$move1+$move2]</m> places to get <m><var name="$dec1" />\cdot<var name="$dec2" />=<var name="$product2" /></m>.
       </p>
 
       <p>

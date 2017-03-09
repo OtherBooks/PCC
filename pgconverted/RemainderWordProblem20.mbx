@@ -1,108 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>RemainderWordProblem20</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Word problems of division with remainders.
-  #
-  # Last edited: Yao 10/9/13
-  #
-  # ENDDESCRIPTION
+    <original-file>RemainderWordProblem20</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Word problems of division with remainders.
+    #
+    # Last edited: Yao 10/9/13
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('division','application','remainder')
-  ## DBCCSS('3.OA','4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('division','application','remainder')
+    ## DBCCSS('3.OA','4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextCurrency.pl</macro-file>
-    <macro-file>PCCmacros.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextCurrency.pl</macro-file>
+        <macro-file>PCCmacros.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$remainder">
-        <!--<static></static>-->
-      </var>
-      <var name="$possessive">
-        <!--<static></static>-->
-      </var>
-      <var name="$s2U">
-        <!--<static></static>-->
-      </var>
-      <var name="$name">
-        <!--<static></static>-->
-      </var>
-      <var name="$total">
-        <!--<static></static>-->
-      </var>
-      <var name="$totalU">
-        <!--<static></static>-->
-      </var>
-      <var name="$pronoun">
-        <!--<static></static>-->
-      </var>
-      <var name="$s1">
-        <!--<static></static>-->
-      </var>
-      <var name="$weeklySpendingU">
-        <!--<static></static>-->
-      </var>
-      <var name="$weeks">
-        <!--<static></static>-->
-      </var>
-      <var name="$symbol">
-        <!--<static></static>-->
-      </var>
-      <var name="$weeklySpending">
-        <!--<static></static>-->
-      </var>
-      <var name="$remainderU">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$possessive">
+              <!--<static></static>-->
+            </var>
+            <var name="$s2U">
+              <!--<static></static>-->
+            </var>
+            <var name="$name">
+              <!--<static></static>-->
+            </var>
+            <var name="$total">
+              <!--<static></static>-->
+            </var>
+            <var name="$totalU">
+              <!--<static></static>-->
+            </var>
+            <var name="$pronoun">
+              <!--<static></static>-->
+            </var>
+            <var name="$s1">
+              <!--<static></static>-->
+            </var>
+            <var name="$weeklySpendingU">
+              <!--<static></static>-->
+            </var>
+            <var name="$weeks">
+              <!--<static></static>-->
+            </var>
+            <var name="$symbol">
+              <!--<static></static>-->
+            </var>
+            <var name="$weeklySpending">
+              <!--<static></static>-->
+            </var>
+            <var name="$remainderU">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $weeklySpending = random(5,15,1);
-        $weeks = random(10,20,1);
-        $remainder = random(1,$weeklySpending-1,1);
-        $total = $weeklySpending*$weeks + $remainder;
+                $weeklySpending = random(5,15,1);
+                $weeks = random(10,20,1);
+                $remainder = random(1,$weeklySpending-1,1);
+                $total = $weeklySpending*$weeks + $remainder;
 
-        Context("Currency");
-        $weeklySpendingU = Currency($weeklySpending);
-        $totalU = Currency($total);
-        $remainderU = Currency($remainder);
+                Context("Currency");
+                $weeklySpendingU = Currency($weeklySpending);
+                $totalU = Currency($total);
+                $remainderU = Currency($remainder);
 
-        $sex = list_random('male','female');
-        $pronoun = 'he' if ($sex eq 'male');
-        $pronoun = 'she' if ($sex eq 'female');
+                $sex = list_random('male','female');
+                $pronoun = 'he' if ($sex eq 'male');
+                $pronoun = 'she' if ($sex eq 'female');
 
-        $possessive = 'his' if ($sex eq 'male');
-        $possessive = 'her' if ($sex eq 'female');
+                $possessive = 'his' if ($sex eq 'male');
+                $possessive = 'her' if ($sex eq 'female');
 
-        $name = RandomName(sex=>$sex);
+                $name = RandomName(sex=>$sex);
 
-        $s1 = $total/$weeklySpending;
-        if ($s1*100!=int($s1*100)) {
-           $s1 =  sprintf("%.2f",$s1);
-           $symbol = "\approx";
-        } else {
-           $symbol = "=";
-        }
-        $s2 = $weeklySpending*$weeks;
-        $s2U = Currency($s2);
+                $s1 = $total/$weeklySpending;
+                if ($s1*100!=int($s1*100)) {
+                   $s1 =  sprintf("%.2f",$s1);
+                   $symbol = "\approx";
+                } else {
+                   $symbol = "=";
+                }
+                $s2 = $weeklySpending*$weeks;
+                $s2U = Currency($s2);
       </pg-code>
     </setup>
     <statement>

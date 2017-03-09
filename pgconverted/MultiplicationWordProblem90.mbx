@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>MultiplicationWordProblem90</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Multiplication word problem.
-  #
-  # Last edited: Yao 10/2/13
-  #
-  # ENDDESCRIPTION
+    <original-file>MultiplicationWordProblem90</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Multiplication word problem.
+    #
+    # Last edited: Yao 10/2/13
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('multiplication','application')
-  ## DBCCSS('3.OA','4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('multiplication','application')
+    ## DBCCSS('3.OA','4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>PCCmacros.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>PCCmacros.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$numGamesPerYear">
-        <!--<static></static>-->
-      </var>
-      <var name="$numGamesTotal">
-        <!--<static></static>-->
-      </var>
-      <var name="$kmPerEvent">
-        <!--<static></static>-->
-      </var>
-      <var name="$name">
-        <!--<static></static>-->
-      </var>
-      <var name="$numGamesOutput">
-        <!--<static></static>-->
-      </var>
-      <var name="$pronoun">
-        <!--<static></static>-->
-      </var>
-      <var name="$kmTotalU">
-        <!--<static></static>-->
-      </var>
-      <var name="$years">
-        <!--<static></static>-->
-      </var>
-      <var name="$kmPerEventU">
-        <!--<static></static>-->
-      </var>
-      <var name="$kmTotal">
-        <!--<static></static>-->
-      </var>
-      <var name="$numGamesPerMonth">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$numGamesTotal">
+              <!--<static></static>-->
+            </var>
+            <var name="$kmPerEvent">
+              <!--<static></static>-->
+            </var>
+            <var name="$name">
+              <!--<static></static>-->
+            </var>
+            <var name="$numGamesOutput">
+              <!--<static></static>-->
+            </var>
+            <var name="$pronoun">
+              <!--<static></static>-->
+            </var>
+            <var name="$kmTotalU">
+              <!--<static></static>-->
+            </var>
+            <var name="$years">
+              <!--<static></static>-->
+            </var>
+            <var name="$kmPerEventU">
+              <!--<static></static>-->
+            </var>
+            <var name="$kmTotal">
+              <!--<static></static>-->
+            </var>
+            <var name="$numGamesPerMonth">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $numGamesPerMonth = random(2,5,1);
-        $numGamesOutput = $numGamesPerMonth==2 ? "twice" : "$numGamesPerMonth times";
-        $numGamesPerYear = $numGamesPerMonth*12;
-        $years = random(2,9,1);
-        $numGamesTotal = $numGamesPerYear * $years;
+                $numGamesPerMonth = random(2,5,1);
+                $numGamesOutput = $numGamesPerMonth==2 ? "twice" : "$numGamesPerMonth times";
+                $numGamesPerYear = $numGamesPerMonth*12;
+                $years = random(2,9,1);
+                $numGamesTotal = $numGamesPerYear * $years;
 
-        $kmPerEvent = random(5.1,20-0.1,0.1);
-        $kmTotal = $kmPerEvent*$numGamesTotal;
+                $kmPerEvent = random(5.1,20-0.1,0.1);
+                $kmTotal = $kmPerEvent*$numGamesTotal;
 
-        $kmPerEventU = NumberWithUnits("$kmPerEvent km");
-        $kmTotalU = NumberWithUnits("$kmTotal km");
+                $kmPerEventU = NumberWithUnits("$kmPerEvent km");
+                $kmTotalU = NumberWithUnits("$kmTotal km");
 
-        $sex = list_random('male','female');
-        $pronoun = 'he' if ($sex eq 'male');
-        $pronoun = 'she' if ($sex eq 'female');
+                $sex = list_random('male','female');
+                $pronoun = 'he' if ($sex eq 'male');
+                $pronoun = 'she' if ($sex eq 'female');
 
-        $possessive = 'his' if ($sex eq 'male');
-        $possessive = 'her' if ($sex eq 'female');
+                $possessive = 'his' if ($sex eq 'male');
+                $possessive = 'her' if ($sex eq 'female');
 
-        $name = RandomName(sex=>$sex);
+                $name = RandomName(sex=>$sex);
       </pg-code>
     </setup>
     <statement>

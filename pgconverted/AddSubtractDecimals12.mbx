@@ -1,88 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>AddSubtractDecimals12</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Template
-  #
-  # Add two decimals, like 2.003+12.15
-  # 
-  # Last updated: Yao, 10/23/2013
-  #
-  # ENDDESCRIPTION
+    <original-file>AddSubtractDecimals12</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Add two decimals, like 2.003+12.15
+    # 
+    # Last updated: Yao, 10/23/2013
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('')
-  ## KEYWORDS('decimal','add')
-  ## DBCCSS('5.NBT.7')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('')
+    ## KEYWORDS('decimal','add')
+    ## DBCCSS('5.NBT.7')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$decimal0">
-        <!--<static></static>-->
-      </var>
-      <var name="$decimal1">
-        <!--<static></static>-->
-      </var>
-      <var name="$digit10">
-        <!--<static></static>-->
-      </var>
-      <var name="$digit02">
-        <!--<static></static>-->
-      </var>
-      <var name="$digit01">
-        <!--<static></static>-->
-      </var>
-      <var name="$digit13">
-        <!--<static></static>-->
-      </var>
-      <var name="$sum">
-        <!--<static></static>-->
-      </var>
-      <var name="$digit00">
-        <!--<static></static>-->
-      </var>
-      <var name="$digit11">
-        <!--<static></static>-->
-      </var>
-      <var name="$digit03">
-        <!--<static></static>-->
-      </var>
-      <var name="$digit12">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$decimal1">
+              <!--<static></static>-->
+            </var>
+            <var name="$digit10">
+              <!--<static></static>-->
+            </var>
+            <var name="$digit02">
+              <!--<static></static>-->
+            </var>
+            <var name="$digit01">
+              <!--<static></static>-->
+            </var>
+            <var name="$digit13">
+              <!--<static></static>-->
+            </var>
+            <var name="$sum">
+              <!--<static></static>-->
+            </var>
+            <var name="$digit00">
+              <!--<static></static>-->
+            </var>
+            <var name="$digit11">
+              <!--<static></static>-->
+            </var>
+            <var name="$digit03">
+              <!--<static></static>-->
+            </var>
+            <var name="$digit12">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        #$decimal1 is like 1.23
+                #$decimal1 is like 1.23
 
-        $digit00 = random(1,9,1);
-        $digit01 = 0;
-        $digit02 = 0;
-        $digit03 = random(1,9,1);
-        $decimal0 = $digit00+$digit01/10+$digit02/100+$digit03/1000;
+                $digit00 = random(1,9,1);
+                $digit01 = 0;
+                $digit02 = 0;
+                $digit03 = random(1,9,1);
+                $decimal0 = $digit00+$digit01/10+$digit02/100+$digit03/1000;
 
-        $digit10 = random(1,8,1);
-        $digit11 = random(1,9,1);
-        $digit12 = random(1,9,1);
-        $digit13 = random(1,9,1);
-        $decimal1 = $digit10*10+$digit11+$digit12/10+$digit13/100;
+                $digit10 = random(1,8,1);
+                $digit11 = random(1,9,1);
+                $digit12 = random(1,9,1);
+                $digit13 = random(1,9,1);
+                $decimal1 = $digit10*10+$digit11+$digit12/10+$digit13/100;
 
-        $sum = $decimal0 + $decimal1;
+                $sum = $decimal0 + $decimal1;
       </pg-code>
     </setup>
     <statement>

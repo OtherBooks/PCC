@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>DivideByZero10</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Template
-  #
-  # Find the value of 0/3 and 3/0.
-  # 
-  # Last updated: Yao, 10/16/2013
-  #
-  # ENDDESCRIPTION
+    <original-file>DivideByZero10</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Find the value of 0/3 and 3/0.
+    # 
+    # Last updated: Yao, 10/16/2013
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('Algebraic Expressions')
-  ## KEYWORDS('evaluate','divide','zero')
-  ## DBCCSS('4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('evaluate','divide','zero')
+    ## DBCCSS('4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$frac0">
-        <!--<static></static>-->
-      </var>
-      <var name="$frac1">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans1">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans0">
-        <!--<static></static>-->
-      </var>
-      <var name="$a">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$frac1">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans1">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans0">
+              <!--<static></static>-->
+            </var>
+            <var name="$a">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $a=random(2,9,1);
-        @questions = ([$a,0,"DNE"],[0,$a,0]);
+                $a=random(2,9,1);
+                @questions = ([$a,0,"DNE"],[0,$a,0]);
 
-        #Randomize the sequence of these two problems.
-        if (random(0,1,1)==0) {
-          ($questions[0],$questions[1]) = ($questions[1],$questions[0]);
-        }
+                #Randomize the sequence of these two problems.
+                if (random(0,1,1)==0) {
+                  ($questions[0],$questions[1]) = ($questions[1],$questions[0]);
+                }
 
-        $frac0 = "\frac{$questions[0][0]}{$questions[0][1]}";
-        $frac1 = "\frac{$questions[1][0]}{$questions[1][1]}";
+                $frac0 = "\frac{$questions[0][0]}{$questions[0][1]}";
+                $frac1 = "\frac{$questions[1][0]}{$questions[1][1]}";
 
-        $ans0 = Compute("$questions[0][2]");
-        $ans1 = Compute("$questions[1][2]");
+                $ans0 = Compute("$questions[0][2]");
+                $ans1 = Compute("$questions[1][2]");
       </pg-code>
     </setup>
     <statement>

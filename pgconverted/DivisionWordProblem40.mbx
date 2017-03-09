@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>DivisionWordProblem40</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Division word problem.
-  #
-  # Last edited: Yao 10/8/13
-  #
-  # ENDDESCRIPTION
+    <original-file>DivisionWordProblem40</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Division word problem.
+    #
+    # Last edited: Yao 10/8/13
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('division','application')
-  ## DBCCSS('3.OA','4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('division','application')
+    ## DBCCSS('3.OA','4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextCurrency.pl</macro-file>
-    <macro-file>PCCmacros.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextCurrency.pl</macro-file>
+        <macro-file>PCCmacros.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$name">
-        <!--<static></static>-->
-      </var>
-      <var name="$weekly">
-        <!--<static></static>-->
-      </var>
-      <var name="$total">
-        <!--<static></static>-->
-      </var>
-      <var name="$pronoun">
-        <!--<static></static>-->
-      </var>
-      <var name="$weeks">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$weekly">
+              <!--<static></static>-->
+            </var>
+            <var name="$total">
+              <!--<static></static>-->
+            </var>
+            <var name="$pronoun">
+              <!--<static></static>-->
+            </var>
+            <var name="$weeks">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $weekly = random(2,7,1);
-        $weeks = random(30,50,1);
-        $total = $weekly*$weeks;
+                $weekly = random(2,7,1);
+                $weeks = random(30,50,1);
+                $total = $weekly*$weeks;
 
-        $sex = list_random('male','female');
-        $pronoun = 'he' if ($sex eq 'male');
-        $pronoun = 'she' if ($sex eq 'female');
+                $sex = list_random('male','female');
+                $pronoun = 'he' if ($sex eq 'male');
+                $pronoun = 'she' if ($sex eq 'female');
 
-        $possessive = 'his' if ($sex eq 'male');
-        $possessive = 'her' if ($sex eq 'female');
+                $possessive = 'his' if ($sex eq 'male');
+                $possessive = 'her' if ($sex eq 'female');
 
-        $name = RandomName(sex=>$sex);
+                $name = RandomName(sex=>$sex);
       </pg-code>
     </setup>
     <statement>

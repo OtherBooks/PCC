@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>RemainderWordProblem10</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Word problems of division with remainders.
-  #
-  # Last edited: Yao 10/9/13
-  #
-  # ENDDESCRIPTION
+    <original-file>RemainderWordProblem10</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Word problems of division with remainders.
+    #
+    # Last edited: Yao 10/9/13
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('division','application','remainder')
-  ## DBCCSS('3.OA','4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('division','application','remainder')
+    ## DBCCSS('3.OA','4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$remainder">
-        <!--<static></static>-->
-      </var>
-      <var name="$total">
-        <!--<static></static>-->
-      </var>
-      <var name="$each">
-        <!--<static></static>-->
-      </var>
-      <var name="$s2">
-        <!--<static></static>-->
-      </var>
-      <var name="$s1">
-        <!--<static></static>-->
-      </var>
-      <var name="$numStudents">
-        <!--<static></static>-->
-      </var>
-      <var name="$symbol">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$total">
+              <!--<static></static>-->
+            </var>
+            <var name="$each">
+              <!--<static></static>-->
+            </var>
+            <var name="$s2">
+              <!--<static></static>-->
+            </var>
+            <var name="$s1">
+              <!--<static></static>-->
+            </var>
+            <var name="$numStudents">
+              <!--<static></static>-->
+            </var>
+            <var name="$symbol">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $numStudents = random(15,30,1);
-        $each = random(10,20,1);
-        $remainder = random(1,$each-1,1);
-        $total= $numStudents*$each+$remainder;
+                $numStudents = random(15,30,1);
+                $each = random(10,20,1);
+                $remainder = random(1,$each-1,1);
+                $total= $numStudents*$each+$remainder;
 
-        $s1 = $total/$numStudents;
-        if ($s1*100!=int($s1*100)) {
-           $s1 =  sprintf("%.2f",$s1);
-           $symbol = "\approx";
-        } else {
-           $symbol = "=";
-        }
-        $s2 = $each*$numStudents;
+                $s1 = $total/$numStudents;
+                if ($s1*100!=int($s1*100)) {
+                   $s1 =  sprintf("%.2f",$s1);
+                   $symbol = "\approx";
+                } else {
+                   $symbol = "=";
+                }
+                $s2 = $each*$numStudents;
       </pg-code>
     </setup>
     <statement>

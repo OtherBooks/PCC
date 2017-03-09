@@ -1,109 +1,118 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>SquarePerimeterArea10</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Find the perimeter and area of a square.
-  #
-  # Last edited by Carl Yao on 2/25/2014
-  #
-  # ENDDESCRIPTION
+    <original-file>SquarePerimeterArea10</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Find the perimeter and area of a square.
+    #
+    # Last edited by Carl Yao on 2/25/2014
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('Problem Solving with Equations')
-  ## KEYWORDS('area','perimeter','square')
-  ## DBCCSS('4.MD.3')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Problem Solving with Equations')
+    ## KEYWORDS('area','perimeter','square')
+    ## DBCCSS('4.MD.3')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGgraphmacros.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGgraphmacros.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
-      <var name="$baseWithUnit">
-        <!--<static></static>-->
-      </var>
-      <var name="$ansA">
-        <!--<static></static>-->
-      </var>
-      <var name="$ansP">
-        <!--<static></static>-->
-      </var>
-      <var name="$CARET">
-        <!--<static></static>-->
-      </var>
+      <var name="$ECENTER">
+              <!--<static></static>-->
+            </var>
+            <var name="$CARET">
+              <!--<static></static>-->
+            </var>
+            <var name="$BCENTER">
+              <!--<static></static>-->
+            </var>
+            <var name="$ansP">
+              <!--<static></static>-->
+            </var>
+            <var name="$picture">
+              <!--<static></static>-->
+            </var>
+            <var name="$base">
+              <!--<static></static>-->
+            </var>
+            <var name="$baseWithUnit">
+              <!--<static></static>-->
+            </var>
+            <var name="$ansA">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         $refreshCachedImages = 1;
-        Context("Numeric");
+                Context("Numeric");
 
-        $xmin = 0;         #The viewing window
-        $xmax = 20;
-        $ymin = 0;
-        $ymax = 20;
+                $xmin = 0;         #The viewing window
+                $xmax = 20;
+                $ymin = 0;
+                $ymax = 20;
 
-        $base = random(5,15,1);
-        $height = $base;
+                $base = random(5,15,1);
+                $height = $base;
 
-        @x = (($xmax-$base)/2,($xmax+$base)/2);
-        @y = (($ymax-$height)/2,($ymax+$height)/2);
+                @x = (($xmax-$base)/2,($xmax+$base)/2);
+                @y = (($ymax-$height)/2,($ymax+$height)/2);
 
-        $cornersize = min(($x[1]-$x[0]),($y[1]-$y[0]))/10;
+                $cornersize = min(($x[1]-$x[0]),($y[1]-$y[0]))/10;
 
-        $picture = init_graph($xmin,$ymin,$xmax,$ymax,
-              pixels=>[400,400]);
+                $picture = init_graph($xmin,$ymin,$xmax,$ymax,
+                      pixels=>[400,400]);
 
-        $picture->lb( new Label(($x[0]+$x[1])/2, $y[0]-0.5,"$base cm",'black','center','middle'));
-        #$picture->lb( new Label($x[1]+1,($y[0]+$y[1])/2,"$height cm",'black','center','middle'));
+                $picture->lb( new Label(($x[0]+$x[1])/2, $y[0]-0.5,"$base cm",'black','center','middle'));
+                #$picture->lb( new Label($x[1]+1,($y[0]+$y[1])/2,"$height cm",'black','center','middle'));
 
-        $picture->new_color("lightblue", 200,200,255); # RGB
-        $picture->new_color("darkblue",  100,100,255); 
+                $picture->new_color("lightblue", 200,200,255); # RGB
+                $picture->new_color("darkblue",  100,100,255); 
 
-        $picture->moveTo($x[0],$y[0]);
-        $picture->lineTo($x[1],$y[0], darkblue,3);
-        $picture->lineTo($x[1],$y[1], darkblue,3); 
-        $picture->lineTo($x[0],$y[1], darkblue,3);
-        $picture->lineTo($x[0],$y[0], darkblue,3);
+                $picture->moveTo($x[0],$y[0]);
+                $picture->lineTo($x[1],$y[0], darkblue,3);
+                $picture->lineTo($x[1],$y[1], darkblue,3); 
+                $picture->lineTo($x[0],$y[1], darkblue,3);
+                $picture->lineTo($x[0],$y[0], darkblue,3);
 
-        foreach $i (0,1) {
-         foreach $j (0,1) {
+                foreach $i (0,1) {
+                 foreach $j (0,1) {
 
-        $picture->moveTo($x[$i]+(-1)**$i*$cornersize,$y[$j]);
-        $picture->lineTo($x[$i]+(-1)**$i*$cornersize,$y[$j]+(-1)**$j*$cornersize, darkblue,3);
-        $picture->lineTo($x[$i],$y[$j]+(-1)**$j*$cornersize, darkblue,3);
-        }}
+                $picture->moveTo($x[$i]+(-1)**$i*$cornersize,$y[$j]);
+                $picture->lineTo($x[$i]+(-1)**$i*$cornersize,$y[$j]+(-1)**$j*$cornersize, darkblue,3);
+                $picture->lineTo($x[$i],$y[$j]+(-1)**$j*$cornersize, darkblue,3);
+                }}
 
 
-        $perimeter = 2*($base+$height);
-        $area = $base*$height;
-        $ansP = NumberWithUnits("$perimeter cm");
-        $ansA = NumberWithUnits("$area cm^2");
-        $baseWithUnit = NumberWithUnits("$base cm");
-        BEGIN_TEXT
-
-        Find the perimeter and area of the square.$PAR
-
-        $BCENTER
-        \{ image(insertGraph( $picture  ), tex_size=>400, height=>400, width=>400, extra_html_tags => 'alt = "a square with a base of $base cm" title = "a square with a base of $base cm"') \}
-        $ECENTER
-        $PAR
-
-        END_TEXT
+                $perimeter = 2*($base+$height);
+                $area = $base*$height;
+                $ansP = NumberWithUnits("$perimeter cm");
+                $ansA = NumberWithUnits("$area cm^2");
+                $baseWithUnit = NumberWithUnits("$base cm");
       </pg-code>
     </setup>
     <statement>
+      <p>
+        Find the perimeter and area of the square.
+                $BCENTER
+                \{ image(insertGraph( $picture  ), tex_size=>400, height=>400, width=>400, extra_html_tags => 'alt = "a square with a base of $base cm" title = "a square with a base of $base cm"') \}
+                $ECENTER
+      </p>
+
       <p>
         Its perimeter is <var name="$ansP" width="13" /> and its area is <var name="$ansA" width="13" />.
       </p>
@@ -127,13 +136,13 @@
 
       <p>
         ----
-        For the given square, we have:
+                For the given square, we have:
       </p>
 
       <p>
         <md>
           <mrow>\text{square perimeter}
-                 \amp = 4 \cdot \text{(side length)}</mrow>
+                           \amp = 4 \cdot \text{(side length)}</mrow>
           <mrow>\amp = 4 \cdot <var name="$baseWithUnit" /></mrow>
           <mrow>\amp = <var name="$ansP" /></mrow>
         </md>
@@ -141,11 +150,11 @@
 
       <p>
         Don't forget the length unit <m>\textrm{cm}</m>.  
-        ----
-        Also,
+                ----
+                Also,
         <md>
           <mrow>\text{square area}
-                 \amp = \text{(side length)}^{2}</mrow>
+                           \amp = \text{(side length)}^{2}</mrow>
           <mrow>\amp = (<var name="$baseWithUnit" />)^{2}</mrow>
           <mrow>\amp = <var name="$ansA" /></mrow>
         </md>

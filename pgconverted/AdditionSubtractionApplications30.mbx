@@ -1,136 +1,134 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>AdditionSubtractionApplications30</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Addition/subtraction word problem.
-  #
-  # Last edited: Yao 09/29/16
-  #
-  # ENDDESCRIPTION
+    <original-file>AdditionSubtractionApplications30</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Addition/subtraction word problem.
+    #
+    # Last edited: Yao 09/29/16
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('division','application')
-  ## DBCCSS('3.OA','4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('division','application')
+    ## DBCCSS('3.OA','4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>niceTables.pl</macro-file>
-    <macro-file>PCCmacros.pl</macro-file>
-    <macro-file>PGcourse.pl</macro-file>
-    </pg-macros>
+        <macro-file>niceTables.pl</macro-file>
+        <macro-file>PCCmacros.pl</macro-file>
+        <macro-file>PGcourse.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$half2">
-        <!--<static></static>-->
-      </var>
-      <var name="$half1">
-        <!--<static></static>-->
-      </var>
-      <var name="$a10">
-        <!--<static></static>-->
-      </var>
-      <var name="$name">
-        <!--<static></static>-->
-      </var>
-      <var name="$PAR">
-        <!--<static></static>-->
-      </var>
-      <var name="$a3">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans1">
-        <!--<static></static>-->
-      </var>
-      <var name="$pronoun">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans2">
-        <!--<static></static>-->
-      </var>
-      <var name="$a4">
-        <!--<static></static>-->
-      </var>
-      <var name="$a5">
-        <!--<static></static>-->
-      </var>
-      <var name="$a6">
-        <!--<static></static>-->
-      </var>
-      <var name="$a7">
-        <!--<static></static>-->
-      </var>
-      <var name="$a0">
-        <!--<static></static>-->
-      </var>
-      <var name="$a1">
-        <!--<static></static>-->
-      </var>
-      <var name="$months">
-        <!--<static></static>-->
-      </var>
-      <var name="$a11">
-        <!--<static></static>-->
-      </var>
-      <var name="$a2">
-        <!--<static></static>-->
-      </var>
-      <var name="$a8">
-        <!--<static></static>-->
-      </var>
-      <var name="$a9">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$half1">
+              <!--<static></static>-->
+            </var>
+            <var name="$a10">
+              <!--<static></static>-->
+            </var>
+            <var name="$name">
+              <!--<static></static>-->
+            </var>
+            <var name="$a3">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans1">
+              <!--<static></static>-->
+            </var>
+            <var name="$pronoun">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans2">
+              <!--<static></static>-->
+            </var>
+            <var name="$a4">
+              <!--<static></static>-->
+            </var>
+            <var name="$a5">
+              <!--<static></static>-->
+            </var>
+            <var name="$a6">
+              <!--<static></static>-->
+            </var>
+            <var name="$a7">
+              <!--<static></static>-->
+            </var>
+            <var name="$a0">
+              <!--<static></static>-->
+            </var>
+            <var name="$a1">
+              <!--<static></static>-->
+            </var>
+            <var name="$months">
+              <!--<static></static>-->
+            </var>
+            <var name="$a11">
+              <!--<static></static>-->
+            </var>
+            <var name="$a2">
+              <!--<static></static>-->
+            </var>
+            <var name="$a8">
+              <!--<static></static>-->
+            </var>
+            <var name="$a9">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        @months = ( );
+                @months = ( );
 
-        do {
-           $quarter = 0;
-           $half1 = 0;
-           $half2 = 0;
-           for (my $i=0;$i&lt;12;$i++) {
-              $months[$i] = random(10,50,1);
-              if ($i&lt;=2) {$quarter += $months[$i];}
-              if ($i&lt;=5) {$half1 += $months[$i];}
-              else {$half2 += $months[$i];}
-           }
-        } until ($half1 > $half2);
+                do {
+                   $quarter = 0;
+                   $half1 = 0;
+                   $half2 = 0;
+                   for (my $i=0;$i&lt;12;$i++) {
+                      $months[$i] = random(10,50,1);
+                      if ($i&lt;=2) {$quarter += $months[$i];}
+                      if ($i&lt;=5) {$half1 += $months[$i];}
+                      else {$half2 += $months[$i];}
+                   }
+                } until ($half1 > $half2);
 
-        $ans1 = Compute("$quarter");
-        $ans2 = $half1-$half2;
-        $ans2 = Compute("$ans2");
+                $ans1 = Compute("$quarter");
+                $ans2 = $half1-$half2;
+                $ans2 = Compute("$ans2");
 
-        $sex = list_random('male','female');
-        $pronoun = 'he' if ($sex eq 'male');
-        $pronoun = 'she' if ($sex eq 'female');
-        $possessive = 'his' if ($sex eq 'male');
-        $possessive = 'her' if ($sex eq 'female');
-        $name = RandomName(sex=>$sex);
-
-        $a0 = $months[0];
-        $a1 = $months[1];
-        $a2 = $months[2];
-        $a3 = $months[3];
-        $a4 = $months[4];
-        $a5 = $months[5];
-        $a6 = $months[6];
-        $a7 = $months[7];
-        $a8 = $months[8];
-        $a9 = $months[9];
-        $a10 = $months[10];
-        $a11 = $months[11];
+                $sex = list_random('male','female');
+                $pronoun = 'he' if ($sex eq 'male');
+                $pronoun = 'she' if ($sex eq 'female');
+                $possessive = 'his' if ($sex eq 'male');
+                $possessive = 'her' if ($sex eq 'female');
+                $name = RandomName(sex=>$sex);
+                Context()->texStrings;
+                Context()->normalStrings;
+                $a0 = $months[0];
+                $a1 = $months[1];
+                $a2 = $months[2];
+                $a3 = $months[3];
+                $a4 = $months[4];
+                $a5 = $months[5];
+                $a6 = $months[6];
+                $a7 = $months[7];
+                $a8 = $months[8];
+                $a9 = $months[9];
+                $a10 = $months[10];
+                $a11 = $months[11];
       </pg-code>
     </setup>
     <statement>
@@ -139,39 +137,22 @@
       </p>
 
       <p>
-        END_PGML
-      </p>
-
-      <p>
-        Context()->texStrings;
-        BEGIN_TEXT
-        $PAR
         \{ 
-        DataTable([[{data=>"Months",header=>"CH"},{data=>"Number of cards collected",header=>"CH"},],
-        ["January","\( $months[0]\)"],
-        ["February","\( $months[1]\)"],
-        ["March","\( $months[2]\)"],
-        ["April","\( $months[3]\)"],
-        ["May","\( $months[4]\)"],
-        ["June","\( $months[5]\)"],
-        ["July","\( $months[6]\)"],
-        ["August","\( $months[7]\)"],
-        ["September","\( $months[8]\)"],
-        ["October","\( $months[9]\)"],
-        ["November","\( $months[10]\)"],
-        ["December","\( $months[11]\)"],
-        ], allcellcss=>"border:1px solid;", align=>cc);
-        \}
-      </p>
-
-      <p>
-        $PAR
-        END_TEXT
-        Context()->normalStrings;
-      </p>
-
-      <p>
-        BEGIN_PGML
+                DataTable([[{data=>"Months",header=>"CH"},{data=>"Number of cards collected",header=>"CH"},],
+                ["January","\( $months[0]\)"],
+                ["February","\( $months[1]\)"],
+                ["March","\( $months[2]\)"],
+                ["April","\( $months[3]\)"],
+                ["May","\( $months[4]\)"],
+                ["June","\( $months[5]\)"],
+                ["July","\( $months[6]\)"],
+                ["August","\( $months[7]\)"],
+                ["September","\( $months[8]\)"],
+                ["October","\( $months[9]\)"],
+                ["November","\( $months[10]\)"],
+                ["December","\( $months[11]\)"],
+                ], allcellcss=>"border:1px solid;", align=>cc);
+                \}
       </p>
 
       <p>

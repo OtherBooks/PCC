@@ -1,121 +1,121 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>MultiplyDivideDecimals240</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Given 115*15=1725, calculate 11.5*1.5=?
-  # 
-  # Last updated: Yao, 11/20/2013
-  #
-  # ENDDESCRIPTION
+    <original-file>MultiplyDivideDecimals240</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Given 115*15=1725, calculate 11.5*1.5=?
+    # 
+    # Last updated: Yao, 11/20/2013
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('')
-  ## KEYWORDS('decimal','multiply')
-  ## DBCCSS('5.NBT')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('')
+    ## KEYWORDS('decimal','multiply')
+    ## DBCCSS('5.NBT')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PCCmacros.pl</macro-file>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PCCmacros.pl</macro-file>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$movesToWords">
-        <!--<static></static>-->
-      </var>
-      <var name="$product1">
-        <!--<static></static>-->
-      </var>
-      <var name="$num11">
-        <!--<static></static>-->
-      </var>
-      <var name="$num10">
-        <!--<static></static>-->
-      </var>
-      <var name="$num00">
-        <!--<static></static>-->
-      </var>
-      <var name="$num01">
-        <!--<static></static>-->
-      </var>
-      <var name="$product2">
-        <!--<static></static>-->
-      </var>
-      <var name="$product3">
-        <!--<static></static>-->
-      </var>
-      <var name="$product0">
-        <!--<static></static>-->
-      </var>
-      <var name="$num30">
-        <!--<static></static>-->
-      </var>
-      <var name="$num20">
-        <!--<static></static>-->
-      </var>
-      <var name="$num21">
-        <!--<static></static>-->
-      </var>
-      <var name="$num31">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$product1">
+              <!--<static></static>-->
+            </var>
+            <var name="$num11">
+              <!--<static></static>-->
+            </var>
+            <var name="$num10">
+              <!--<static></static>-->
+            </var>
+            <var name="$num00">
+              <!--<static></static>-->
+            </var>
+            <var name="$num01">
+              <!--<static></static>-->
+            </var>
+            <var name="$product2">
+              <!--<static></static>-->
+            </var>
+            <var name="$product3">
+              <!--<static></static>-->
+            </var>
+            <var name="$product0">
+              <!--<static></static>-->
+            </var>
+            <var name="$num30">
+              <!--<static></static>-->
+            </var>
+            <var name="$num20">
+              <!--<static></static>-->
+            </var>
+            <var name="$num21">
+              <!--<static></static>-->
+            </var>
+            <var name="$num31">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("Numeric");
 
-        $num00 = random(1,9,1)*100+random(0,9,1)*10+random(1,9,1);
-        $num01 = random(1,9,1)*10+random(1,9,1);
-        $product0 = $num00*$num01;
+                $num00 = random(1,9,1)*100+random(0,9,1)*10+random(1,9,1);
+                $num01 = random(1,9,1)*10+random(1,9,1);
+                $product0 = $num00*$num01;
 
-        @moves = ();
-        @nums = ();
+                @moves = ();
+                @nums = ();
 
-        $nums[0] = $num00*list_random(0.1,0.01,0.001);
-        $nums[1] = $num01*list_random(0.1,0.01,0.001);
-        $product1 = $nums[0]*$nums[1];
-        $moves[1] = -log($product1/$product0)/log(10);
+                $nums[0] = $num00*list_random(0.1,0.01,0.001);
+                $nums[1] = $num01*list_random(0.1,0.01,0.001);
+                $product1 = $nums[0]*$nums[1];
+                $moves[1] = -log($product1/$product0)/log(10);
 
-        $nums[2] = $num00*list_random(0.1,0.01,0.001);
-        do {$nums[3] = $num01*list_random(0.1,0.01,0.001);} until ($nums[3]!=$nums[1]);
-        $product2 = $nums[2]*$nums[3];
-        $moves[2] = -log($product2/$product0)/log(10);
+                $nums[2] = $num00*list_random(0.1,0.01,0.001);
+                do {$nums[3] = $num01*list_random(0.1,0.01,0.001);} until ($nums[3]!=$nums[1]);
+                $product2 = $nums[2]*$nums[3];
+                $moves[2] = -log($product2/$product0)/log(10);
 
-        do {$nums[4] = $num00*list_random(0.1,0.01,0.001);} until ( ($nums[4]!=$nums[0]) &amp;&amp; ($nums[4]!=$nums[2]) );
-        $nums[5] = $num01*list_random(0.1,0.01,0.001);
-        $product3 = $nums[4]*$nums[5];
-        $moves[3] = -log($product3/$product0)/log(10);
+                do {$nums[4] = $num00*list_random(0.1,0.01,0.001);} until ( ($nums[4]!=$nums[0]) &amp;&amp; ($nums[4]!=$nums[2]) );
+                $nums[5] = $num01*list_random(0.1,0.01,0.001);
+                $product3 = $nums[4]*$nums[5];
+                $moves[3] = -log($product3/$product0)/log(10);
 
-        @movesToWords = ();
-        for my $i (1..3) {
-           if (Real($moves[$i])==1) {$movesToWords[$i]="once";}
-           elsif (Real($moves[$i])==2) {$movesToWords[$i]="twice";}
-           else {$movesToWords[$i]= numberWord($moves[$i])." times";}
-        }
+                @movesToWords = ();
+                for my $i (1..3) {
+                   if (Real($moves[$i])==1) {$movesToWords[$i]="once";}
+                   elsif (Real($moves[$i])==2) {$movesToWords[$i]="twice";}
+                   else {$movesToWords[$i]= numberWord($moves[$i])." times";}
+                }
 
-        $num10 = $nums[0];
-        $num11 = $nums[1];
+                $num10 = $nums[0];
+                $num11 = $nums[1];
 
-        $num20 = $nums[2];
-        $num21 = $nums[3];
+                $num20 = $nums[2];
+                $num21 = $nums[3];
 
-        $num30 = $nums[4];
-        $num31 = $nums[5];
+                $num30 = $nums[4];
+                $num31 = $nums[5];
 
-        Context("LimitedNumeric");
-        $product1 = Compute($product1);
-        $product2 = Compute($product2);
-        $product3 = Compute($product3);
+                Context("LimitedNumeric");
+                $product1 = Compute($product1);
+                $product2 = Compute($product2);
+                $product3 = Compute($product3);
       </pg-code>
     </setup>
     <statement>

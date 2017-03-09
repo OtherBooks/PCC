@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>MultiplicationWordProblem70</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Multiplication word problem.
-  #
-  # Last edited: Yao 10/2/13
-  #
-  # ENDDESCRIPTION
+    <original-file>MultiplicationWordProblem70</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Multiplication word problem.
+    #
+    # Last edited: Yao 10/2/13
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('multiplication','application')
-  ## DBCCSS('3.OA','4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('multiplication','application')
+    ## DBCCSS('3.OA','4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$numPerHour">
-        <!--<static></static>-->
-      </var>
-      <var name="$numPerWeek">
-        <!--<static></static>-->
-      </var>
-      <var name="$numPerMinute">
-        <!--<static></static>-->
-      </var>
-      <var name="$numPerDay">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$numPerWeek">
+              <!--<static></static>-->
+            </var>
+            <var name="$numPerMinute">
+              <!--<static></static>-->
+            </var>
+            <var name="$numPerDay">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $numPerMinute = random(2,9,1);
-        $numPerHour = $numPerMinute*60;
-        $numPerDay = $numPerHour*24;
-        $numPerWeek = $numPerDay*7;
+                $numPerMinute = random(2,9,1);
+                $numPerHour = $numPerMinute*60;
+                $numPerDay = $numPerHour*24;
+                $numPerWeek = $numPerDay*7;
       </pg-code>
     </setup>
     <statement>

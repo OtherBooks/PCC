@@ -1,115 +1,115 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>MultiplyTrailingZero10</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Template
-  #
-  # 70*40
-  # 
-  # Last updated: Yao, 10/13/2016
-  #
-  # ENDDESCRIPTION
+    <original-file>MultiplyTrailingZero10</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # 70*40
+    # 
+    # Last updated: Yao, 10/13/2016
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('Algebraic Expressions')
-  ## KEYWORDS('evaluate','multiply')
-  ## DBCCSS('4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('evaluate','multiply')
+    ## DBCCSS('4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$a">
-        <!--<static></static>-->
-      </var>
-      <var name="$b1Ten">
-        <!--<static></static>-->
-      </var>
-      <var name="$zeroText1">
-        <!--<static></static>-->
-      </var>
-      <var name="$b">
-        <!--<static></static>-->
-      </var>
-      <var name="$b2Exp">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans1">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans2">
-        <!--<static></static>-->
-      </var>
-      <var name="$a1Exp">
-        <!--<static></static>-->
-      </var>
-      <var name="$a2Exp">
-        <!--<static></static>-->
-      </var>
-      <var name="$a1">
-        <!--<static></static>-->
-      </var>
-      <var name="$a2">
-        <!--<static></static>-->
-      </var>
-      <var name="$b1">
-        <!--<static></static>-->
-      </var>
-      <var name="$b1Exp">
-        <!--<static></static>-->
-      </var>
-      <var name="$b2">
-        <!--<static></static>-->
-      </var>
-      <var name="$a1Ten">
-        <!--<static></static>-->
-      </var>
-      <var name="$zeroText2">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$b1Ten">
+              <!--<static></static>-->
+            </var>
+            <var name="$zeroText1">
+              <!--<static></static>-->
+            </var>
+            <var name="$b">
+              <!--<static></static>-->
+            </var>
+            <var name="$b2Exp">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans1">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans2">
+              <!--<static></static>-->
+            </var>
+            <var name="$a1Exp">
+              <!--<static></static>-->
+            </var>
+            <var name="$a2Exp">
+              <!--<static></static>-->
+            </var>
+            <var name="$a1">
+              <!--<static></static>-->
+            </var>
+            <var name="$a2">
+              <!--<static></static>-->
+            </var>
+            <var name="$b1">
+              <!--<static></static>-->
+            </var>
+            <var name="$b1Exp">
+              <!--<static></static>-->
+            </var>
+            <var name="$b2">
+              <!--<static></static>-->
+            </var>
+            <var name="$a1Ten">
+              <!--<static></static>-->
+            </var>
+            <var name="$zeroText2">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
-        Context()->{format}{number} = "%u";
+                Context()->{format}{number} = "%u";
 
-        $a = random(2,9,1);
-        $b = random(2,9,1);
+                $a = random(2,9,1);
+                $b = random(2,9,1);
 
-        do {
-           $a1Exp = random(1,4,1);
-           $a1Ten = 10**$a1Exp;
-           $b1Exp = random(1,4,1);
-           $b1Ten = 10**$b1Exp;
-           $a1 = $a*$a1Ten;
-           $b1 = $b*$b1Ten;
-           $ans1 = $a1*$b1;
-           $ans1 = Compute("$ans1");
+                do {
+                   $a1Exp = random(1,4,1);
+                   $a1Ten = 10**$a1Exp;
+                   $b1Exp = random(1,4,1);
+                   $b1Ten = 10**$b1Exp;
+                   $a1 = $a*$a1Ten;
+                   $b1 = $b*$b1Ten;
+                   $ans1 = $a1*$b1;
+                   $ans1 = Compute("$ans1");
 
-           $a2Exp = random(1,4,1);
-           $a2Ten = 10**$a2Exp;
-           $b2Exp = random(1,4,1);
-           $b2Ten = 10**$b2Exp;
-           $a2 = $a*$a2Ten;
-           $b2 = $b*$b2Ten;
-           $ans2 = $a2*$b2;
-           $ans2 = Compute("$ans2");
-        } until ( ($a1!=$a2) || ($b1!=$b2) );
+                   $a2Exp = random(1,4,1);
+                   $a2Ten = 10**$a2Exp;
+                   $b2Exp = random(1,4,1);
+                   $b2Ten = 10**$b2Exp;
+                   $a2 = $a*$a2Ten;
+                   $b2 = $b*$b2Ten;
+                   $ans2 = $a2*$b2;
+                   $ans2 = Compute("$ans2");
+                } until ( ($a1!=$a2) || ($b1!=$b2) );
 
-        $zeroText1 = ($a1Exp==1) ? "zero" : "zeroes";
-        $zeroText2 = ($b1Exp==1) ? "zero" : "zeroes";
+                $zeroText1 = ($a1Exp==1) ? "zero" : "zeroes";
+                $zeroText2 = ($b1Exp==1) ? "zero" : "zeroes";
       </pg-code>
     </setup>
     <statement>

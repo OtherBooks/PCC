@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>MultiplyDivideDecimals30</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Template
-  #
-  # Multiply a decimal by a power of 10.
-  # 
-  # Last updated: Yao, 12/20/2013
-  #
-  # ENDDESCRIPTION
+    <original-file>MultiplyDivideDecimals30</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Multiply a decimal by a power of 10.
+    # 
+    # Last updated: Yao, 12/20/2013
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('')
-  ## KEYWORDS('decimal','multiply')
-  ## DBCCSS('5.NBT')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('')
+    ## KEYWORDS('decimal','multiply')
+    ## DBCCSS('5.NBT')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$numZeroes">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans1">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans3">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans2">
-        <!--<static></static>-->
-      </var>
-      <var name="$dec">
-        <!--<static></static>-->
-      </var>
-      <var name="$power">
-        <!--<static></static>-->
-      </var>
-      <var name="$times">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$ans1">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans3">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans2">
+              <!--<static></static>-->
+            </var>
+            <var name="$dec">
+              <!--<static></static>-->
+            </var>
+            <var name="$power">
+              <!--<static></static>-->
+            </var>
+            <var name="$times">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
-        #Context()->{format}{number} = "%9d";
+                #Context()->{format}{number} = "%9d";
 
-        $numZeroes = 1;
-        $power = 10**$numZeroes;
+                $numZeroes = 1;
+                $power = 10**$numZeroes;
 
-        $dec = random(1,9,1)+random(0,9,1)/10+random(1,9,1)/100;
-        $ans1 = $dec*$power;
-        $ans2 = $ans1*10;
-        $ans3 = $ans2*10;
+                $dec = random(1,9,1)+random(0,9,1)/10+random(1,9,1)/100;
+                $ans1 = $dec*$power;
+                $ans2 = $ans1*10;
+                $ans3 = $ans2*10;
 
-        if ($numZeroes==1) {$times = "once";}
-        elsif ($numZeroes==2) {$times = "twice";}
-        else {$times = "$numZeroes".' times';}
+                if ($numZeroes==1) {$times = "once";}
+                elsif ($numZeroes==2) {$times = "twice";}
+                else {$times = "$numZeroes".' times';}
       </pg-code>
     </setup>
     <statement>

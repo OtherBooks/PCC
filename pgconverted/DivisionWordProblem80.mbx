@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>DivisionWordProblem80</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Division word problem.
-  #
-  # Last edited: Yao 10/9/13
-  #
-  # ENDDESCRIPTION
+    <original-file>DivisionWordProblem80</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Division word problem.
+    #
+    # Last edited: Yao 10/9/13
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('division','application')
-  ## DBCCSS('3.OA','4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('division','application')
+    ## DBCCSS('3.OA','4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>PCCmacros.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>PCCmacros.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$numPerGame">
-        <!--<static></static>-->
-      </var>
-      <var name="$numGamesTotal">
-        <!--<static></static>-->
-      </var>
-      <var name="$possessive">
-        <!--<static></static>-->
-      </var>
-      <var name="$name">
-        <!--<static></static>-->
-      </var>
-      <var name="$pronoun">
-        <!--<static></static>-->
-      </var>
-      <var name="$numGamesMissed">
-        <!--<static></static>-->
-      </var>
-      <var name="$numGamesPlayed">
-        <!--<static></static>-->
-      </var>
-      <var name="$totalPoints">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$numGamesTotal">
+              <!--<static></static>-->
+            </var>
+            <var name="$possessive">
+              <!--<static></static>-->
+            </var>
+            <var name="$name">
+              <!--<static></static>-->
+            </var>
+            <var name="$pronoun">
+              <!--<static></static>-->
+            </var>
+            <var name="$numGamesMissed">
+              <!--<static></static>-->
+            </var>
+            <var name="$numGamesPlayed">
+              <!--<static></static>-->
+            </var>
+            <var name="$totalPoints">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $numPerGame = random(5,20,1);
-        $numGamesTotal = random(50,70,1);
-        $numGamesMissed = random(5,10,1);
-        $numGamesPlayed = $numGamesTotal - $numGamesMissed;
-        $totalPoints = $numPerGame * $numGamesPlayed;
+                $numPerGame = random(5,20,1);
+                $numGamesTotal = random(50,70,1);
+                $numGamesMissed = random(5,10,1);
+                $numGamesPlayed = $numGamesTotal - $numGamesMissed;
+                $totalPoints = $numPerGame * $numGamesPlayed;
 
-        $sex = list_random('male','female');
-        $pronoun = 'he' if ($sex eq 'male');
-        $pronoun = 'she' if ($sex eq 'female');
+                $sex = list_random('male','female');
+                $pronoun = 'he' if ($sex eq 'male');
+                $pronoun = 'she' if ($sex eq 'female');
 
-        $possessive = 'his' if ($sex eq 'male');
-        $possessive = 'her' if ($sex eq 'female');
+                $possessive = 'his' if ($sex eq 'male');
+                $possessive = 'her' if ($sex eq 'female');
 
-        $name = RandomName(sex=>$sex);
+                $name = RandomName(sex=>$sex);
       </pg-code>
     </setup>
     <statement>
@@ -108,7 +108,7 @@
       <p>
         <md>
           <mrow><var name="$totalPoints" /> \div (<var name="$numGamesTotal" />-<var name="$numGamesMissed" />) 
-                \amp= <var name="$totalPoints" /> \div <var name="$numGamesPlayed" /></mrow>
+                          \amp= <var name="$totalPoints" /> \div <var name="$numGamesPlayed" /></mrow>
           <mrow>\amp= <var name="$numPerGame" /></mrow>
         </md>
       </p>

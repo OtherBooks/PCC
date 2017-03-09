@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>multiplicationTable20</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Practice multiplication facts by doing division problems. Numbers range from 2 to 9.
-  #
-  # Last edited: Carl Yao 9/25/13
-  #
-  # ENDDESCRIPTION
+    <original-file>multiplicationTable20</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Practice multiplication facts by doing division problems. Numbers range from 2 to 9.
+    #
+    # Last edited: Carl Yao 9/25/13
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('multiplication','division')
-  ## DBCCSS('3.OA.7')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('multiplication','division')
+    ## DBCCSS('3.OA.7')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$num1">
-        <!--<static></static>-->
-      </var>
-      <var name="$products">
-        <!--<static></static>-->
-      </var>
-      <var name="$num2">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$products">
+              <!--<static></static>-->
+            </var>
+            <var name="$num2">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        @num1 = ();
-        @num2 = ();
-        @products = ();
+                @num1 = ();
+                @num2 = ();
+                @products = ();
 
-        do
-        {for my $i (0..9) {
-          $num1[$i] = random(2,9,1);
-          $num2[$i] = random(2,9,1);
-          $products[$i] = $num1[$i]*$num2[$i];
-          }
+                do
+                {for my $i (0..9) {
+                  $num1[$i] = random(2,9,1);
+                  $num2[$i] = random(2,9,1);
+                  $products[$i] = $num1[$i]*$num2[$i];
+                  }
 
-        my %seen = ();
-        @duplicates = ();
-        @duplicates = map { 1==$seen{$_}++ ? $_ : () } @products;
+                my %seen = ();
+                @duplicates = ();
+                @duplicates = map { 1==$seen{$_}++ ? $_ : () } @products;
 
-        } until (@duplicates == 0);
+                } until (@duplicates == 0);
       </pg-code>
     </setup>
     <statement>

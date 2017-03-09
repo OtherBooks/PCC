@@ -1,78 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>MultiplyDivideDecimals40</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Template
-  #
-  # Multiply a decimal by a power of 10.
-  # 
-  # Last updated: Yao, 10/19/2013
-  #
-  # ENDDESCRIPTION
+    <original-file>MultiplyDivideDecimals40</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Multiply a decimal by a power of 10.
+    # 
+    # Last updated: Yao, 10/19/2013
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('')
-  ## KEYWORDS('decimal','multiply')
-  ## DBCCSS('5.NBT')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('')
+    ## KEYWORDS('decimal','multiply')
+    ## DBCCSS('5.NBT')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$power2">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans1">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans2">
-        <!--<static></static>-->
-      </var>
-      <var name="$dec">
-        <!--<static></static>-->
-      </var>
-      <var name="$place2">
-        <!--<static></static>-->
-      </var>
-      <var name="$power1">
-        <!--<static></static>-->
-      </var>
-      <var name="$times">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$ans1">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans2">
+              <!--<static></static>-->
+            </var>
+            <var name="$dec">
+              <!--<static></static>-->
+            </var>
+            <var name="$place2">
+              <!--<static></static>-->
+            </var>
+            <var name="$power1">
+              <!--<static></static>-->
+            </var>
+            <var name="$times">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
-        Context()->{format}{number} = "%9d";
+                Context()->{format}{number} = "%9d";
 
-        $dec = random(1,99,1)+random(1,99,1)/100+random(1,9,1)/1000;
-        $power1 = list_random(10,100,1000);
-        $power2 = list_random(10000,100000,1000000);
-        $ans1 = $dec*$power1;
-        $ans2 = $dec*$power2;
+                $dec = random(1,99,1)+random(1,99,1)/100+random(1,9,1)/1000;
+                $power1 = list_random(10,100,1000);
+                $power2 = list_random(10000,100000,1000000);
+                $ans1 = $dec*$power1;
+                $ans2 = $dec*$power2;
 
-        Context("Numeric");
-        $place1 = log($power1)/log(10);
-        $place2 = log($power2)/log(10);
+                Context("Numeric");
+                $place1 = log($power1)/log(10);
+                $place2 = log($power2)/log(10);
 
-        Context("LimitedNumeric");
+                Context("LimitedNumeric");
 
-        if ($place1==1) {$times = "once";}
-        elsif ($place1==2) {$times = "twice";}
-        else {$times = "$place1".' times';}
+                if ($place1==1) {$times = "once";}
+                elsif ($place1==2) {$times = "twice";}
+                else {$times = "$place1".' times';}
       </pg-code>
     </setup>
     <statement>

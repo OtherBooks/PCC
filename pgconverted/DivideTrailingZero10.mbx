@@ -1,138 +1,138 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>DivideTrailingZero10</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Template
-  #
-  # 140000/70
-  # 
-  # Last updated: Yao, 10/13/2016
-  #
-  # ENDDESCRIPTION
+    <original-file>DivideTrailingZero10</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # 140000/70
+    # 
+    # Last updated: Yao, 10/13/2016
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('Algebraic Expressions')
-  ## KEYWORDS('evaluate','multiply')
-  ## DBCCSS('4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('evaluate','multiply')
+    ## DBCCSS('4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$a">
-        <!--<static></static>-->
-      </var>
-      <var name="$s1">
-        <!--<static></static>-->
-      </var>
-      <var name="$b2Exp">
-        <!--<static></static>-->
-      </var>
-      <var name="$zeroText2">
-        <!--<static></static>-->
-      </var>
-      <var name="$zeroText1">
-        <!--<static></static>-->
-      </var>
-      <var name="$itOrThem">
-        <!--<static></static>-->
-      </var>
-      <var name="$s6">
-        <!--<static></static>-->
-      </var>
-      <var name="$b">
-        <!--<static></static>-->
-      </var>
-      <var name="$s4">
-        <!--<static></static>-->
-      </var>
-      <var name="$s5">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans1">
-        <!--<static></static>-->
-      </var>
-      <var name="$s3">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans2">
-        <!--<static></static>-->
-      </var>
-      <var name="$s2">
-        <!--<static></static>-->
-      </var>
-      <var name="$a1Exp">
-        <!--<static></static>-->
-      </var>
-      <var name="$a2Exp">
-        <!--<static></static>-->
-      </var>
-      <var name="$a1">
-        <!--<static></static>-->
-      </var>
-      <var name="$a2">
-        <!--<static></static>-->
-      </var>
-      <var name="$s7">
-        <!--<static></static>-->
-      </var>
-      <var name="$b1">
-        <!--<static></static>-->
-      </var>
-      <var name="$b2">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$s1">
+              <!--<static></static>-->
+            </var>
+            <var name="$b2Exp">
+              <!--<static></static>-->
+            </var>
+            <var name="$zeroText2">
+              <!--<static></static>-->
+            </var>
+            <var name="$zeroText1">
+              <!--<static></static>-->
+            </var>
+            <var name="$itOrThem">
+              <!--<static></static>-->
+            </var>
+            <var name="$s6">
+              <!--<static></static>-->
+            </var>
+            <var name="$b">
+              <!--<static></static>-->
+            </var>
+            <var name="$s4">
+              <!--<static></static>-->
+            </var>
+            <var name="$s5">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans1">
+              <!--<static></static>-->
+            </var>
+            <var name="$s3">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans2">
+              <!--<static></static>-->
+            </var>
+            <var name="$s2">
+              <!--<static></static>-->
+            </var>
+            <var name="$a1Exp">
+              <!--<static></static>-->
+            </var>
+            <var name="$a2Exp">
+              <!--<static></static>-->
+            </var>
+            <var name="$a1">
+              <!--<static></static>-->
+            </var>
+            <var name="$a2">
+              <!--<static></static>-->
+            </var>
+            <var name="$s7">
+              <!--<static></static>-->
+            </var>
+            <var name="$b1">
+              <!--<static></static>-->
+            </var>
+            <var name="$b2">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
-        Context()->{format}{number} = "%u";
+                Context()->{format}{number} = "%u";
 
-        $b = random(2,9,1);
-        $a = $b*random(2,9,1);
+                $b = random(2,9,1);
+                $a = $b*random(2,9,1);
 
-           $a1Exp = random(1,4,1);
-           $a1Ten = 10**$a1Exp;
-           $a1 = $a*$a1Ten;
-           $b1 = $b;
-           $ans1 = $a1/$b1;
-           $ans1 = Compute("$ans1");
+                   $a1Exp = random(1,4,1);
+                   $a1Ten = 10**$a1Exp;
+                   $a1 = $a*$a1Ten;
+                   $b1 = $b;
+                   $ans1 = $a1/$b1;
+                   $ans1 = Compute("$ans1");
 
-        $d = random(2,9,1);
-        $c = $d*random(2,9,1);
+                $d = random(2,9,1);
+                $c = $d*random(2,9,1);
 
-           $a2Exp = random(3,5,1);
-           $a2Ten = 10**$a2Exp;
-           $b2Exp = random(1,$a2Exp-1,1);
-           $b2Ten = 10**$b2Exp;
-           $a2 = $c*$a2Ten;
-           $b2 = $d*$b2Ten;
-           $ans2 = $a2/$b2;
-           $ans2 = Compute("$ans2");
+                   $a2Exp = random(3,5,1);
+                   $a2Ten = 10**$a2Exp;
+                   $b2Exp = random(1,$a2Exp-1,1);
+                   $b2Ten = 10**$b2Exp;
+                   $a2 = $c*$a2Ten;
+                   $b2 = $d*$b2Ten;
+                   $ans2 = $a2/$b2;
+                   $ans2 = Compute("$ans2");
 
-        $s1 = $a2/10**$b2Exp;
-        $s2 = $b2/10**$b2Exp;
-        $s3 = 10**$a1Exp;
-        $s4 = $a/$b;
+                $s1 = $a2/10**$b2Exp;
+                $s2 = $b2/10**$b2Exp;
+                $s3 = 10**$a1Exp;
+                $s4 = $a/$b;
 
-        $s5 = 10**$a2Exp;
-        $s6 = 10**$b2Exp;
-        $s7 = 10**($a2Exp-$b2Exp);
+                $s5 = 10**$a2Exp;
+                $s6 = 10**$b2Exp;
+                $s7 = 10**($a2Exp-$b2Exp);
 
-        $zeroText1 = ($a1Exp==1) ? "zero" : "zeroes";
-        $itOrThem = ($a1Exp==1) ? "it" : "them";
-        $zeroText2 = ($b2Exp==1) ? "zero" : "zeroes";
+                $zeroText1 = ($a1Exp==1) ? "zero" : "zeroes";
+                $itOrThem = ($a1Exp==1) ? "it" : "them";
+                $zeroText2 = ($b2Exp==1) ? "zero" : "zeroes";
       </pg-code>
     </setup>
     <statement>

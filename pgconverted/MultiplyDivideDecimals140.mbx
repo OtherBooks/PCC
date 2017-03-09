@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>MultiplyDivideDecimals140</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Template
-  #
-  # Calculate 4*7, 4*70, 4*700, 4*7000
-  # 
-  # Last updated: Yao, 12/20/2013
-  #
-  # ENDDESCRIPTION
+    <original-file>MultiplyDivideDecimals140</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Calculate 4*7, 4*70, 4*700, 4*7000
+    # 
+    # Last updated: Yao, 12/20/2013
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('')
-  ## KEYWORDS('decimal','multiply')
-  ## DBCCSS('5.NBT.7')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('')
+    ## KEYWORDS('decimal','multiply')
+    ## DBCCSS('5.NBT.7')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$int01">
-        <!--<static></static>-->
-      </var>
-      <var name="$int00">
-        <!--<static></static>-->
-      </var>
-      <var name="$int10">
-        <!--<static></static>-->
-      </var>
-      <var name="$int11">
-        <!--<static></static>-->
-      </var>
-      <var name="$int21">
-        <!--<static></static>-->
-      </var>
-      <var name="$int20">
-        <!--<static></static>-->
-      </var>
-      <var name="$int30">
-        <!--<static></static>-->
-      </var>
-      <var name="$int31">
-        <!--<static></static>-->
-      </var>
-      <var name="$product2">
-        <!--<static></static>-->
-      </var>
-      <var name="$product3">
-        <!--<static></static>-->
-      </var>
-      <var name="$product0">
-        <!--<static></static>-->
-      </var>
-      <var name="$product1">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$int00">
+              <!--<static></static>-->
+            </var>
+            <var name="$int10">
+              <!--<static></static>-->
+            </var>
+            <var name="$int11">
+              <!--<static></static>-->
+            </var>
+            <var name="$int21">
+              <!--<static></static>-->
+            </var>
+            <var name="$int20">
+              <!--<static></static>-->
+            </var>
+            <var name="$int30">
+              <!--<static></static>-->
+            </var>
+            <var name="$int31">
+              <!--<static></static>-->
+            </var>
+            <var name="$product2">
+              <!--<static></static>-->
+            </var>
+            <var name="$product3">
+              <!--<static></static>-->
+            </var>
+            <var name="$product0">
+              <!--<static></static>-->
+            </var>
+            <var name="$product1">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $int00 = random(2,9,1);
-        $int01 = random(2,9,1);
-        $product0 = $int00*$int01;
+                $int00 = random(2,9,1);
+                $int01 = random(2,9,1);
+                $product0 = $int00*$int01;
 
-        $int10 = $int00;
-        $int11 = $int01*10;
-        $product1 = $int10*$int11;
-        $move1 = 1;
+                $int10 = $int00;
+                $int11 = $int01*10;
+                $product1 = $int10*$int11;
+                $move1 = 1;
 
-        $int20 = $int00;
-        $int21 = $int01*100;
-        $product2 = $int20*$int21;
-        $move2 = 2;
+                $int20 = $int00;
+                $int21 = $int01*100;
+                $product2 = $int20*$int21;
+                $move2 = 2;
 
-        $int30 = $int00;
-        $int31 = $int01*1000;
-        $product3 = $int30*$int31;
-        $move3 = 3;
+                $int30 = $int00;
+                $int31 = $int01*1000;
+                $product3 = $int30*$int31;
+                $move3 = 3;
       </pg-code>
     </setup>
     <statement>
@@ -129,7 +129,7 @@
 
       <p>
         1. From <m><var name="$int01" /></m> to <m><var name="$int11" /></m>, the decimal point moved to the right once.
-        2. Since <m><var name="$int00" /> \cdot <var name="$int01" /> = <var name="$product0" /></m>, to calculate <m><var name="$int10" /> \cdot <var name="$int11" /></m>, we move the decimal point of <m><var name="$product0" /></m> to the right once, and we have: <m><var name="$int10" /> \cdot <var name="$int11" /> = <var name="$product1" /></m>.
+                2. Since <m><var name="$int00" /> \cdot <var name="$int01" /> = <var name="$product0" /></m>, to calculate <m><var name="$int10" /> \cdot <var name="$int11" /></m>, we move the decimal point of <m><var name="$product0" /></m> to the right once, and we have: <m><var name="$int10" /> \cdot <var name="$int11" /> = <var name="$product1" /></m>.
       </p>
 
       <p>
@@ -138,8 +138,8 @@
 
       <p>
         a) <m>\displaystyle{<var name="$int10" /> \cdot <var name="$int11" /> = <var name="$product1" />}</m>
-        b) <m>\displaystyle{<var name="$int20" /> \cdot <var name="$int21" /> = <var name="$product2" />}</m>
-        c) <m>\displaystyle{<var name="$int30" /> \cdot <var name="$int31" /> = <var name="$product3" />}</m>
+                b) <m>\displaystyle{<var name="$int20" /> \cdot <var name="$int21" /> = <var name="$product2" />}</m>
+                c) <m>\displaystyle{<var name="$int30" /> \cdot <var name="$int31" /> = <var name="$product3" />}</m>
       </p>
     </solution>
   </webwork>

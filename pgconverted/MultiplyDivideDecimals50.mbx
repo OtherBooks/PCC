@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>MultiplyDivideDecimals50</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Template
-  #
-  # Divide an integer by a power of 10. Answer is an integer.
-  # 
-  # Last updated: Yao, 10/19/2013
-  #
-  # ENDDESCRIPTION
+    <original-file>MultiplyDivideDecimals50</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Divide an integer by a power of 10. Answer is an integer.
+    # 
+    # Last updated: Yao, 10/19/2013
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('')
-  ## KEYWORDS('decimal','divide')
-  ## DBCCSS('5.NBT')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('')
+    ## KEYWORDS('decimal','divide')
+    ## DBCCSS('5.NBT')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$divisorZeroes">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans1">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans3">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans2">
-        <!--<static></static>-->
-      </var>
-      <var name="$dec">
-        <!--<static></static>-->
-      </var>
-      <var name="$divisor">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$ans1">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans3">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans2">
+              <!--<static></static>-->
+            </var>
+            <var name="$dec">
+              <!--<static></static>-->
+            </var>
+            <var name="$divisor">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
-        Context()->{format}{number} = "%9d";
+                Context()->{format}{number} = "%9d";
 
-        $numZeroes = random(3,6,1);
-        $divisorZeroes = 1;
-        $power = 10**$numZeroes;
-        $divisor = 10**$divisorZeroes;
+                $numZeroes = random(3,6,1);
+                $divisorZeroes = 1;
+                $power = 10**$numZeroes;
+                $divisor = 10**$divisorZeroes;
 
-        $dec = random(11,99,1)*$power;
-        $ans1 = $dec/$divisor;
-        $ans2 = $ans1/10;
-        $ans3 = $ans2/10;
+                $dec = random(11,99,1)*$power;
+                $ans1 = $dec/$divisor;
+                $ans2 = $ans1/10;
+                $ans3 = $ans2/10;
       </pg-code>
     </setup>
     <statement>

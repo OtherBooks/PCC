@@ -1,145 +1,145 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>AdditionSubtractionApplications60</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Given a line graph, find the difference of two numbers.
-  #
-  # Last edited by Carl Yao on 09/29/2016
-  #
-  # ENDDESCRIPTION
+    <original-file>AdditionSubtractionApplications60</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Given a line graph, find the difference of two numbers.
+    #
+    # Last edited by Carl Yao on 09/29/2016
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Algebra')
-  ## DBchapter('Basic Algebra')
-  ## DBsection('')
-  ## KEYWORDS('percent','graph','application','line graph','rounding')
-  ## DBCCSS('7.RP.3','6.RP.3c')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('')
+    ## KEYWORDS('percent','graph','application','line graph','rounding')
+    ## DBCCSS('7.RP.3','6.RP.3c')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGgraphmacros.pl</macro-file>
-    <macro-file>contextPercent.pl</macro-file>
-    <macro-file>contextCurrency.pl</macro-file>
-    <macro-file>PCCmacros.pl</macro-file>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGgraphmacros.pl</macro-file>
+        <macro-file>contextPercent.pl</macro-file>
+        <macro-file>contextCurrency.pl</macro-file>
+        <macro-file>PCCmacros.pl</macro-file>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$maxPrice">
-        <!--<static></static>-->
-      </var>
-      <var name="$day1">
-        <!--<static></static>-->
-      </var>
-      <var name="$day1Price">
-        <!--<static></static>-->
-      </var>
-      <var name="$dayLast">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans">
-        <!--<static></static>-->
-      </var>
-      <var name="$alt">
-        <!--<static></static>-->
-      </var>
-      <var name="$picture">
-        <!--<static></static>-->
-      </var>
-      <var name="$dayLastPrice">
-        <!--<static></static>-->
-      </var>
-      <var name="$minPrice">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$day1">
+              <!--<static></static>-->
+            </var>
+            <var name="$day1Price">
+              <!--<static></static>-->
+            </var>
+            <var name="$dayLast">
+              <!--<static></static>-->
+            </var>
+            <var name="$ans">
+              <!--<static></static>-->
+            </var>
+            <var name="$alt">
+              <!--<static></static>-->
+            </var>
+            <var name="$picture">
+              <!--<static></static>-->
+            </var>
+            <var name="$dayLastPrice">
+              <!--<static></static>-->
+            </var>
+            <var name="$minPrice">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $numPoints = 5;
-        $maxLimit = 2;
+                $numPoints = 5;
+                $maxLimit = 2;
 
-        @days = ("Jan.","Feb.","March","April","May");
-        @price = (0,0,0,0,0);
-        @priceC = ();
+                @days = ("Jan.","Feb.","March","April","May");
+                @price = (0,0,0,0,0);
+                @priceC = ();
 
-        do {
-           $startPrice = 100*(1+random(-1,1,2)*random(1,50,1)/100);
-           $price[0] = $startPrice;
-           for my $i (1..$numPoints-1) {
-              $price[$i] = $price[$i-1]+random(-1,1,2)*random(1,50,1);
-           }
-           $out = 0;
-           for my $i (1..$numPoints-1) {
-              if (($price[$i]>=$maxLimit*100) || ($price[$i]&lt;=0)) {
-                 $out = 1;
-              }
-           }
-           $ans = abs($price[$numPoints-1]-$price[0]);
-        } until ( ($out==0) &amp;&amp; ($ans!=0) );
+                do {
+                   $startPrice = 100*(1+random(-1,1,2)*random(1,50,1)/100);
+                   $price[0] = $startPrice;
+                   for my $i (1..$numPoints-1) {
+                      $price[$i] = $price[$i-1]+random(-1,1,2)*random(1,50,1);
+                   }
+                   $out = 0;
+                   for my $i (1..$numPoints-1) {
+                      if (($price[$i]>=$maxLimit*100) || ($price[$i]&lt;=0)) {
+                         $out = 1;
+                      }
+                   }
+                   $ans = abs($price[$numPoints-1]-$price[0]);
+                } until ( ($out==0) &amp;&amp; ($ans!=0) );
 
-        Context("LimitedNumeric");
+                Context("LimitedNumeric");
 
-        $yCover = $maxLimit;
-        $ystep = $yCover/4;
-        $xCover = 5;
-        $xstep = 1;
+                $yCover = $maxLimit;
+                $ystep = $yCover/4;
+                $xCover = 5;
+                $xstep = 1;
 
-        $xmin = -$xstep;         #The viewing window
-        $xmax = $xCover + 2*$xstep;
-        $ymin = -$ystep/2;
-        $ymax = $yCover + $ystep;
+                $xmin = -$xstep;         #The viewing window
+                $xmax = $xCover + 2*$xstep;
+                $ymin = -$ystep/2;
+                $ymax = $yCover + $ystep;
 
-        $picture = init_graph($xmin,$ymin,$xmax,$ymax,
-              pixels=>[400,400]);
-        $picture->lb('reset');
+                $picture = init_graph($xmin,$ymin,$xmax,$ymax,
+                      pixels=>[400,400]);
+                $picture->lb('reset');
 
-        $picture->moveTo(0,0);
-        $picture->lineTo($xmax-$xstep, 0, black,3);
-        $picture->moveTo(0,0);
-        $picture->arrowTo(0, $ymax-$ystep/2, black,3);
+                $picture->moveTo(0,0);
+                $picture->lineTo($xmax-$xstep, 0, black,3);
+                $picture->moveTo(0,0);
+                $picture->arrowTo(0, $ymax-$ystep/2, black,3);
 
-        for my $i (0..4) {
-           $picture->stamps( closed_circle(0,$i*($maxLimit/4),'blue') );
-           $mark = 100*$i*($maxLimit/4);
-           $picture->lb( new Label(-$xstep/2,$i*($maxLimit/4),"$mark",'black','center','middle'));
-        }
+                for my $i (0..4) {
+                   $picture->stamps( closed_circle(0,$i*($maxLimit/4),'blue') );
+                   $mark = 100*$i*($maxLimit/4);
+                   $picture->lb( new Label(-$xstep/2,$i*($maxLimit/4),"$mark",'black','center','middle'));
+                }
 
-        $picture->lb( new Label($xmax-$xstep,-$ystep/4,"months",'black','center','middle'));
-        $picture->lb( new Label($xstep/4,$ymax-$ystep/3,"number of club members",'black','left','middle'));
+                $picture->lb( new Label($xmax-$xstep,-$ystep/4,"months",'black','center','middle'));
+                $picture->lb( new Label($xstep/4,$ymax-$ystep/3,"number of club members",'black','left','middle'));
 
-        $picture->moveTo($xstep,$price[0]/100);
-        $alt = "This is a line graph about the membership change of a club over $numPoints months. ";
-        for my $i (0..$numPoints-1) {
-           $picture->lb( new Label(($i+1)*$xstep,-$ystep/(2*(4-2*($i%2))),
-                 "$days[$i]",'black','center','middle'));
-           $picture->lineTo(($i+1)*$xstep,$price[$i]/100,'red',1);
-           $picture->stamps( closed_circle(($i+1)*$xstep,$price[$i]/100,'blue') );
-           $picture->lb( new Label(($i+1)*$xstep,$price[$i]/100+$ystep/4,
-                 "$price[$i]",'black','center','middle'));
-           $alt = $alt."In $days[$i], the club had $price[$i] members. ";
-        }
-        $refreshCachedImages = 1;
+                $picture->moveTo($xstep,$price[0]/100);
+                $alt = "This is a line graph about the membership change of a club over $numPoints months. ";
+                for my $i (0..$numPoints-1) {
+                   $picture->lb( new Label(($i+1)*$xstep,-$ystep/(2*(4-2*($i%2))),
+                         "$days[$i]",'black','center','middle'));
+                   $picture->lineTo(($i+1)*$xstep,$price[$i]/100,'red',1);
+                   $picture->stamps( closed_circle(($i+1)*$xstep,$price[$i]/100,'blue') );
+                   $picture->lb( new Label(($i+1)*$xstep,$price[$i]/100+$ystep/4,
+                         "$price[$i]",'black','center','middle'));
+                   $alt = $alt."In $days[$i], the club had $price[$i] members. ";
+                }
+                $refreshCachedImages = 1;
 
-        $day1 = $days[0];
-        $dayLast = $days[$numPoints-1];
-        $day1Price = $price[0];
-        $dayLastPrice = $price[$numPoints-1];
-        $change = abs($dayLastPrice-$day1Price);
+                $day1 = $days[0];
+                $dayLast = $days[$numPoints-1];
+                $day1Price = $price[0];
+                $dayLastPrice = $price[$numPoints-1];
+                $change = abs($dayLastPrice-$day1Price);
 
-        if ($day1Price>$dayLastPrice) {
-           $minPrice = $dayLastPrice;$maxPrice = $day1Price;
-        } else {
-           $maxPrice = $dayLastPrice;$minPrice = $day1Price;
-        }
+                if ($day1Price>$dayLastPrice) {
+                   $minPrice = $dayLastPrice;$maxPrice = $day1Price;
+                } else {
+                   $maxPrice = $dayLastPrice;$minPrice = $day1Price;
+                }
       </pg-code>
     </setup>
     <statement>

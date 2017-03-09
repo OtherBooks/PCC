@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>AdditionSubtractionApplications20</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Addition/subtraction word problem.
-  #
-  # Last edited: Yao 09/29/16
-  #
-  # ENDDESCRIPTION
+    <original-file>AdditionSubtractionApplications20</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Addition/subtraction word problem.
+    #
+    # Last edited: Yao 09/29/16
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('division','application')
-  ## DBCCSS('3.OA','4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('division','application')
+    ## DBCCSS('3.OA','4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>PCCmacros.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>PCCmacros.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$name">
-        <!--<static></static>-->
-      </var>
-      <var name="$ans">
-        <!--<static></static>-->
-      </var>
-      <var name="$b">
-        <!--<static></static>-->
-      </var>
-      <var name="$pronoun">
-        <!--<static></static>-->
-      </var>
-      <var name="$a">
-        <!--<static></static>-->
-      </var>
-      <var name="$total">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$ans">
+              <!--<static></static>-->
+            </var>
+            <var name="$b">
+              <!--<static></static>-->
+            </var>
+            <var name="$pronoun">
+              <!--<static></static>-->
+            </var>
+            <var name="$a">
+              <!--<static></static>-->
+            </var>
+            <var name="$total">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $a = random(10,50,1);
-        $b = random(10,50,1);
-        $ans = random(10,50,1);
-        $total = $a+$b+$ans;
+                $a = random(10,50,1);
+                $b = random(10,50,1);
+                $ans = random(10,50,1);
+                $total = $a+$b+$ans;
 
-        $sex = list_random('male','female');
-        $pronoun = 'he' if ($sex eq 'male');
-        $pronoun = 'she' if ($sex eq 'female');
-        $name = RandomName(sex=>$sex);
+                $sex = list_random('male','female');
+                $pronoun = 'he' if ($sex eq 'male');
+                $pronoun = 'she' if ($sex eq 'female');
+                $name = RandomName(sex=>$sex);
       </pg-code>
     </setup>
     <statement>

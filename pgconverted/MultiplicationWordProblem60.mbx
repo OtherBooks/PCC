@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercise>
   <original-metadata>
-  <original-file>MultiplicationWordProblem60</original-file>
-  # WeBWorK problem written by Carl Yao
-  # Portland Community College
-  #
-  # Multiplication word problem.
-  #
-  # Last edited: Yao 10/2/13
-  #
-  # ENDDESCRIPTION
+    <original-file>MultiplicationWordProblem60</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Multiplication word problem.
+    #
+    # Last edited: Yao 10/2/13
+    #
+    # ENDDESCRIPTION
 
-  ## DBsubject('Elementary School')
-  ## DBchapter('')
-  ## DBsection('')
-  ## KEYWORDS('multiplication','application')
-  ## DBCCSS('3.OA','4.OA')
-  ## TitleText1('')
-  ## EditionText1('')
-  ## AuthorText1('')
-  ## Section1('')
-  ## Problem1('')
-  ## Author('Carl Yao')
-  ## Institution('PCC')
-  </original-metadata>
+    ## DBsubject('Elementary School')
+    ## DBchapter('')
+    ## DBsection('')
+    ## KEYWORDS('multiplication','application')
+    ## DBCCSS('3.OA','4.OA')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
   <webwork seed="1">
     <pg-macros>
-    <macro-file>PGcourse.pl</macro-file>
-    <macro-file>PCCmacros.pl</macro-file>
-    <macro-file>contextFraction.pl</macro-file>
-    <macro-file>parserNumberWithUnits.pl</macro-file>
-    </pg-macros>
+        <macro-file>PGcourse.pl</macro-file>
+        <macro-file>PCCmacros.pl</macro-file>
+        <macro-file>contextFraction.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
     <setup>
       <var name="$days">
-        <!--<static></static>-->
-      </var>
-      <var name="$more">
-        <!--<static></static>-->
-      </var>
-      <var name="$pages1">
-        <!--<static></static>-->
-      </var>
-      <var name="$name1">
-        <!--<static></static>-->
-      </var>
-      <var name="$name2">
-        <!--<static></static>-->
-      </var>
-      <var name="$totalMore">
-        <!--<static></static>-->
-      </var>
+              <!--<static></static>-->
+            </var>
+            <var name="$more">
+              <!--<static></static>-->
+            </var>
+            <var name="$pages1">
+              <!--<static></static>-->
+            </var>
+            <var name="$name1">
+              <!--<static></static>-->
+            </var>
+            <var name="$name2">
+              <!--<static></static>-->
+            </var>
+            <var name="$totalMore">
+              <!--<static></static>-->
+            </var>
       <pg-code>
         Context("LimitedNumeric");
 
-        $pages1 = random(30,50,1);
-        $more = random(5,15,1);
-        $days = random(30,60,1);
-        $totalMore = $more*$days;
+                $pages1 = random(30,50,1);
+                $more = random(5,15,1);
+                $days = random(30,60,1);
+                $totalMore = $more*$days;
 
-        $name1 = RandomName();
-        do {$name2 = RandomName();} until ($name1 ne $name2);
+                $name1 = RandomName();
+                do {$name2 = RandomName();} until ($name1 ne $name2);
       </pg-code>
     </setup>
     <statement>
