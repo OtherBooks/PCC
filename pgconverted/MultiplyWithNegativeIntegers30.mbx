@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>MultiplyWithNegativeIntegers30</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    # Multiply the following integers:
+    #
+    # a)    (-1)(-2)(-3)(-4)=?
+    #
+    # b)    2(-3)(-4)(-1)=?
+    #
+    # Last updated: Carl Yao 2/25/2014
+    # ENDDESCRIPTION
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('integer','negative','operation','multiply')
+    ## DBCCSS('6.NS.6')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        <macro-file>answerHints.pl</macro-file>
+        </pg-macros>
+        <setup>
+            <var name="$a">
+              <static></static>
+            </var>
+            <var name="$absA">
+              <static></static>
+            </var>
+            <var name="$absB">
+              <static></static>
+            </var>
+            <var name="$absC">
+              <static></static>
+            </var>
+            <var name="$absD">
+              <static></static>
+            </var>
+            <var name="$absE">
+              <static></static>
+            </var>
+            <var name="$absF">
+              <static></static>
+            </var>
+            <var name="$absG">
+              <static></static>
+            </var>
+            <var name="$absH">
+              <static></static>
+            </var>
+            <var name="$ans1">
+              <static></static>
+            </var>
+            <var name="$ans2">
+              <static></static>
+            </var>
+            <var name="$b">
+              <static></static>
+            </var>
+            <var name="$c">
+              <static></static>
+            </var>
+            <var name="$d">
+              <static></static>
+            </var>
+            <var name="$e">
+              <static></static>
+            </var>
+            <var name="$f">
+              <static></static>
+            </var>
+            <var name="$g">
+              <static></static>
+            </var>
+            <var name="$h">
+              <static></static>
+            </var>
+            <var name="$symbol">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("LimitedNumeric");
+
+                @nums = (1,2,3);
+
+                $a = -1*list_random(@nums);
+                $absA = abs($a);
+                $b = -1*list_random(@nums);
+                $absB = abs($b);
+                $c = -1*list_random(@nums);
+                $absC = abs($c);
+                $d = -1*list_random(@nums);
+                $absD = abs($d);
+
+                $e = random(-1,1,2)*list_random(@nums);
+                $absE = abs($e);
+                $f = -1*list_random(@nums);
+                $absF = abs($f);
+                $g = random(-1,1,2)*list_random(@nums);
+                $absG = abs($g);
+                $h = -1*list_random(@nums);
+                $absH = abs($h);
+
+                $ans1 = Compute($a*$b*$c*$d);
+                $ans2 = Compute($e*$f*$g*$h);
+
+                if ($ans2>0) {$symbol = "";}
+                else {$symbol = "-";}
+
+                if($envir{problemSeed}==10) {
+                  $a=1;
+                  $absA=1;
+                  $absB=1;
+                  $absC=1;
+                  $absD=1;
+                  $absE=1;
+                  $absF=1;
+                  $absG=1;
+                  $absH=1;
+                  $ans1=1;
+                  $ans2=1;
+                  $b=1;
+                  $c=1;
+                  $d=1;
+                  $e=1;
+                  $f=1;
+                  $g=1;
+                  $h=1;
+                  $symbol=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                Multiply the following integers.
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$a" />)(<var name="$b" />)(<var name="$c" />)(<var name="$d" />) =}</m>  <var name="$ans1" width="8" />
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$e" />)(<var name="$f" />)(<var name="$g" />)(<var name="$h" />)=}</m>  <var name="$ans2" width="8" />
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                In multiplication, each pair of negative signs cancel. If all negative signs are canceled, the product is positive; if there is one negative sign left, the product is negative.
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>\amp\phantom{{}=}(<var name="$a" />)(<var name="$b" />)(<var name="$c" />)(<var name="$d" />)</mrow>
+                                <mrow>\amp= (<var name="$absA" />)(<var name="$absB" />)(<var name="$absC" />)(<var name="$absD" />)</mrow>
+                                <mrow>\amp= <var name="$ans1" /></mrow>
+                            </md>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>\amp\phantom{{}=}(<var name="$e" />)(<var name="$f" />)(<var name="$g" />)(<var name="$h" />)</mrow>
+                                <mrow>\amp= <var name="$symbol" />(<var name="$absE" />)(<var name="$absF" />)(<var name="$absG" />)(<var name="$absH" />)</mrow>
+                                <mrow>\amp= <var name="$ans2" /></mrow>
+                            </md>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </webwork>
+</exercise>

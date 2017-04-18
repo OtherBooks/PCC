@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>MultiplyWithNegativeIntegers20</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    # Multiply the following integers:
+    #
+    # a)    [`` ([$a])\cdot([$b])\cdot([$c]) =  ``]  [________]{$ans1}
+    #
+    # b)    [`` [$d]\cdot([$e])\cdot([$f])=  ``]  [________]{$ans2} 
+    #
+    # c)    [`` ([$g])\cdot([$h])\cdot[$i]=  ``]  [________]{$ans3} 
+    # Last updated: Hughes, 7/30/13, 6/25/13
+    # ENDDESCRIPTION
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('integer','negative','operation','multiply')
+    ## DBCCSS('6.NS.6')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Alex Jordan, Carl Yao, Chris Hughes')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        <macro-file>answerHints.pl</macro-file>
+        </pg-macros>
+        <setup>
+            <var name="$a">
+              <static></static>
+            </var>
+            <var name="$ans1">
+              <static></static>
+            </var>
+            <var name="$ans2">
+              <static></static>
+            </var>
+            <var name="$ans3">
+              <static></static>
+            </var>
+            <var name="$b">
+              <static></static>
+            </var>
+            <var name="$c">
+              <static></static>
+            </var>
+            <var name="$d">
+              <static></static>
+            </var>
+            <var name="$e">
+              <static></static>
+            </var>
+            <var name="$f">
+              <static></static>
+            </var>
+            <var name="$g">
+              <static></static>
+            </var>
+            <var name="$h">
+              <static></static>
+            </var>
+            <var name="$i">
+              <static></static>
+            </var>
+            <var name="$pro1Step">
+              <static></static>
+            </var>
+            <var name="$pro2Step">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("LimitedNumeric");
+
+                $a = random(-3,-1,1);
+                $b = random(-6,-4,1);
+                $c = random(-5,-2,1);
+                $pro1Step = $a*$b;
+
+                $d = random(2,7,1);
+                $e = random(-9,-6,1);
+                $f = random(-5,-1,1);
+                $pro2Step = $d*$e;
+
+                $g = random(-100,-80,1);
+                $h = random(-79,-50,1);
+                $i = 0;
+
+                $ans1 = Compute($a*$b*$c);
+                $ans2 = Compute($d*$e*$f);
+                $ans3 = Compute($g*$h*$i);
+
+                if($envir{problemSeed}==10) {
+                  $a=1;
+                  $ans1=1;
+                  $ans2=1;
+                  $ans3=1;
+                  $b=1;
+                  $c=1;
+                  $d=1;
+                  $e=1;
+                  $f=1;
+                  $g=1;
+                  $h=1;
+                  $i=1;
+                  $pro1Step=1;
+                  $pro2Step=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                Multiply the following integers.
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$a" />)\cdot(<var name="$b" />)\cdot(<var name="$c" />) =}</m>  <var name="$ans1" width="8" />
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{<var name="$d" />\cdot(<var name="$e" />)\cdot(<var name="$f" />)=}</m>  <var name="$ans2" width="8" />
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$g" />)\cdot(<var name="$h" />)\cdot<var name="$i" />=}</m>  <var name="$ans3" width="8" />
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>(<var name="$a" />)\cdot(<var name="$b" />)\cdot(<var name="$c" />) \amp = <var name="$pro1Step" />\cdot(<var name="$c" />)</mrow>
+                                <mrow>\amp = <var name="$ans1" /></mrow>
+                            </md>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <md>
+                                <mrow><var name="$d" />\cdot(<var name="$e" />)\cdot(<var name="$f" />) \amp = <var name="$pro2Step" />\cdot(<var name="$f" />)</mrow>
+                                <mrow>\amp = <var name="$ans2" /></mrow>
+                            </md>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m><var name="$g" />\cdot(<var name="$h" />)\cdot<var name="$i" /> =0</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                Note that in the last case there is no need to waste time multiplying the first two numbers because any number multiplied by <m>0</m> equals <m>0</m>.
+            </p>
+        </solution>
+    </webwork>
+</exercise>

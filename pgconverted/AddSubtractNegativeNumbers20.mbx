@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>AddSubtractNegativeNumbers20</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    # Evaluate the following expressions which involve the absolute value:
+    #
+    # Consider the following story problem in which you borrow money from your 
+    #
+    # * On June 1, you borrowed [`[$a]`] dollars from your dad.
+    #
+    # * On July 1, you borrowed [`[$b]`] more dollars from your dad.
+    #
+    # * On August 1, you paid back [`[$c]`] dollars from your dad.
+    #
+    # * On September 1, you borrowed another [`[$d]`] dollars from your dad.
+    #
+    # How much money do you owe your dad now? Use positive and negative integers to solve this problem.  
+    #
+    # $a, $b, $c, $d are all integers.
+    #
+    # Last updated: Jordan 7/25/13; Jordan, 6/25/13
+    # ENDDESCRIPTION
+
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('integer','negative','add','subtract','absolute value')
+    ## DBCCSS('6.NS.6','6.NS.7')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Alex Jordan, Carl Yao, Chris Hughes')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        <macro-file>answerHints.pl</macro-file>
+        <macro-file>contextCurrency.pl</macro-file>
+        </pg-macros>
+        <setup>
+            <var name="$CurrencyAns">
+              <static></static>
+            </var>
+            <var name="$a">
+              <static></static>
+            </var>
+            <var name="$ans">
+              <static></static>
+            </var>
+            <var name="$b">
+              <static></static>
+            </var>
+            <var name="$c">
+              <static></static>
+            </var>
+            <var name="$d">
+              <static></static>
+            </var>
+            <var name="$step1">
+              <static></static>
+            </var>
+            <var name="$step2">
+              <static></static>
+            </var>
+            <var name="$t">
+              <static></static>
+            </var>
+            <var name="$y">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("Numeric");
+
+                $a=random(1000,1500,100);
+                $b=random(300,500,10);
+                $c=random(500,700,10);
+                $d=random(800,1000,10);
+
+                $ans = abs(-$a-$b+$c-$d);
+
+                $step1 = -$a-$b;
+                $step2 = $step1+$c;
+
+                Context("Currency");
+                Context()->currency->addSymbol("dollars","dollar");
+                Context()->flags->set(trimTrailingZeros=>1);
+                Context()->operators->undefine('+','-');
+                $CurrencyAns = Currency($ans);
+                $wrong = -1*$CurrencyAns;
+                ;
+
+                $ansevaluator = $CurrencyAns -> cmp() ->
+                  withPostFilter(AnswerHints(
+                    "$wrong" =>
+                    "Remember that your answer should be *positive* because the question asks how much you owe.",
+    	sub {
+                          my ($correct,$student,$ans) = @_;
+                          return ($student->class eq 'Real');} => ["Since the answer is a dollar amount, you should answer with a dollar symbol",checkTypes => 0, replaceMessage => 1],));
+                if($envir{problemSeed}==10) {
+                  $CurrencyAns=1;
+                  $a=1;
+                  $ans=1;
+                  $b=1;
+                  $c=1;
+                  $d=1;
+                  $step1=1;
+                  $step2=1;
+                  $t=1;
+                  $y=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                $y$t
+            </p>
+
+            <p>
+                Consider the following situation in which you borrow money from your cousin:
+            </p>
+
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            On June 1st, you borrowed <m><var name="$a" /></m> dollars from your cousin.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            On July 1st, you borrowed <m><var name="$b" /></m> more dollars from your cousin.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            On August 1st, you paid back <m><var name="$c" /></m> dollars to your cousin.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            On September 1st, you borrowed another <m><var name="$d" /></m> dollars from your cousin.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                How much money do you owe your cousin now?
+            </p>
+
+            <p>
+                <var name="$CurrencyAns" evaluator="$ansevaluator" width="9" />
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Borrowing money is like adding a negative number. Paying money back is like adding a positive number. To model this situation, we do the following calculation:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>-<var name="$a" />+(-<var name="$b" />)+<var name="$c" />+(-<var name="$d" />) \amp = <var name="$step1" />+<var name="$c" />+(-<var name="$d" />)</mrow>
+                    <mrow>\amp = <var name="$step2" /> +(-<var name="$d" />)</mrow>
+                    <mrow>\amp = -<var name="$ans" /></mrow>
+                </md>
+            </p>
+
+            <p>
+                Now you owe your cousin <m><var name="$CurrencyAns" /></m>.
+            </p>
+        </solution>
+    </webwork>
+</exercise>

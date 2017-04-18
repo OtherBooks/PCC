@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>AddSubtractDecimals15</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Add two decimals, like (-2.3)+(-1.05)
+    # 
+    # Last updated: Yao, 10/23/2013
+    #
+    # ENDDESCRIPTION
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('')
+    ## KEYWORDS('decimal','add','negative')
+    ## DBCCSS('5.NBT.7')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        </pg-macros>
+        <setup>
+            <var name="$absSum">
+              <static></static>
+            </var>
+            <var name="$decimal0">
+              <static></static>
+            </var>
+            <var name="$decimal1">
+              <static></static>
+            </var>
+            <var name="$digit00">
+              <static></static>
+            </var>
+            <var name="$digit01">
+              <static></static>
+            </var>
+            <var name="$digit02">
+              <static></static>
+            </var>
+            <var name="$digit10">
+              <static></static>
+            </var>
+            <var name="$digit11">
+              <static></static>
+            </var>
+            <var name="$digit12">
+              <static></static>
+            </var>
+            <var name="$sum">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("LimitedNumeric");
+
+                $digit00 = random(1,9,1);
+                $digit01 = random(0,9,1);
+                $digit02 = random(1,9,1);
+                $decimal0 = -($digit00+$digit01/10+$digit02/100);
+
+                $digit10 = random(1,8,1);
+                $digit11 = random(0,9,1);
+                $digit12 = random(1,9,1);
+                $decimal1 = -($digit10*10+$digit11+$digit12/10);
+
+                $sum = $decimal0 + $decimal1;
+                $absSum = abs($sum);
+
+                if($envir{problemSeed}==10) {
+                  $absSum=1;
+                  $decimal0=1;
+                  $decimal1=1;
+                  $digit00=1;
+                  $digit01=1;
+                  $digit02=1;
+                  $digit10=1;
+                  $digit11=1;
+                  $digit12=1;
+                  $sum=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                Add these two decimals without using a calculator.
+            </p>
+
+            <p>
+                <m>\displaystyle{<var name="$decimal0" /> + (<var name="$decimal1" />) =}</m> <var name="$sum" width="11" />
+            </p>
+        </statement>
+        <solution>
+            <p>
+                When we add up two negative numbers, the result will be negative.
+            </p>
+
+            <p>
+                We need to find the sum of their absolute value. To add two decimals, make sure to line up the decimal points:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>\amp\phantom{+<var name="$digit10" />}<var name="$digit00" />.<var name="$digit01" /><var name="$digit02" /></mrow>
+                    <mrow>\amp\underline{+<var name="$digit10" />  <var name="$digit11" />.<var name="$digit12" />\phantom{ad}}</mrow>
+                    <mrow>\amp\phantom{+}<var name="$absSum" /></mrow>
+                </md>
+            </p>
+
+            <p>
+                Since the result is negative, we have <m><var name="$decimal0" /> + (<var name="$decimal1" />) = <var name="$sum" /></m>.
+            </p>
+        </solution>
+    </webwork>
+</exercise>

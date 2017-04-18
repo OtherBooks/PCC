@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>ExponentDefinition10</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    # Evaluate the following expressions that have integer exponents:
+    #
+    # a)   [`` [$a]^{2}=  ``]  [________]{$ans1} 
+    #
+    # b)    [`` [$b]^{3}=  ``]  [________]{$ans2} 
+    #
+    # c)    [`` ([$c])^{2}=  ``]  [________]{$ans3} 
+    #
+    # d)    [`` ([$d])^{3}=  ``]  [________]{$ans4} 
+    #
+    # Last updated: Hughes, 6/25/13
+    # ENDDESCRIPTION
+
+    ## DBCC('6.EE.1')
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('integer','negative','operation','integer exponent','evaluate')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Alex Jordan, Carl Yao, Chris Hughes')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        </pg-macros>
+        <setup>
+            <var name="$a">
+              <static></static>
+            </var>
+            <var name="$ans1">
+              <static></static>
+            </var>
+            <var name="$ans2">
+              <static></static>
+            </var>
+            <var name="$ans3">
+              <static></static>
+            </var>
+            <var name="$ans4">
+              <static></static>
+            </var>
+            <var name="$b">
+              <static></static>
+            </var>
+            <var name="$c">
+              <static></static>
+            </var>
+            <var name="$d">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("LimitedNumeric");
+
+                $a = random(2,5,1);
+                $b = random(2,5,1);
+                while ($b==$a) {$b = random(2,5,1);}
+                $c = random(-5,-2,1);
+                $d = random(-5,-2,1);
+                while ($d==$c) {$d = random(-5,-2,1);}
+
+                $ans1 = Compute(($a)**2);
+                $ans2 = Compute(($b)**3);
+                $ans3 = Compute(($c)**2);
+                $ans4 = Compute(($d)**3);
+
+                if($envir{problemSeed}==10) {
+                  $a=1;
+                  $ans1=1;
+                  $ans2=1;
+                  $ans3=1;
+                  $ans4=1;
+                  $b=1;
+                  $c=1;
+                  $d=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                Evaluate the following expressions that have integer exponents:
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <m>\displaystyle{<var name="$a" />^{2}=}</m>  <var name="$ans1" width="8" />
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{<var name="$b" />^{3}=}</m>  <var name="$ans2" width="8" />
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$c" />)^{2}=}</m>  <var name="$ans3" width="8" />
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$d" />)^{3}=}</m>  <var name="$ans4" width="8" />
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                The solutions are:
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <md>
+                                <mrow><var name="$a" />^{2}\amp=<var name="$a" />\cdot<var name="$a" /></mrow>
+                                <mrow>\amp=<var name="$ans1" /></mrow>
+                            </md>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <md>
+                                <mrow><var name="$b" />^{3}\amp=<var name="$b" />\cdot<var name="$b" />\cdot<var name="$b" /></mrow>
+                                <mrow>\amp=<var name="$ans2" /></mrow>
+                            </md>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>(<var name="$c" />)^{2}\amp=(<var name="$c" />)\cdot(<var name="$c" />)</mrow>
+                                <mrow>\amp=<var name="$ans3" /></mrow>
+                            </md>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>(<var name="$d" />)^{3}\amp=(<var name="$d" />)\cdot(<var name="$d" />)\cdot(<var name="$d" />)</mrow>
+                                <mrow>\amp=<var name="$ans4" /></mrow>
+                            </md>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </webwork>
+</exercise>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>ExponentDefinition20</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Evaluate the following expressions that have integer exponents:
+    #
+    # a)    [`` 1^{[$a]}=  ``]  [________]{1} (.)
+    #
+    # b)    [`` (-1)^{[$b]}=  ``]  [________]{-1} (.)
+    #
+    # c)    [`` (-1)^{[$c]}=  ``]  [________]{1} (.)
+    #
+    # d)    [`` 0^{[$d]}=  ``]  [________]{0} (.)
+    # 
+    # Last updated: Hughes, 6/25/13
+    # ENDDESCRIPTION
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('integer','negative','operation','integer exponents','evaluate')
+    ## DBCCSS('6.EE.1')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Alex Jordan, Carl Yao, Chris Hughes')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        </pg-macros>
+        <setup>
+            <var name="$a">
+              <static></static>
+            </var>
+            <var name="$b">
+              <static></static>
+            </var>
+            <var name="$c">
+              <static></static>
+            </var>
+            <var name="$d">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("Numeric");
+
+                $a=random(5,10,1);
+                $b=random(11,15,2);
+                $c=random(12,18,2);
+                $d=random(16,20,1);
+
+                Context("LimitedNumeric");
+
+                if($envir{problemSeed}==10) {
+                  $a=1;
+                  $b=1;
+                  $c=1;
+                  $d=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                Evaluate the following expressions that have integer exponents:
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <m>\displaystyle{1^{<var name="$a" />}=}</m>  <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="8" />{1}
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(-1)^{<var name="$b" />}=}</m>  <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="8" />{-1}
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(-1)^{<var name="$c" />}=}</m>  <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="8" />{1}
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{0^{<var name="$d" />}=}</m>  <var name="ERROR_VARIABLE_NOT_FOUND_IN_ORIGINAL_SOURCE" evaluator="$ansevaluator" width="8" />{0}
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                The solutions are:
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <m>\displaystyle{1^{<var name="$a" />}=1,}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(-1)^{<var name="$b" />}=-1,}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(-1)^{<var name="$c" />}=1,}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{0^{<var name="$d" />}=0.}</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                When two negative numbers are multiplied together they make a positive number; each pair of negative signs "cancel each other out".
+            </p>
+
+            <p>
+                When an odd number of negative numbers are multiplied together, each pair of negative signs "cancel out" but there is still one negative sign left. That's why <m>(-1)^{\text{odd number}}=-1</m>.
+            </p>
+
+            <p>
+                Similarly, when an even number of negative numbers are multiplied together each pair of negative signs "cancel out" and there are no negative signs left. That's why <m>(-1)^{\text{even number}}=1</m>.
+            </p>
+        </solution>
+    </webwork>
+</exercise>

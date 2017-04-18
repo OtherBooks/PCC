@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>MultiplyWithNegativeIntegers10</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    # Multiply the following integers:
+    #
+    # a)    [` ([$a])\cdot([$b])=  `]  
+    #
+    # b)    [`` ([$c])\cdot[$d]=  ``]  
+    #
+    # c)    [`` [$e]\cdot([$f])=  ``]  
+    #
+    # d)    [`` ([$g])\cdot[$h]=  ``]  
+    #
+    #  a-h are all integers
+    # 
+    # Last updated: Hughes, 6/25/13
+    # ENDDESCRIPTION
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('integer','negative','operation','multiply')
+    ## DBCCSS('6.NS.6')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Alex Jordan, Carl Yao, Chris Hughes')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        </pg-macros>
+        <setup>
+            <var name="$a">
+              <static></static>
+            </var>
+            <var name="$ans1">
+              <static></static>
+            </var>
+            <var name="$ans2">
+              <static></static>
+            </var>
+            <var name="$ans3">
+              <static></static>
+            </var>
+            <var name="$ans4">
+              <static></static>
+            </var>
+            <var name="$b">
+              <static></static>
+            </var>
+            <var name="$c">
+              <static></static>
+            </var>
+            <var name="$d">
+              <static></static>
+            </var>
+            <var name="$e">
+              <static></static>
+            </var>
+            <var name="$f">
+              <static></static>
+            </var>
+            <var name="$g">
+              <static></static>
+            </var>
+            <var name="$h">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("LimitedNumeric");
+
+                $a = random(-10,-8,1);
+                $b = random(-3,-1,1);
+                $c = random(-7,-4,1);
+                $d = random(2,7,1);
+                $e = random(5,9,1);
+                $f = random(-7,-1,1);
+                $g = random(-10,-2,1);
+                $h = 0;
+
+                $ans1 = Compute($a*$b);
+                $ans2 = Compute($c*$d);
+                $ans3 = Compute($e*$f);
+                $ans4 = Compute($g*$h);
+
+                if($envir{problemSeed}==10) {
+                  $a=1;
+                  $ans1=1;
+                  $ans2=1;
+                  $ans3=1;
+                  $ans4=1;
+                  $b=1;
+                  $c=1;
+                  $d=1;
+                  $e=1;
+                  $f=1;
+                  $g=1;
+                  $h=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                Multiply the following integers.
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$a" />)\cdot(<var name="$b" />)=}</m>  <var name="$ans1" width="8" />
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$c" />)\cdot<var name="$d" />=}</m>  <var name="$ans2" width="8" />
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{<var name="$e" />\cdot(<var name="$f" />)=}</m>  <var name="$ans3" width="8" />
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$g" />)\cdot<var name="$h" />=}</m>  <var name="$ans4" width="8" />
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                The rules for multiplying positive and negative numbers are:
+            </p>
+
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            <m>\displaystyle{\text{positive} \cdot \text{positive} = \text{positive}}</m>,
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{\text{positive} \cdot \text{negative} = \text{negative}}</m>,
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{\text{negative} \cdot \text{positive} = \text{negative}}</m>,
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{\text{negative} \cdot \text{negative} = \text{positive}}</m>.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                The solutions are:
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$a" />)\cdot(<var name="$b" />)=<var name="$ans1" />,}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$c" />)\cdot<var name="$d" />=<var name="$ans2" />,}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{<var name="$e" />\cdot(<var name="$f" />)=<var name="$ans3" />,}</m>
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$g" />)\cdot<var name="$h" />=<var name="$ans4" />.}</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </solution>
+    </webwork>
+</exercise>

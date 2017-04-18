@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>AddSubtractNegativeNumbers10</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    # Perform the given addition and subtraction:
+    #
+    #       $a-$b+($c)
+    #       $d-($e)+($f)
+    # 
+    # a, b, c, d, e, f are all integers- some positive, 
+    # some negative, none of which are greater than 20 in 
+    # absolute value.
+    #
+    # Last updated: Hughes, 6/25/13
+    # ENDDESCRIPTION
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('integer','negative','add','subtract')
+    ## DBCCSS('6.NS.6')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Alex Jordan, Carl Yao, Chris Hughes')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        </pg-macros>
+        <setup>
+            <var name="$absE">
+              <static></static>
+            </var>
+            <var name="$ans1">
+              <static></static>
+            </var>
+            <var name="$ans2">
+              <static></static>
+            </var>
+            <var name="$c">
+              <static></static>
+            </var>
+            <var name="$d">
+              <static></static>
+            </var>
+            <var name="$f">
+              <static></static>
+            </var>
+            <var name="$func1">
+              <static></static>
+            </var>
+            <var name="$func2">
+              <static></static>
+            </var>
+            <var name="$step11">
+              <static></static>
+            </var>
+            <var name="$step12">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("Numeric");
+                Context()->noreduce('(-x)-y','(-x)+y');
+
+                Context()->flags->set(
+                   reduceConstants => 0,
+                   reduceConstantFunctions => 0
+                );
+
+                $a=random(-20,-10,1);
+                $b=random(1,10,1);
+                $c=random(-10,-1,1);
+                $d=random(1,10,1);
+                $e=random(-20,-10,1);
+                $f=random(-20,-10,1);
+
+                $func1 = Formula("$a-$b+($c)");
+                $func2 = Formula("$d-($e)+($f)");
+
+                $step11=$a-$b;
+                $step12=$d-$e;
+                $absE = abs($e);
+
+                $ans1 = $a-$b+($c);
+                $ans2 = $d-($e)+($f);
+
+                Context("LimitedNumeric");
+
+                if($envir{problemSeed}==10) {
+                  $absE=1;
+                  $ans1=1;
+                  $ans2=1;
+                  $c=1;
+                  $d=1;
+                  $f=1;
+                  $func1=1;
+                  $func2=1;
+                  $step11=1;
+                  $step12=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                Perform the given addition and subtraction:
+            </p>
+
+            <p>
+                <m>\displaystyle{<var name="$func1" />=}</m>  <var name="$ans1" width="8" />
+            </p>
+
+            <p>
+                <m>\displaystyle{<var name="$func2" />=}</m>  <var name="$ans2" width="8" />
+            </p>
+        </statement>
+        <solution>
+            <p>
+                *Problem 1*
+            </p>
+
+            <p>
+                <md>
+                    <mrow><var name="$func1" /> \amp =<var name="$step11" />+(<var name="$c" />)</mrow>
+                    <mrow>\amp =<var name="$step11" />+<var name="$c" /></mrow>
+                    <mrow>\amp=<var name="$ans1" /></mrow>
+                </md>
+            </p>
+
+            <p>
+                *Problem 2*
+            </p>
+
+            <p>
+                <md>
+                    <mrow><var name="$func2" /> \amp =<var name="$d" />+<var name="$absE" />+(<var name="$f" />)</mrow>
+                    <mrow>\amp =<var name="$step12" />+(<var name="$f" />)</mrow>
+                    <mrow>\amp =<var name="$step12" />+<var name="$f" /></mrow>
+                    <mrow>\amp=<var name="$ans2" /></mrow>
+                </md>
+            </p>
+        </solution>
+    </webwork>
+</exercise>

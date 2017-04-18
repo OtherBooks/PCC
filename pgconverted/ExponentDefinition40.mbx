@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>ExponentDefinition40</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Evaluate the following expressions that have integer exponents:
+    #
+    # a)    [`` ([$a])^{3}=  ``]  [________]{$ans1} (.)
+    #
+    # b)    [`` [$b]^{3}=  ``]  [________]{$ans2} (.)
+    # 
+    # Last updated: Hughes, 6/25/13
+    # ENDDESCRIPTION
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('integer','negative','order of operations','integer exponents','evaluate')
+    ## DBCCSS('6.EE.1')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Alex Jordan, Carl Yao, Chris Hughes')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        </pg-macros>
+        <setup>
+            <var name="$a">
+              <static></static>
+            </var>
+            <var name="$absB">
+              <static></static>
+            </var>
+            <var name="$ans1">
+              <static></static>
+            </var>
+            <var name="$ans2">
+              <static></static>
+            </var>
+            <var name="$b">
+              <static></static>
+            </var>
+            <var name="$tMvR0">
+              <static>$absB**3</static>
+            </var>
+            <pg-code>
+                Context("LimitedNumeric");
+
+                $a=random(-4,-1,1);
+                do {$b=random(1,4,1);} until (abs($b)!=abs($a));
+
+                $ans1=Compute(($a)**3);
+                $ans2=Compute(-($b)**3);
+                $absA=abs($a);
+                $absB=abs($b);
+
+                if($envir{problemSeed}==10) {
+                  $a=1;
+                  $absB=1;
+                  $ans1=1;
+                  $ans2=1;
+                  $b=1;
+                  $tMvR0=$absB**31;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                Evaluate the following expressions that have integer exponents:
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <m>\displaystyle{(<var name="$a" />)^{3}=}</m>  <var name="$ans1" width="8" />
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <m>\displaystyle{-<var name="$b" />^{3}=}</m>  <var name="$ans2" width="8" />
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Remember to use order of operations here: parentheses take priority over exponents, and exponents take priority over multiplication.
+            </p>
+
+            <p>
+                The quantities evaluate to:
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>(<var name="$a" />)^{3}\amp=(<var name="$a" />)\cdot(<var name="$a" />)\cdot(<var name="$a" />)</mrow>
+                                <mrow>\amp =<var name="$ans1" /></mrow>
+                            </md>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                When we multiply three negative numbers, the result is negative. Two negative signs cancelled, but one is left, making the result negative.
+            </p>
+
+            <p>
+                <ol label="a">
+                    <li>
+                        <p>
+                            <md>
+                                <mrow>-<var name="$b" />^{3}\amp=-1\cdot<var name="$b" />^3</mrow>
+                                <mrow>\amp=-1\cdot<var name="$b" />\cdot<var name="$b" />\cdot<var name="$b" /></mrow>
+                                <mrow>\amp = -1\cdot <var name="$tMvR0" /></mrow>
+                                <mrow>\amp=<var name="$ans2" /></mrow>
+                            </md>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                Note that the negative sign is like "negative one multiplied by....". For example:
+            </p>
+
+            <p>
+                + <m>\displaystyle{-2=-1\cdot2}</m>
+            </p>
+
+            <p>
+                + <m>\displaystyle{-3=-1\cdot3}</m>
+            </p>
+
+            <p>
+                + <m>\displaystyle{-4=-1\cdot4}</m>
+            </p>
+
+            <p>
+                You can see the pattern. This demonstrates that the negative sign can be viewed as multiplication by <m>-1</m>.
+            </p>
+
+            <p>
+                So, we can change <m>-<var name="$b" />^{3}</m> into <m>-1\cdot<var name="$b" />^{2}</m>. Since exponents take priority over multiplication, we evaluate <m><var name="$b" />^2</m> _before_ multiplying by <m>-1</m>.
+            </p>
+        </solution>
+    </webwork>
+</exercise>

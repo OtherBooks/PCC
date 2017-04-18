@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>AddSubtractDecimals25</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Subtract two decimals, like -1.05+2.3
+    # 
+    # Last updated: Yao, 10/23/2013
+    #
+    # ENDDESCRIPTION
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('')
+    ## KEYWORDS('decimal','add','negative')
+    ## DBCCSS('5.NBT.7')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Carl Yao')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        </pg-macros>
+        <setup>
+            <var name="$decimal0">
+              <static></static>
+            </var>
+            <var name="$decimal1">
+              <static></static>
+            </var>
+            <var name="$dif">
+              <static></static>
+            </var>
+            <var name="$digit00">
+              <static></static>
+            </var>
+            <var name="$digit01">
+              <static></static>
+            </var>
+            <var name="$digit10">
+              <static></static>
+            </var>
+            <var name="$digit11">
+              <static></static>
+            </var>
+            <var name="$digit12">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("LimitedNumeric");
+
+
+                $digit00 = random(5,9,1);
+                $digit01 = random(1,9,1);
+                $decimal0 = $digit00+$digit01/10;
+
+                $digit10 = random(1,$digit00-1,1);
+                $digit11 = random(0,9,1);
+                $digit12 = random(1,9,1);
+                $decimal1 = $digit10+$digit11/10+$digit12/100;
+
+                $dif = $decimal0 - $decimal1;
+
+                if($envir{problemSeed}==10) {
+                  $decimal0=1;
+                  $decimal1=1;
+                  $dif=1;
+                  $digit00=1;
+                  $digit01=1;
+                  $digit10=1;
+                  $digit11=1;
+                  $digit12=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                Subtract these two decimals without using a calculator.
+            </p>
+
+            <p>
+                <m>\displaystyle{- <var name="$decimal1" /> + <var name="$decimal0" /> =}</m> <var name="$dif" width="11" />
+            </p>
+        </statement>
+        <solution>
+            <p>
+                When we add a negative number with a positive number, we need to find the difference of their absolute values. To subtract two decimals, make sure to line up the decimal points:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>\amp\phantom{-}<var name="$digit00" />.<var name="$digit01" />0</mrow>
+                    <mrow>\amp\underline{-<var name="$digit10" />.<var name="$digit11" /><var name="$digit12" />\phantom{ad}}</mrow>
+                    <mrow>\amp\phantom{-}<var name="$dif" /></mrow>
+                </md>
+            </p>
+
+            <p>
+                Note that we added an extra <m>0</m> to the end of <m><var name="$decimal0" /></m> before doing subtraction.
+            </p>
+
+            <p>
+                Finally, since the absolute value of <m>- <var name="$decimal1" /></m> is smaller than the absolute value of <m><var name="$decimal0" /></m>, the result is positive.
+            </p>
+
+            <p>
+                <em>Solution:</em> <m>- <var name="$decimal1" /> + <var name="$decimal0" /> = <var name="$dif" /></m>
+            </p>
+        </solution>
+    </webwork>
+</exercise>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>AddSubtractNegativeNumbers30</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    #
+    # Consider the following scenario in which you study your bank account.
+    #
+    # * On Jan. 1, you had a balance of [`-[$a]`] dollars in your bank account.
+    #
+    # * On Jan. 2, your bank charged [`[$b]`] dollar overdraft fee.
+    #
+    # * On Jan. 3, you deposited [`[$c]`] dollars.
+    #
+    # * On Jan. 10, you withdrew [`[$d]`] dollars.
+    #
+    # What is your balance on Jan. 11?
+    # 
+    # a-d are all integers.
+    # 
+    # Last updated: Jordan, 6/25/13
+    # ENDDESCRIPTION
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('integer','negative','add','subtract','absolute value')
+    ## DBCCSS('6.NS.6','6.NS.7')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Alex Jordan, Carl Yao, Chris Hughes')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        <macro-file>contextCurrency.pl</macro-file>
+        </pg-macros>
+        <setup>
+            <var name="$CurrencyAns">
+              <static></static>
+            </var>
+            <var name="$a">
+              <static></static>
+            </var>
+            <var name="$ans">
+              <static></static>
+            </var>
+            <var name="$b">
+              <static></static>
+            </var>
+            <var name="$c">
+              <static></static>
+            </var>
+            <var name="$d">
+              <static></static>
+            </var>
+            <var name="$step1">
+              <static></static>
+            </var>
+            <var name="$step2">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("Numeric");
+
+                $a=random(100,500,10);
+                $b=random(30,50,5);
+                $c=random(800,1000,10);
+                $d=random(500,800,10);
+
+                $ans = -$a-$b+$c-$d;
+
+                $step1 = -$a-$b;
+                $step2 = $step1+$c;
+
+                Context("Currency");
+                Context()->currency->addSymbol("dollars","dollar");
+                Context()->flags->set(trimTrailingZeros=>1);
+                Context()->operators->undefine('+','-');
+                $CurrencyAns = Currency($ans);
+
+                if($envir{problemSeed}==10) {
+                  $CurrencyAns=1;
+                  $a=1;
+                  $ans=1;
+                  $b=1;
+                  $c=1;
+                  $d=1;
+                  $step1=1;
+                  $step2=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                Consider the following scenario in which you study your bank account.
+            </p>
+
+            <p>
+                <ul>
+                    <li>
+                        <p>
+                            On Jan. 1, you had a balance of <m>-<var name="$a" /></m> dollars in your bank account.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            On Jan. 2, your bank charged <m><var name="$b" /></m> dollar overdraft fee.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            On Jan. 3, you deposited <m><var name="$c" /></m> dollars.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            On Jan. 10, you withdrew <m><var name="$d" /></m> dollars.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                What is your balance on Jan. 11?
+            </p>
+
+            <p>
+                <var name="$CurrencyAns" width="9" />
+            </p>
+        </statement>
+        <solution>
+            <p>
+                Withdrawing money and being charge a fee is like adding a negative number to your bank balance. Depositing money is like adding a positive number to your bank balance. To model this situation, we do the following calculation:
+            </p>
+
+            <p>
+                <md>
+                    <mrow>-<var name="$a" />+(-<var name="$b" />)+<var name="$c" />+(-<var name="$d" />)\amp  = <var name="$step1" />+<var name="$c" />+(-<var name="$d" />)</mrow>
+                    <mrow>\amp= <var name="$step2" /> +(-<var name="$d" />)</mrow>
+                    <mrow>\amp = <var name="$ans" /></mrow>
+                </md>
+            </p>
+
+            <p>
+                Your balance is <m><var name="$CurrencyAns" /></m> on Jan. 11.
+            </p>
+        </solution>
+    </webwork>
+</exercise>

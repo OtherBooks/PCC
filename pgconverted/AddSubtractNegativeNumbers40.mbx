@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercise>
+    <original-metadata>
+    <original-file>AddSubtractNegativeNumbers40</original-file>
+    # WeBWorK problem written by Carl Yao
+    # Portland Community College
+    #
+    # Template
+    # A mountain is [`[$a]`] feet _above_ sea level.
+    #
+    # A trench is [`[$b]`] feet _below_ sea level.
+    #
+    # What is the difference in elevation between the mountain top and the bottom of the trench? Use positive and negative numbers to # solve this problem.
+    # 
+    # Last updated: Jordan, 6/25/13
+    # ENDDESCRIPTION
+
+    ## DBsubject('Algebra')
+    ## DBchapter('Basic Algebra')
+    ## DBsection('Algebraic Expressions')
+    ## KEYWORDS('integer','negative','add','subtract','absolute value')
+    ## DBCCSS('6.NS.6','6.NS.7')
+    ## TitleText1('')
+    ## EditionText1('')
+    ## AuthorText1('')
+    ## Section1('')
+    ## Problem1('')
+    ## Author('Alex Jordan, Carl Yao, Chris Hughes')
+    ## Institution('PCC')
+    </original-metadata>
+    <webwork seed="1">
+        <pg-macros>
+        <macro-file>answerHints.pl</macro-file>
+        <macro-file>parserNumberWithUnits.pl</macro-file>
+        </pg-macros>
+        <setup>
+            <var name="$UnitAns">
+              <static></static>
+            </var>
+            <var name="$a">
+              <static></static>
+            </var>
+            <var name="$ans">
+              <static></static>
+            </var>
+            <var name="$b">
+              <static></static>
+            </var>
+            <pg-code>
+                Context("Numeric");
+
+                $a=random(1000,1500,100);
+                $b=random(300,500,10);
+
+                $ans = $a+$b;
+
+
+                $UnitAns = NumberWithUnits($a+$b,"ft");
+                $wrong =  NumberWithUnits("$a-$b ft");;
+                ;
+
+                $ansevaluator = $UnitAns -> cmp() ->
+                  withPostFilter(AnswerHints(
+                    $wrong =>
+                    "Remember that the trench is *below* sea level - does that mean its height has a positive or negative value?"));
+                if($envir{problemSeed}==10) {
+                  $UnitAns=1;
+                  $a=1;
+                  $ans=1;
+                  $b=1;
+                }
+            </pg-code>
+        </setup>
+        <statement>
+            <p>
+                A mountain is <m><var name="$a" /></m> feet _above_ sea level.
+            </p>
+
+            <p>
+                A trench is <m><var name="$b" /></m> feet _below_ sea level.
+            </p>
+
+            <p>
+                What is the difference in elevation between the mountain top and the bottom of the trench?
+            </p>
+
+            <p>
+                <var name="$UnitAns" evaluator="$ansevaluator" width="9" />
+            </p>
+        </statement>
+        <solution>
+            <p>
+                The height of the mountain is simply <m><var name="$a" /></m> feet because it is _above_ sea level.
+            </p>
+
+            <p>
+                The bottom of the trench is <m>-<var name="$b" /></m> feet in height. Note that it is negative because it is _below_ sea level.
+            </p>
+
+            <p>
+                To find the difference in height, we use subtraction:
+            </p>
+
+            <p>
+                <md>
+                    <mrow><var name="$a" />-(-<var name="$b" />) \amp = <var name="$a" />+<var name="$b" /></mrow>
+                    <mrow>\amp = <var name="$ans" /></mrow>
+                </md>
+            </p>
+
+            <p>
+                The difference in elevation from the mountain top to the bottom of the trench is <m><var name="$UnitAns" /></m>.
+            </p>
+        </solution>
+    </webwork>
+</exercise>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+<docinfo>
+</docinfo>
+<article>
+  <section>
+    <exercises>
+      <xi:include href="./AdditionWithNegativeNumbers10.mbx" />
+
+      <xi:include href="./AdditionWithNegativeNumbers20.mbx" />
+
+      <xi:include href="./AdditionWithNegativeNumbers30.mbx" />
+
+      <xi:include href="./AddSubtractDecimals15.mbx" />
+
+      <xi:include href="./AddSubtractDecimals25.mbx" />
+
+      <xi:include href="./AddSubtractDecimals26.mbx" />
+
+      <xi:include href="./AddSubtractNegativeNumbers10.mbx" />
+
+      <xi:include href="./AddSubtractNegativeNumbers20.mbx" />
+
+      <xi:include href="./AddSubtractNegativeNumbers30.mbx" />
+
+      <xi:include href="./AddSubtractNegativeNumbers40.mbx" />
+
+      <xi:include href="./DivideWithNegativeIntegers10.mbx" />
+
+      <xi:include href="./DivideWithNegativeIntegers20.mbx" />
+
+      <xi:include href="./ExponentDefinition10.mbx" />
+
+      <xi:include href="./ExponentDefinition20.mbx" />
+
+      <xi:include href="./ExponentDefinition30.mbx" />
+
+      <xi:include href="./ExponentDefinition40.mbx" />
+
+      <xi:include href="./MultiplyDivideDecimals210.mbx" />
+
+      <xi:include href="./MultiplyDivideDecimals220.mbx" />
+
+      <xi:include href="./MultiplyWithNegativeIntegers10.mbx" />
+
+      <xi:include href="./MultiplyWithNegativeIntegers20.mbx" />
+
+      <xi:include href="./MultiplyWithNegativeIntegers30.mbx" />
+
+      <xi:include href="./SubtractionWithNegativeNumbers10.mbx" />
+
+      <xi:include href="./SubtractionWithNegativeNumbers20.mbx" />
+
+      <xi:include href="./SubtractionWithNegativeNumbers30.mbx" />
+
+    </exercises>
+  </section>
+</article>
+</mathbook>
